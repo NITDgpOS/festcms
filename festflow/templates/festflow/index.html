@@ -4,6 +4,21 @@
 	<title>Hello</title>
 </head>
 <body>
+
 <h1>Hello World!</h1>
+
+{% if user.is_authenticated %}
+	<!-- User is logged in -->
+	<div class="user-details">
+	You are logged in as <b>{{ user.username }}</b>!
+	</div>
+	<a href="/logout">Logout</a>
+{% else %}
+	<!-- User is not logged in -->
+	{% for backend in backends.backends %}
+	<a href="/login/{{backend}}/?next=/"><div class="login-button {{backend}}">{{backend}}</div></a><br>
+	{% endfor %}
+{% endif %}
+
 </body>
 </html>
