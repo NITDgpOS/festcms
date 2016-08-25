@@ -1,11 +1,110 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hello</title>
+<title>login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .modal-header {
+      background-color: #f9f9f9;
+      color:white !important;
+      text-align: center;
+      font-size: 20px;
+      font-family: 'Baloo Bhaina', cursive;
+  }
+ .close{
+color:red;
+
+}
+  .modal-footer {
+      background-color: #fff;
+      padding-top:20px;
+  }
+  </style>
 </head>
 <body>
+<div class="container">
+  <h2>Modal Login</h2>
+   <!--Trigger the modal with a button -->
+  <button type="button" class="btn btn-default btn-lg" id="myBtn">Login</button>
 
-<h1>Hello World!</h1>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:30px 30px;">
+          <button type="button" class="close" data-dismiss="modal">&nbsp;&nbsp;&nbsp; &times;</button>
+<ul class="nav nav-pills nav-justified">
+    <li class="active"><a data-toggle="pill" href="#login">Login</a></li>
+    <li><a data-toggle="pill" href="#register">Register</a></li>
+  </ul>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+  <div class="tab-content">
+    <div id="login" class="tab-pane fade in active" style="padding-bottom:30px">
+      <form role="form" class="form-horizontal">
+            <div class="form-group">
+              <label class="control-label col-sm-4" for="email"><span class="glyphicon glyphicon-user"></span> Email:</label>
+    <div class="col-sm-8">
+      <input type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-4" for="password"><span class="glyphicon glyphicon-eye-open"></span> Password:</label>
+    <div class="col-sm-8">
+      <input type="password" class="form-control" id="password" placeholder="Enter password">
+    </div>
+            </div>
+              <button type="submit" class="btn btn-primary center-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>     
+    </div>
+    <div id="register" class="tab-pane fade" style="padding-bottom:30px">
+<form role="form" class="form-horizontal">
+            <div class="form-group">
+              <label class="control-label col-sm-4" for="email"><span class="glyphicon glyphicon-user"></span> Email:</label>
+    <div class="col-sm-8">
+      <input type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-4" for="password"><span class="glyphicon glyphicon-eye-open"></span> Password:</label>
+    <div class="col-sm-8">
+      <input type="password" class="form-control" id="password" placeholder="Enter password">
+    </div>
+            </div>
+	<div class="form-group">
+              <label class="control-label col-sm-4" for="number"><span class="glyphicon glyphicon-earphone"></span> Phone Number:</label>
+    <div class="col-sm-8">
+      <input type="number" class="form-control" id="number"  maxlength="10" placeholder="Enter phone number">
+    </div>
+            </div>
+              <button type="submit" class="btn btn-primary center-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+</div>
+    </div>
+<div class="modal-footer">
+          <button type="submit" class="btn btn-default  pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <button type="submit" class="btn btn-primary  btn-default pull-right"><i class="fa fa-facebook"></i> Sign in with facebook</button>
+          <button type="submit" class="btn btn-danger  btn-default pull-right"><i class="fa fa-google"></i> Sign in with Google</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+    $("#myBtn").click(function(){
+        $("#myModal").modal();
+    });
+});
+</script>
+
 
 {% if user.is_authenticated %}
 	<!-- User is logged in -->
