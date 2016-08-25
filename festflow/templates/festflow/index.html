@@ -10,7 +10,11 @@
 {% if user.is_authenticated %}
 	<!-- User is logged in -->
 	<div class="user-details">
-	You are logged in as <b>{{ user.username }}</b>!
+	<p>You are logged in as <b>{{ user.username }}</b>!</p>
+	<p>First Name: {{ user.first_name }}</p>
+	<p>Last Name: {{ user.last_name }}</p>
+	<p>Email: {{ user.email }}</p>
+
 	</div>
 	<a href="/logout">Logout</a>
 {% else %}

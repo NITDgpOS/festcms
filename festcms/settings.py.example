@@ -153,6 +153,9 @@ SOCIAL_AUTH_PIPELINE = (
 
     # Update the user record with any changed info from the auth service.
     'social.pipeline.user.user_details',
+
+    # Fillup profile data (CUSTOM PIPELINE)
+    'festflow.pipeline.save_profile',
 )
 
 AUTHENTICATION_BACKENDS = (
@@ -166,3 +169,9 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = ''
 
 SOCIAL_AUTH_FACEBOOK_KEY = ''
 SOCIAL_AUTH_FACEBOOK_SECRET = ''
+
+# request email from facebook
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+    'fields': 'id, name, email, age_range'
+}
