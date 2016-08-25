@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title>
+</head>
+<body>
+
+<h1>Complete Profile!</h1>
+
+{% if user.is_authenticated %}
+	<!-- User is logged in -->
+	<div class="user-details">
+	<p>Welcome <b>{{ user.first_name }}</b>!</p>
+	<p>Here is your profile information:</p>
+	<p>First Name: {{ user.first_name }}</p>
+	<p>Last Name: {{ user.last_name }}</p>
+	<p>Email: {{ user.email }}</p>
+	</div>
+{% endif %}
+
+<h2>Please complete your profile to continue:</h2>
+{% if profile_form %}
+	<form action="." method="post">
+	    {% csrf_token %}
+	    {{ profile_form }}
+	    <input type="submit" value="Submit" />
+	</form>
+{% endif %}
+
+</body>
+</html>
+
