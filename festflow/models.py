@@ -13,6 +13,10 @@ class Event(models.Model):
     # event description
     description = models.TextField()
 
+    # event logo
+    logo = models.ImageField(upload_to='event_images/',
+                             blank=True, null=True)
+
     # event problem statement file
     problem_statement_file = models.FileField(upload_to='problem_statements/',
                                               blank=True, null=True)
