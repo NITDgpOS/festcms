@@ -31,7 +31,10 @@
 
   {% for event in all_events %}
     <div class="event_container">
-      <h2>{{ event.name }}</h2>
+      <a href="{{ event.get_absolute_url }}"><h2>{{ event.name }}</h2></a>
+      {% if event.logo %}
+        <img src="{{ event.logo.url }}" width="200px">
+      {% endif %}
       <p>{{ event.description }}</p>
       <p>{{ event.venue }}</p>
     </div>
