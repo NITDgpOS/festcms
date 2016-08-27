@@ -8,6 +8,9 @@ from .models import User, Profile
 
 def index(request):
     context = {}
+    profiles_count = Profile.objects.count()
+
+    context['profiles_count'] = profiles_count
     return render(request, 'festflow/index.html', context)
 
 
