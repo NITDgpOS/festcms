@@ -13,12 +13,11 @@
   <h1>Hello World!</h1>
   {% if user.is_authenticated %}
   	<!-- User is logged in -->
-  	<div class="user-details">
-  	<p>You are logged in as <b>{{ user.username }}</b>!</p>
-  	<p>First Name: {{ user.first_name }}</p>
-  	<p>Last Name: {{ user.last_name }}</p>
-  	<p>Email: {{ user.email }}</p>
-
+    <div class="user_details">
+      <p>You are logged in as <b>{{ user.username }}</b>!</p>
+      <p>First Name: {{ user.first_name }}</p>
+      <p>Last Name: {{ user.last_name }}</p>
+      <p>Email: {{ user.email }}</p>
   	</div>
   	<a href="/logout">Logout</a>
   {% else %}
@@ -29,5 +28,13 @@
   	{% endfor %}
   {% endif %}
 
+
+  {% for event in all_events %}
+    <div class="event_container">
+      <h2>{{ event.name }}</h2>
+      <p>{{ event.description }}</p>
+      <p>{{ event.venue }}</p>
+    </div>
+  {% endfor %}
 </body>
 </html>

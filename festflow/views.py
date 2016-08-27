@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 
 from .forms import EditProfileForm
-from .models import User, Profile
+from .models import *
 
 # Create your views here.
 
@@ -9,8 +9,10 @@ from .models import User, Profile
 def index(request):
     context = {}
     profiles_count = Profile.objects.count()
+    all_events = Event.objects.all()
 
     context['profiles_count'] = profiles_count
+    context['all_events'] = all_events
     return render(request, 'festflow/index.html', context)
 
 

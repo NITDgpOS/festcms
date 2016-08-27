@@ -1,11 +1,19 @@
 from django.contrib.auth.models import User
+from django.core.validators import RegexValidator
 from django.db import models
 
+
+lowercaseAlphabet = RegexValidator(
+    r'^[a-z]*$', 'Only lower case alphabets are allowed.')
 # Create your models here.
 
 
 class Event(models.Model):
     "Stores information about the events in the fest"
+
+    # event id
+    identifier = models.CharField(max_length=50, unique=True,
+                                  validators=[lowercaseAlphabet])
 
     # event name
     name = models.CharField(max_length=255)
@@ -34,6 +42,9 @@ class Event(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return '/events/%s/' % self.identifier
+
 
 class Profile(models.Model):
     "Stores additional information about the user"
@@ -53,3 +64,6 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.user.get_full_name()
+
+    def get_absolute_url(self):
+        return '/events/%s/' % self.user.username

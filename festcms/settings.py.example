@@ -106,6 +106,16 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
+# Media files
+# example:
+# https://timmyomahony.com/blog/static-vs-media-and-root-vs-path-in-django/
+
+ENV_PATH = os.path.abspath(os.path.dirname(__file__))
+MEDIA_ROOT = os.path.join(ENV_PATH, 'media/')
+
+MEDIA_URL = '/media/'
+
+
 # python-social-auth settings
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
 SOCIAL_AUTH_LOGIN_URL = '/login'
