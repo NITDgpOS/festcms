@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect
+from django.core.exceptions import ObjectDoesNotExist
+from django.shortcuts import render, redirect, Http404
 
 from .forms import EditProfileForm
 from .models import *
@@ -14,6 +15,18 @@ def index(request):
     context['profiles_count'] = profiles_count
     context['all_events'] = all_events
     return render(request, 'festflow/index.html', context)
+
+
+def event_view(request, event_identifier):
+    context = {}
+    try:
+        event = Event.objects.get(identifier=event_identifier)
+    except ObjectDoesNotExist:
+        raise Http404
+
+    context['event'] = event
+
+    return render(request, 'festflow/event_view.html', context)
 
 
 def complete_profile(request):
