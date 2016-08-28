@@ -17,6 +17,11 @@
       {% endif %}
       <p>{{ event.description }}</p>
       <p>{{ event.venue }}</p>
+      {% if event in user_profile.registered_events.all %}
+        <h3>You have already registered for this event</h3>
+      {% else %}
+        <a href="/register_event/{{ event.identifier }}"><h3>Register</h2></a>
+      {% endif %}
   </div>
 </body>
 </html>

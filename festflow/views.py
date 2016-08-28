@@ -1,4 +1,5 @@
 from django.core.exceptions import ObjectDoesNotExist
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, Http404
 
 from .forms import EditProfileForm
@@ -24,9 +25,27 @@ def event_view(request, event_identifier):
     except ObjectDoesNotExist:
         raise Http404
 
+    if request.user.is_authenticated:
+        user_profile = Profile.objects.get(user=request.user)
+        context['user_profile'] = user_profile
+
     context['event'] = event
 
     return render(request, 'festflow/event_view.html', context)
+
+
+@login_required
+def register_event(request, event_identifier):
+    try:
+        event = Event.objects.get(identifier=event_identifier)
+    except ObjectDoesNotExist:
+        raise Http404
+
+    user_profile = Profile.objects.get(user=request.user)
+    user_profile.registered_events.add(event)
+    user_profile.save()
+
+    return redirect(event.get_absolute_url())
 
 
 def complete_profile(request):

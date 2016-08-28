@@ -115,6 +115,10 @@ MEDIA_ROOT = os.path.join(ENV_PATH, 'media/')
 
 MEDIA_URL = '/media/'
 
+# django auth settings
+LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = '/login'
+
 
 # python-social-auth settings
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
