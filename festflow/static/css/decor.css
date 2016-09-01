@@ -1,0 +1,190 @@
+/*============================================================
+    -        OUR TEAM       -
+===============================================================*/
+
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+@import url(http://fonts.googleapis.com/css?family=Raleway:700,100,400,300);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
+
+
+
+.our-team .col-md-3{
+    padding-top     : 50px;
+}
+
+ .our-team .icon-holder ul li{
+
+    display             : inline-block;
+    margin              : 0 10px;
+}
+
+.our-team .icon-holder ul li:first-child{
+
+    margin  : 0 10px 0 0;
+}
+
+.our-team .icon-holder ul li:last-child{
+
+    margin  : 0 0 0 10px;
+}
+.our-team .icon-holder ul li a{
+
+     color  : #ffffff;
+}
+
+.our-team .icon-holder ul li a  .fa{
+    
+    height              : 45px;
+    width               : 45px;
+    border-radius       : 50%;
+    padding             : 14px;
+    border              : 1px solid;
+    font-size           : 20px;
+    line-height         : 15px;
+    background          : rgba(232, 71, 0, 0);
+    -webkit-transition  : background  ease 0.50s;
+    -moz-transition     : background  ease 0.50s;
+    -ms-transition      : background  ease 0.50s;
+    -o-transition       : background  ease 0.50s;
+    transition          : background ease 0.50s;
+
+
+}
+.our-team .icon-holder ul li:hover a .fa{
+background      : rgba(232, 71, 0, 1);
+border-color    : rgba(255,255,255,0.5);
+
+}
+
+.our-team .team-designation{
+width               : 100%;
+background          : #ffffff;
+padding             : 10px 0 5px 0;
+-webkit-box-shadow  : 0px 2px 0px #ebeaea;
+-moz-box-shadow     : 0px 2px 0px #ebeaea;
+-ms-box-shadow      : 0px 2px 0px #ebeaea;
+-o-box-shadow       : 0px 2px 0px #ebeaea;
+box-shadow          : 0px 2px 0px #ebeaea;
+text-align          : center;
+
+}
+
+
+
+.our-team .zoomIn .team-designation p{
+
+    font-family         : 'Roboto Condensed', sans-serif;
+    color               : #707070;
+    font-size           : 14px;
+    font-weight         : bold;
+    letter-spacing      : 1.5px;
+    line-height         : 17px;
+    text-transform      : uppercase;
+    line-height         : 10px;
+}
+
+
+
+.our-team .team-designation span{
+
+    font-family     : 'Roboto Condensed', sans-serif;
+    color           : #989898;
+    font-size       : 11px;
+    font-weight     : bold;
+    letter-spacing  : 1.5px;
+    text-transform  : uppercase;
+
+}
+
+#conhead{
+	font-weight:800px;
+	font-style:'Raleway',sans serif;
+	font-size:40px;
+}
+
+
+
+
+
+/*---------------*/
+/***** Duke *****/
+/*---------------*/
+
+figure.effect-duke
+{
+	background  : rgba(232,71,0,0.7);
+	overflow    :hidden;
+}
+
+figure.effect-duke img,
+figure.effect-duke:hover .icon-holder {
+	opacity 			: 1;
+	top 				: 50%;
+	-webkit-transition  : all 0.35s, -webkit-transform 0.35s;
+	transition 			: all 1s 0.25s, transform 0.35s;
+	z-index 			: 999;
+}
+
+figure.effect-duke:hover img {
+	opacity 			: 0.1;
+	-webkit-transform 	: scale3d(1.2,1.2,1);
+	transform 			: scale3d(1.2,1.2,1);
+}
+
+figure.effect-duke h2 {
+	-webkit-transition 		: -webkit-transform 0.35s;
+	transition 				: transform 0.35s;
+	-webkit-transform 		: scale3d(0.8,0.8,1);
+	transform 				: scale3d(0.8,0.8,1);
+	-webkit-transform-origin: 50% 100%;
+	transform-origin 		: 50% 100%;
+}
+
+figure.effect-duke .icon-holder {
+	position 				: absolute;
+	top 					: 40%;
+	left 					: 0;
+	margin 					: 20px;
+	padding 				: 30px;
+	text-transform 			: none;
+	font-size 				: 90%;
+	opacity 				: 0;
+	width 					: 100%;
+	margin 					: auto;
+	-webkit-transform 		: scale3d(0.8,0.8,1);
+	transform 				: scale3d(0.8,0.8,1);
+	-webkit-transform-origin: 50% -100%;
+	transform-origin 		: 50% -100%;
+}
+
+figure.effect-duke .icon-holder ul{
+	width 		: 185px;
+	margin 		: auto;
+
+}
+
+figure.effect-duke:hover h2,
+figure.effect-duke:hover p {
+	opacity 			: 1;
+	-webkit-transform 	: scale3d(1,1,1);
+	transform 			: scale3d(1,1,1);
+}
+
+/* Media queries */
+@media screen and (max-width: 50em) {
+	.content {
+		padding 	: 0 10px;
+		text-align 	: center;
+	}
+	.grid figure {
+		display 	: inline-block;
+		float 		: none;
+		margin 		: 10px auto;
+		width 		: 100%;
+	}
+}
+
+
+
+

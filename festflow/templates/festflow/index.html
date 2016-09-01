@@ -6,7 +6,7 @@
 		<meta name="description" content="ANK 2016 - The Knowledge Fest by National Institute Of Technology Durgapur Maths N Tech Club">
 		<meta name="keywords" content="MNTC,Ank 2K16" /> 
 		<meta name="author" content="Maths n Tech Club"> 
-		<title>MNTC ! Maths N Tech Club</title>	
+		<title>ANK 2016!#LetTheFunBegin </title>	
 		
 		<!-- SOCIAL MEDIA META -->
 		<meta property="og:title" content="ANK 2016 | The Knowledge Fest"/>
@@ -14,25 +14,25 @@
 		<meta property="og:type" content="article" />
 		<meta property="og:description" content="MNTC NIT Durgapur presents ANK 2016 | The Knowledge Fest" />
 		
-
+		{% load staticfiles %}
 		<!-- STYLE SHEETS-->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/prettyPhoto.css" rel="stylesheet"> 
-		<link href="css/font-awesome.min.css" rel="stylesheet"> 
-		<link href="css/animate.css" rel="stylesheet"> <!-- used for wow.js-->
-		<link href="css/main.css" rel="stylesheet"><!----important---->
-		<link href="css/responsive.css" rel="stylesheet">
-		<link rel="stylesheet" href="css/style.css">
-		<link href="css/decor.css" rel="stylesheet"><!--/CSS for contact us-->
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" /><!--CSS for effect home-->
-		<link rel="stylesheet" href="css/owl.carousel.css"><!-- Important Owl stylesheet -->
-		<link rel="stylesheet" href="css/owl.theme.css">
+		<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/static/css/prettyPhoto.css" rel="stylesheet"> 
+		<link href="/static/css/font-awesome.min.css" rel="stylesheet"> 
+		<link href="/static/css/animate.css" rel="stylesheet"> <!-- used for wow.js-->
+		<link href="/static/css/main.css" rel="stylesheet"><!----important---->
+		<link href="/static/css/responsive.css" rel="stylesheet">
+		<link rel="stylesheet" href="/static/css/style.css">
+		<link href="/static/css/decor.css" rel="stylesheet"><!--/CSS for contact us-->
+		<link rel="/static/stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/component.css" /><!--CSS for effect home-->
+		<link rel="stylesheet" href="/static/css/owl.carousel.css"><!-- Important Owl stylesheet -->
+		<link rel="stylesheet" href="/static/css/owl.theme.css">
 		
 		<!--[if lt IE 9]> <script src="js/html5shiv.js"></script> 
 		<script src="js/respond.min.js"></script> <![endif]--> 
 		
-		<link rel="shortcut icon" href="images/ico/favicon.png">  
+		<link rel="shortcut icon" href="static/images/ico/favicon.png">  
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,800,400' rel='stylesheet' type='text/css'>
 
 
@@ -49,7 +49,7 @@
 	
 	<body data-spy="scroll" data-target=".navbar" data-offset="90" style="overflow-x:hidden">
 	
-		<!--------------PRELOADER------------------>
+		<!--------------PRELOADER----------->
 		
 		<div class="preloader">
 			<div class="preloder-wrap">
@@ -74,7 +74,7 @@
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
 							<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> 
 						</button> 
-						<a class="navbar-brand" href="index.html"><h1><img class="img-responsive" src="images/logo-mntc.png" alt="logo"></h1></a> 
+						<a class="navbar-brand" href="index.html"><h1><img class="img-responsive" src="/static/images/logo-mntc.png" alt="logo"></h1></a> 
 					</div> 
 					<div class="collapse navbar-collapse"> 
 						<ul class="nav navbar-nav navbar-right"> 
@@ -97,21 +97,24 @@
 		<div class="demo-1">
 			<div class="content">
 				<div id="large-header" class="large-header wow zoomInUp" data-wow-duration="1s">
-					<p class="main-title col-sm-12 wow zoomInUp " data-wow-duration="3s"><a href="http://www.ank.mntc.in" target="_blank"><span class="thin">ANK</span></a>
-	                                 {% if user.is_authenticated %}
-				  	<!-- User is logged in -->
-					      <p class="main-title col-sm-12 wow zoomInUp " data-wow-duration="3s">You are logged in as <b>{{ user.username }}</b>!</p>
-					      <p class="main-title col-sm-12 wow zoomInUp " data-wow-duration="3s">First Name: {{ user.first_name }}</p>
-					      <p class="main-title col-sm-12 wow zoomInUp " data-wow-duration="3s">Last Name: {{ user.last_name }}</p>
-					      <p class="main-title col-sm-12 wow zoomInUp " data-wow-duration="3s">Email: {{ user.email }}</p>
-					  	<a href="/logout">Logout</a>
-					  {% else %}
-					  	<!-- User is not logged in -->
-					    <p class="main-title col-sm-12 wow zoomInUp " data-wow-duration="3s">{{ profiles_count }} users have already registered! Register NOW!</p>
-					  	{% for backend in backends.backends %}
-					  	<a href="/login/{{backend}}/?next=/"><div class="login-button {{backend}}">{{backend}}</div></a><br>
-					  	{% endfor %}
-					  {% endif %}</p>
+					<p class="main-title col-sm-12 wow zoomInUp " data-wow-duration="3s"><a href="http://www.ank.mntc.in" target="_blank"><span class="thin">ANK</span></a><br> </p>
+					 {% if user.is_authenticated %}
+						  	<!-- User is logged in -->
+						    <div class="user_details">
+						      <p>You are logged in as <b>{{ user.username }}</b>!</p>
+						      <p>First Name: {{ user.first_name }}</p>
+						      <p>Last Name: {{ user.last_name }}</p>
+						      <p>Email: {{ user.email }}</p>
+						  	</div>
+						  	<a href="/logout"><button class="btn-lg default">Login</button></a>
+						  {% else %}
+						  	<!-- User is not logged in -->
+						    <h2>{{ profiles_count }} users have already registered! Register NOW!</h2>
+						  	{% for backend in backends.backends %}
+						  	<a href="/login/{{backend}}/?next=/"><p class="col-sm-12 text-center login-button {{backend}}">{{backend}}</p></a><br>
+						  	{% endfor %}
+						  {% endif %}	
+	                                
 					
 					<canvas id="demo-canvas"></canvas>
 				</div>
@@ -130,7 +133,7 @@
 					<h2 class="title-one">About ANK</h2>
 					<div class="row">
 					<div class="col-sm-6">
-					    <img src="images/aboutank1.jpg" class="img-responsive" alt="ank-img">
+					    <img src="/static/images/aboutank1.jpg" class="img-responsive" alt="ank-img">
 					</div>
 					<div class="col-sm-6">
 					<p> Started in the year 2004, Maths and Tech club was initially conceived with the concept of creating  platform to engender in students fervor for the mathematics by emphasizing its benefits and the want for logic through through a multitude of intriguing challenges.<br/><br/>
@@ -207,76 +210,76 @@
 						<div class="col-sm-3 col-xs-12 portfolio-item title">
 							<div class="view efffect">
 								<div class="portfolio-image">
-									<img src="images/portfolio/work-image1.jpg" alt=""></div> 
+									<img src="/static/images/portfolio/work-image1.jpg" alt=""></div> 
 									<div class="mask text-center">
 										<h3>Clash of Titans</h3>
 										<h4>The ANK Championship!</h4>
 										<a href="#"><i class="fa fa-link"></i></a>
-										<a href="images/portfolio/big-item.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
+										<a href="/static/images/portfolio/big-item.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
 									</div>
 								</div>
 							</div>
 							<div class="col-sm-3 col-xs-12 portfolio-item creativity">
 								<div class="view efffect" >
 									<div class="portfolio-image">
-										<img src="images/portfolio/work-image2.jpg" alt="">
+										<img src="/static/images/portfolio/work-image2.jpg" alt="">
 									</div> 
 									<div class="mask text-center">
 										<h3>Constructo</h3>
 										<h4>Let Your Dreams come to Life</h4>
 										<a href="#"><i class="fa fa-link"></i></a>
-										<a href="images/portfolio/work-image2.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
+										<a href="/static/images/portfolio/work-image2.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
 									</div>
 								</div>
 							</div>
 							<div class="col-sm-3 col-xs-12 portfolio-item coding">
 								<div class="view efffect">
 									<div class="portfolio-image">
-										<img src="images/portfolio/work-image3.jpg" alt="">
+										<img src="/static/images/portfolio/work-image3.jpg" alt="">
 									</div> 
 									<div class="mask text-center">
 									<h3>Kryptic</h3>
 									<h4>Decipher the Future</h4>
 									<a href="#"><i class="fa fa-link"></i></a>
-									<a href="images/portfolio/work-image3.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
+									<a href="/static/images/portfolio/work-image3.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-3 col-xs-12 portfolio-item brain">
 							<div class="view efffect">
 								<div class="portfolio-image">
-									<img src="images/portfolio/work-image4.jpg" alt="">
+									<img src="/static/images/portfolio/work-image4.jpg" alt="">
 								</div> 
 								<div class="mask text-center">
 									<h3>Matrix</h3>
 									<h4>Unleash the Mathematician in you</h4>
 									<a href="#"><i class="fa fa-link"></i></a>
-									<a href="images/portfolio/work-image4.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
+									<a href="/static/images/portfolio/work-image4.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-3 col-xs-12 portfolio-item coding">
 							<div class="view efffect">
 								<div class="portfolio-image">
-									<img src="images/portfolio/work-image5.jpg" alt="">
+									<img src="/static/images/portfolio/work-image5.jpg" alt="">
 								</div> <div class="mask text-center">
 								<h3>Simplex</h3>
 								<h4>Unleash the Coder in you</h4>
 								<a href="#"><i class="fa fa-link"></i></a>
-								<a href="images/portfolio/work-image5.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
+								<a href="/static/images/portfolio/work-image5.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
 							</div>
 						</div>
 					</div>
 					<div class="col-sm-3 col-xs-12 portfolio-item title">
 						<div class="view efffect">
 							<div class="portfolio-image">
-								<img src="images/portfolio/work-image6.jpg" alt="">
+								<img src="/static/images/portfolio/work-image6.jpg" alt="">
 							</div> 
 							<div class="mask text-center">
 								<h3>Terrorist TakeDown</h3>
 								<h4>The Treasure Hunt</h4>
 								<a href="#"><i class="fa fa-link"></i></a>
-								<a href="images/portfolio/work-image6.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
+								<a href="/static/images/portfolio/work-image6.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
 							</div>
 						</div>
 					</div>
@@ -287,14 +290,14 @@
 						<!---------------SPONSORS-------------->
 						
 						<section id="sponsors"class="jumbotron" >
-						<div class="text-center wow fadeInRight" data-wow-duration="1s">
+						<div class="text-center">
 						<p> <strong>PREVIOUS SPONSORS</strong></p>
 						</div>
-						<div id="owl-demo" class="owl-carousel container wow bounceIn" data-wow-duration="2s"><!--owl carousel-->
-							  <div class="item"><img src="images/slider/logo1.png" alt="LEE Image"></div>
-							  <div class="item"><img src="images/slider/logo2.png" alt="Career Launcher"></div>
-							  <div class="item"><img src="images/slider/logo3.png" alt="Unison"></div>
-							  <div class="item"><img src="images/slider/logo4.png" alt="Tvs"></div>
+						<div id="owl-demo" class="owl-carousel container"><!--owl carousel-->
+							  <div class="item"><img src="/static/images/slider/logo1.png" alt="LEE Image"></div>
+							  <div class="item"><img src="/static/images/slider/logo2.png" alt="Career Launcher"></div>
+							  <div class="item"><img src="/static/images/slider/logo3.png" alt="Unison"></div>
+							  <div class="item"><img src="/static/images/slider/logo4.png" alt="Tvs"></div>
 								</div><!--/owl carousel-->
 								</section><!--/sponsors-->
 					
@@ -317,7 +320,7 @@
 		  <div class="wow zoomIn col-xs-12 col-sm-6 col-md-3" data-wow-duration="2s">
 			<div class="grid">
 			  <figure class="effect-duke">
-				<img class="img-responsive" src="images/contact/team1.jpg" alt="img09">
+				<img class="img-responsive" src="/static/images/contact/team1.jpg" alt="img09">
 				<figcaption>
 				  <div class="icon-holder">
 					<ul >
@@ -337,7 +340,7 @@
 		  <div class=" wow zoomIn col-xs-12 col-sm-6 col-md-3">
 			<div class="grid">
 			  <figure class="effect-duke">
-				<img class="img-responsive" src="images/contact/team2.jpg" alt="img09">
+				<img class="img-responsive" src="/static/images/contact/team2.jpg" alt="img09">
 				<figcaption>
 				  <div class="icon-holder">
 					<ul >
@@ -357,7 +360,7 @@
 		  <div class="wow zoomIn col-xs-12 col-sm-6 col-md-3">
 			<div class="grid">
 			  <figure class="effect-duke">
-				<img class="img-responsive" src="images/contact/team3.jpg" alt="img09">
+				<img class="img-responsive" src="/static/images/contact/team3.jpg" alt="img09">
 				<figcaption>
 				  <div class="icon-holder">
 					<ul >
@@ -377,7 +380,7 @@
 		  <div class="wow zoomIn col-xs-12 col-sm-6 col-md-3">
 			<div class="grid">
 			  <figure class="effect-duke">
-				<img class="img-responsive" src="images/contact/team4.jpg" alt="img09">
+				<img class="img-responsive" src="/static/images/contact/team4.jpg" alt="img09">
 				<figcaption>
 				  <div class="icon-holder">
 					<ul >
@@ -411,23 +414,23 @@
 
 	<!-----SCRIPTS------------->
 	
-		<script type="text/javascript" src="js/jquery.js"></script> 
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/static/js/jquery.js"></script> 
+		<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.js"></script>
-		<script type="text/javascript" src="js/smoothscroll.js"></script>
-		<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
-		<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script> 
-		<script type="text/javascript" src="js/jquery.parallax.js"></script> 
-		<script type="text/javascript" src="js/main.js"></script> 
+		<script type="text/javascript" src="/static/js/smoothscroll.js"></script>
+		<script type="text/javascript" src="/static/js/jquery.isotope.min.js"></script>
+		<script type="text/javascript" src="/static/js/jquery.prettyPhoto.js"></script> 
+		<script type="text/javascript" src="/static/js/jquery.parallax.js"></script> 
+		<script type="text/javascript" src="/static/js/main.js"></script> 
 		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-		<script type="text/javascript" src='js/velocity.min.js'></script>
-		<script type="text/javascript" src="js/owl.carousel.js"></script>
+		<script type="text/javascript" src='/static/js/velocity.min.js'></script>
+		<script type="text/javascript" src="/static/js/owl.carousel.js"></script>
 <!--------Script for home effect------->		
-		<script src="js/TweenLite.min.js"></script>
-		<script src="js/EasePack.min.js"></script>
-		<script src="js/rAF.js"></script>
-		<script src="js/demo-1.js"></script><!--/home effect-->
-			<script src="js/index.js"></script><!--slider team-->
+		<script src="/static/js/TweenLite.min.js"></script>
+		<script src="/static/js/EasePack.min.js"></script>
+		<script src="/static/js/rAF.js"></script>
+		<script src="/static/js/demo-1.js"></script><!--/home effect-->
+			<script src="/static/js/index.js"></script><!--slider team-->
 			
 			<script>
     $(document).ready(function() {
@@ -439,8 +442,7 @@
       });
 
     });
-    </script><!--/scripts-->
-<!--	
+    </script><!--/scripts-->	
  {% for event in all_events %}
     <div class="event_container">
       <a href="{{ event.get_absolute_url }}"><h2>{{ event.name }}</h2></a>
@@ -450,6 +452,6 @@
       <p>{{ event.description }}</p>
       <p>{{ event.venue }}</p>
     </div>
-  {% endfor %}-->
+  {% endfor %}
 	</body>
 	</html>
