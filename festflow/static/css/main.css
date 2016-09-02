@@ -1,32 +1,17 @@
-/*+++++++++++++++++++++
-=====================================
- Template Name : Himu
- Author Name : Mostafizur Rahman
- Author URI : http://mostafiz.me/
- Template URI :http://mostafiz.me/demo/himu/
- Version : 1.1
-===============================
-+++++++++++++++++++*/
-
-
-
-
 
 /*
 ====================================
 ------------------------------------
 	1. Typography
 	2. Header
-	3. Main Slider
-	4. About Us
-	5. Service
-	6. Our Team
-	7. Portfolio
-	8. Clients
-	10. Contact
-	11. Footer
-	13. Isotope
-	14. Portfolio Hover effect
+	3. About Us
+	4. Service
+	5. Portfolio
+	6. sponsors
+	7. Our Team
+	8. Footer
+	9. Isotope
+	10.Portfolio Hover effect
 -------------------------------------
 =====================================
 */
@@ -550,121 +535,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/*=====================
-======Our Team CSS=====
-=======================*/
-/*
-#team-carousel {
-	position:relative
-}
-
-#our-team {
-	background-color:#f6f6f6;
-	color:#43484E;
-}
-
-#our-team h2 {
-	color:#43484E;
-	margin-bottom:35px;
-}
-
-#our-team .team-members {
-	padding:0;
-	margin-top:55px;
-	display:block;
-	overflow:hidden
-}
-
-.single-member {
-	height:430px;
-	background-color:#43484E;
-	border: 1px solid #43484E;
-	color: #f6f6f6;
-	padding: 25px;
-	text-align:center;
-	overflow:hidden;
-}
-
-.single-member img {
-	width:100%
-}
-
-.single-member h4, 
-.single-member h5 {
-	text-align:center
-}
-
-#our-team .socials i {
-	background-color:#fff;
-	border-radius: 50%;
-	color: #43484E;
-	display: inline-block;
-	font-size:16px;
-	height: 30px;
-	line-height:28px;
-	margin-right: 5px;
-	text-align: center;
-	width: 30px;
-	border-width:1px;
-	border-color:#43484E;
-	border-style: solid;
-	opacity:.5;
-	 -webkit-transition: all 0.5s ease-in-out;
-	-moz-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;  
-}
-
-#our-team .socials a i:hover {
-	opacity:1;
-	color:#fff;
-	border:0
-}
-
-#our-team .socials a .fa-facebook:hover {
-	background: #3B5997;	
-}
-
-#our-team .socials a .fa-twitter:hover {
-  background:#29C5F6
-}
-
-#our-team .socials a .fa-pinterest:hover {
-  background:#C61118
-}
-
-#our-team .socials a .fa-dribbble:hover {
-  background:#FF5C93
-}
-
-#our-team .socials a .fa-linkedin:hover {
-  background:#006DC0
-}
-
-#our-team .socials a .fa-google-plus:hover {
-  background:#D13D2F
-}
-
-#our-team .socials a .fa-flickr:hover {
-  background:#7A797B
-}
-
-.member-left, .member-right {
-	position:absolute;
-	top:-43px;
-	color:#43484E
-}
-
-
-.member-left {
-	left:49%;
-}
-
-.member-right {
-	left:51%
-}
-*/
-
 /*======================
 ======Portfolio CSS=====
 ========================*/
@@ -823,8 +693,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/*OWL CAROUSEL*/
-
+/*======================
+======sponsors CSS=====
+========================*/
 #sponsors {
 	background-color:#fff;
 	padding:100px;
@@ -852,112 +723,188 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/*====================*/
+
+/*======================
+======Our Team CSS=====
+========================*/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+@import url(http://fonts.googleapis.com/css?family=Raleway:700,100,400,300);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
 
 
 
-/*====================
-======Clients CSS=====
-======================*/
-
-#clients{
-	background-image: url("../images/clients/cat1.jpg");
-	background-color:#0A0A13;
+.our-team .col-md-3{
+    padding-top     : 50px;
 }
 
-#clients h2 {
-	margin-bottom:30px;
-	color:#000
+ .our-team .icon-holder ul li{
+
+    display             : inline-block;
+    margin              : 0 10px;
 }
 
-#clients p {
-	color:#000
+.our-team .icon-holder ul li:first-child{
+
+    margin  : 0 10px 0 0;
 }
 
-#clients-carousel  {
-	margin-top:45px;
-	text-align:center;
+.our-team .icon-holder ul li:last-child{
+
+    margin  : 0 0 0 10px;
+}
+.our-team .icon-holder ul li a{
+
+     color  : #ffffff;
 }
 
-#clients-carousel 
-.carousel-inner {
-	display:inline-block;
-	width:60%
+.our-team .icon-holder ul li a  .fa{
+    
+    height              : 45px;
+    width               : 45px;
+    border-radius       : 50%;
+    padding             : 14px;
+    border              : 1px solid;
+    font-size           : 20px;
+    line-height         : 15px;
+    background          : rgba(232, 71, 0, 0);
+    -webkit-transition  : background  ease 0.50s;
+    -moz-transition     : background  ease 0.50s;
+    -ms-transition      : background  ease 0.50s;
+    -o-transition       : background  ease 0.50s;
+    transition          : background ease 0.50s;
+
+
+}
+.our-team .icon-holder ul li:hover a .fa{
+background      : rgba(232, 71, 0, 1);
+border-color    : rgba(255,255,255,0.5);
+
 }
 
-.carousel-inner blockquote {
-  border-left: 0 none;
-  margin:15px;
-  padding:0;
-  text-align: left;
+.our-team .team-designation{
+width               : 100%;
+background          : #ffffff;
+padding             : 10px 0 5px 0;
+-webkit-box-shadow  : 0px 2px 0px #ebeaea;
+-moz-box-shadow     : 0px 2px 0px #ebeaea;
+-ms-box-shadow      : 0px 2px 0px #ebeaea;
+-o-box-shadow       : 0px 2px 0px #ebeaea;
+box-shadow          : 0px 2px 0px #ebeaea;
+text-align          : center;
+
 }
 
-.carousel-inner blockquote p {
-	font-size:17px;
-	
+
+
+.our-team .zoomIn .team-designation p{
+
+    font-family         : 'Roboto Condensed', sans-serif;
+    color               : #707070;
+    font-size           : 14px;
+    font-weight         : bold;
+    letter-spacing      : 1.5px;
+    line-height         : 17px;
+    text-transform      : uppercase;
+    line-height         : 10px;
 }
 
-#clients-carousel 
-.carousel-inner img {
-	border-right:5px solid#eee;
-	padding-right:10px
+
+
+.our-team .team-designation span{
+
+    font-family     : 'Roboto Condensed', sans-serif;
+    color           : #989898;
+    font-size       : 11px;
+    font-weight     : bold;
+    letter-spacing  : 1.5px;
+    text-transform  : uppercase;
+
 }
 
-#clients-carousel 
-.carousel-indicators {
-	top: 100%;
-	left: 50%;
-	margin: 0 0 0 -50px;
-	position: absolute;
-	width: 100px;
+#conhead{
+	font-weight:800px;
+	font-style:'Raleway',sans serif;
+	font-size:40px;
 }
 
-#clients-carousel .item {
-	background:#43484E
+/*---------------Duke Effect In Our Team---------------*/
+
+figure.effect-duke
+{
+	background  : rgba(232,71,0,0.7);
+	overflow    :hidden;
 }
 
-#clients-carousel 
-.carousel-indicators li{
-	background: rgba(0, 0, 0, 0);
-	border: 1px solid #fff;
-	width: 13px;
-	height: 13px;
-	margin-left: 5px;
-	text-indent: -9999px;
-	display: inline-block;
+figure.effect-duke img,
+figure.effect-duke:hover .icon-holder {
+	opacity 			: 1;
+	top 				: 50%;
+	-webkit-transition  : all 0.35s, -webkit-transform 0.35s;
+	transition 			: all 1s 0.25s, transform 0.35s;
+	z-index 			: 999;
 }
 
-#clients-carousel 
-.carousel-indicators {
-  margin-top: 20px;
+figure.effect-duke:hover img {
+	opacity 			: 0.1;
+	-webkit-transform 	: scale3d(1.2,1.2,1);
+	transform 			: scale3d(1.2,1.2,1);
 }
 
-.clients{
-  text-align: center;
+figure.effect-duke h2 {
+	-webkit-transition 		: -webkit-transform 0.35s;
+	transition 				: transform 0.35s;
+	-webkit-transform 		: scale3d(0.8,0.8,1);
+	transform 				: scale3d(0.8,0.8,1);
+	-webkit-transform-origin: 50% 100%;
+	transform-origin 		: 50% 100%;
 }
 
-.clients h2 {
-	color: #FFFFFF;
-	font-family: 'Roboto',sans-serif;
-	font-size: 30px;
-	font-weight: 500;
-	line-height: 40px;
-	text-transform: uppercase;
-	margin-top: 0;
+figure.effect-duke .icon-holder {
+	position 				: absolute;
+	top 					: 40%;
+	left 					: 0;
+	margin 					: 20px;
+	padding 				: 30px;
+	text-transform 			: none;
+	font-size 				: 90%;
+	opacity 				: 0;
+	width 					: 100%;
+	margin 					: auto;
+	-webkit-transform 		: scale3d(0.8,0.8,1);
+	transform 				: scale3d(0.8,0.8,1);
+	-webkit-transform-origin: 50% -100%;
+	transform-origin 		: 50% -100%;
 }
 
-.clients p {
-	color: #FFFFFF;
-	font-family: 'Roboto',sans-serif;
-	font-size: 14px;
-	font-weight: 300;
-	letter-spacing: 3px;
-	text-transform: uppercase;
+figure.effect-duke .icon-holder ul{
+	width 		: 185px;
+	margin 		: auto;
+
 }
 
-.clients p span{
-	color:#fc7700;
+figure.effect-duke:hover h2,
+figure.effect-duke:hover p {
+	opacity 			: 1;
+	-webkit-transform 	: scale3d(1,1,1);
+	transform 			: scale3d(1,1,1);
 }
+
+/* Media queries */
+@media screen and (max-width: 50em) {
+	.content {
+		padding 	: 0 10px;
+		text-align 	: center;
+	}
+	.grid figure {
+		display 	: inline-block;
+		float 		: none;
+		margin 		: 10px auto;
+		width 		: 100%;
+	}
+}
+
+
 
 /*====================
 ======Footer CSS=====

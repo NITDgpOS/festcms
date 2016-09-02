@@ -6,22 +6,43 @@
   <!-- Include bootstrap -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="/static/css/main.css" rel="stylesheet"><!----important---->
+		<link href="/static/css/responsive.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 </head>
 <body>
-  <div class="event_container">
-      <a href="{{ event.get_absolute_url }}"><h2>{{ event.name }}</h2></a>
+<header id="navigation">
+<div class="navbar navbar-fixed-top" role="banner"> 
+				<div class="container"> 
+					<div class="navbar-header"> 
+						<a class="navbar-brand" href="http://127.0.0.1:8000/"><h1><img class="img-responsive" src="/static/images/logo-mntc.png" alt="logo"></h1></a> 
+					</div> 
+</div>
+</div>
+</header>
+<section>
+  <div class="event_container container">
+      <h2 class="text-center">{{ event.name }}</h2>
+	<div class="row">
+	<div class="col-sm-6">
       {% if event.logo %}
-        <img src="{{ event.logo.url }}" width="200px">
+        <img src="{{ event.logo.url }}" alt="Oops!" width="100%">
       {% endif %}
+	</div>
+	<div class="col-sm-6">
+	<h2>About the Event</h2>
       <p>{{ event.description }}</p>
       <p>{{ event.venue }}</p>
+      <p><a href="{{ event.problem_statement_file }}" target='_download'>{{ event.problem_statement_file }}</a></p>
       {% if event in user_profile.registered_events.all %}
         <h3>You have already registered for this event</h3>
       {% else %}
-        <a href="/register_event/{{ event.identifier }}"><h3>Register</h2></a>
+        <a href="/register_event/{{ event.identifier }}"><button class="btn btn-lg btn-primary">Register</button></a>
       {% endif %}
+	</div>
+	</div>
   </div>
+<section>
 </body>
 </html>

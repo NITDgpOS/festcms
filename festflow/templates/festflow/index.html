@@ -23,7 +23,7 @@
 		<link href="/static/css/main.css" rel="stylesheet"><!----important---->
 		<link href="/static/css/responsive.css" rel="stylesheet">
 		<link rel="stylesheet" href="/static/css/style.css">
-		<link href="/static/css/decor.css" rel="stylesheet"><!--/CSS for contact us-->
+		<!--<link href="/static/css/decor.css" rel="stylesheet"><!--/CSS for contact us-->
 		<link rel="/static/stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="/static/css/component.css" /><!--CSS for effect home-->
 		<link rel="stylesheet" href="/static/css/owl.carousel.css"><!-- Important Owl stylesheet -->
@@ -100,16 +100,16 @@
 					<p class="main-title col-sm-12 wow zoomInUp " data-wow-duration="3s"><a href="http://www.ank.mntc.in" target="_blank"><span class="thin">ANK</span></a><br> </p>
 					 {% if user.is_authenticated %}
 						  	<!-- User is logged in -->
-						    <div class="user_details">
+						    <div class="user_details text-center ">
 						      <p>You are logged in as <b>{{ user.username }}</b>!</p>
 						      <p>First Name: {{ user.first_name }}</p>
 						      <p>Last Name: {{ user.last_name }}</p>
 						      <p>Email: {{ user.email }}</p>
 						  	</div>
-						  	<a href="/logout"><button class="btn-lg default">Login</button></a>
+						  	<a href="/logout"><button class="btn-lg default center-block">Logout</button></a>
 						  {% else %}
 						  	<!-- User is not logged in -->
-						    <h2>{{ profiles_count }} users have already registered! Register NOW!</h2>
+						    <h2 class="col-sm-12 text-center">{{ profiles_count }} users have already registered! Register NOW!</h2>
 						  	{% for backend in backends.backends %}
 						  	<a href="/login/{{backend}}/?next=/"><p class="col-sm-12 text-center login-button {{backend}}">{{backend}}</p></a><br>
 						  	{% endfor %}
@@ -207,82 +207,24 @@
 						<li><a class="btn btn-default" href="#" data-filter=".title">Title</a></li>
 					</ul><!--/#portfolio-filter-->
 					<div class="portfolio-items wow fadeInUp" data-wow-duration="2s">
-						<div class="col-sm-3 col-xs-12 portfolio-item title">
+						{% for event in all_events %}
+						<div class="col-sm-3 col-xs-12 portfolio-item {{ event.identifier }} event container">
 							<div class="view efffect">
 								<div class="portfolio-image">
-									<img src="/static/images/portfolio/work-image1.jpg" alt=""></div> 
+									{% if event.logo %}
+									<img src="{{ event.logo.url }}" alt= {{ event.name }}></div> 
+									{% endif %}
 									<div class="mask text-center">
-										<h3>Clash of Titans</h3>
-										<h4>The ANK Championship!</h4>
+										<a href="{{ event.get_absolute_url }}"><h3>{{ event.name }}</h3></a>
+										<h4>{{ event.description }}</h4>
+
 										<a href="#"><i class="fa fa-link"></i></a>
-										<a href="/static/images/portfolio/big-item.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
+										<a href="{{ event.logo.url }}" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
 									</div>
 								</div>
 							</div>
-							<div class="col-sm-3 col-xs-12 portfolio-item creativity">
-								<div class="view efffect" >
-									<div class="portfolio-image">
-										<img src="/static/images/portfolio/work-image2.jpg" alt="">
-									</div> 
-									<div class="mask text-center">
-										<h3>Constructo</h3>
-										<h4>Let Your Dreams come to Life</h4>
-										<a href="#"><i class="fa fa-link"></i></a>
-										<a href="/static/images/portfolio/work-image2.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-3 col-xs-12 portfolio-item coding">
-								<div class="view efffect">
-									<div class="portfolio-image">
-										<img src="/static/images/portfolio/work-image3.jpg" alt="">
-									</div> 
-									<div class="mask text-center">
-									<h3>Kryptic</h3>
-									<h4>Decipher the Future</h4>
-									<a href="#"><i class="fa fa-link"></i></a>
-									<a href="/static/images/portfolio/work-image3.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-3 col-xs-12 portfolio-item brain">
-							<div class="view efffect">
-								<div class="portfolio-image">
-									<img src="/static/images/portfolio/work-image4.jpg" alt="">
-								</div> 
-								<div class="mask text-center">
-									<h3>Matrix</h3>
-									<h4>Unleash the Mathematician in you</h4>
-									<a href="#"><i class="fa fa-link"></i></a>
-									<a href="/static/images/portfolio/work-image4.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-3 col-xs-12 portfolio-item coding">
-							<div class="view efffect">
-								<div class="portfolio-image">
-									<img src="/static/images/portfolio/work-image5.jpg" alt="">
-								</div> <div class="mask text-center">
-								<h3>Simplex</h3>
-								<h4>Unleash the Coder in you</h4>
-								<a href="#"><i class="fa fa-link"></i></a>
-								<a href="/static/images/portfolio/work-image5.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-xs-12 portfolio-item title">
-						<div class="view efffect">
-							<div class="portfolio-image">
-								<img src="/static/images/portfolio/work-image6.jpg" alt="">
-							</div> 
-							<div class="mask text-center">
-								<h3>Terrorist TakeDown</h3>
-								<h4>The Treasure Hunt</h4>
-								<a href="#"><i class="fa fa-link"></i></a>
-								<a href="/static/images/portfolio/work-image6.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-							</div>
-						</div>
-					</div>
+							{% endfor %}
+							
 
 						</section> <!--/#events-->
 						
@@ -442,16 +384,6 @@
       });
 
     });
-    </script><!--/scripts-->	
- {% for event in all_events %}
-    <div class="event_container">
-      <a href="{{ event.get_absolute_url }}"><h2>{{ event.name }}</h2></a>
-      {% if event.logo %}
-        <img src="{{ event.logo.url }}" width="200px">
-      {% endif %}
-      <p>{{ event.description }}</p>
-      <p>{{ event.venue }}</p>
-    </div>
-  {% endfor %}
+    </script><!--/scripts-->
 	</body>
 	</html>
