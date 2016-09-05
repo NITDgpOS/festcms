@@ -23,7 +23,6 @@
 		<link href="/static/css/main.css" rel="stylesheet"><!----important---->
 		<link href="/static/css/responsive.css" rel="stylesheet">
 		<link rel="stylesheet" href="/static/css/style.css">
-		<!--<link href="/static/css/decor.css" rel="stylesheet"><!--/CSS for contact us-->
 		<link rel="/static/stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="/static/css/component.css" /><!--CSS for effect home-->
 		<link rel="stylesheet" href="/static/css/owl.carousel.css"><!-- Important Owl stylesheet -->
@@ -81,9 +80,7 @@
 							<li class="scroll active"><a href="#effect">Home</a></li> 
 							<li class="scroll"><a href="#about-us">About ANK</a></li> 
 							<li class="scroll"><a href="#services">About MNTC</a></li> 
-							<li class="scroll"><a href="#portfolio">ANK-The Fest</a></li> 
-							<li class="scroll"><a href="#clients">CAT Forum</a></li> 
-							<li class="scroll"><a href="#teams">Our Team</a></li> 
+							<li class="scroll"><a href="#portfolio">Events</a></li>  
 							<li class="scroll"><a href="#contact">Contact</a></li> 
 						</ul> 
 					</div> 
@@ -97,25 +94,10 @@
 		<div class="demo-1">
 			<div class="content">
 				<div id="large-header" class="large-header wow zoomInUp" data-wow-duration="1s">
-					<p class="main-title col-sm-12 wow zoomInUp " data-wow-duration="3s"><a href="http://www.ank.mntc.in" target="_blank"><span class="thin">ANK</span></a><br> </p>
-					 {% if user.is_authenticated %}
-						  	<!-- User is logged in -->
-						    <div class="user_details text-center ">
-						      <p>You are logged in as <b>{{ user.username }}</b>!</p>
-						      <p>First Name: {{ user.first_name }}</p>
-						      <p>Last Name: {{ user.last_name }}</p>
-						      <p>Email: {{ user.email }}</p>
-						  	</div>
-						  	<a href="/logout"><button class="btn-lg default center-block">Logout</button></a>
-						  {% else %}
-						  	<!-- User is not logged in -->
-						    <h2 class="col-sm-12 text-center">{{ profiles_count }} users have already registered! Register NOW!</h2>
-						  	{% for backend in backends.backends %}
-						  	<a href="/login/{{backend}}/?next=/"><p class="col-sm-12 text-center login-button {{backend}}">{{backend}}</p></a><br>
-						  	{% endfor %}
-						  {% endif %}	
-	                                
 					
+						
+	                                
+				<!--<p class="main-title col-sm-12 wow zoomInUp " data-wow-duration="3s"><a href="http://www.ank.mntc.in" target="_blank"><span class="thin">ANK</span></a><br> </p>-->
 					<canvas id="demo-canvas"></canvas>
 				</div>
 			</div>

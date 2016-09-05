@@ -34,7 +34,7 @@
 	<h2>About the Event</h2>
       <p>{{ event.description }}</p>
       <p>{{ event.venue }}</p>
-      <p><a href="{{ event.problem_statement_file }}" target='_download'>{{ event.problem_statement_file }}</a></p>
+      <p>{{ event.problem_statement_file }}</p>
       {% if event in user_profile.registered_events.all %}
         <h3>You have already registered for this event</h3>
       {% else %}
