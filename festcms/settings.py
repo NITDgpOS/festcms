@@ -117,12 +117,12 @@ MEDIA_URL = '/media/'
 
 # django auth settings
 LOGIN_REDIRECT_URL = '/'
-LOGIN_URL = '/login'
+LOGIN_URL = '/login/'
 
 
 # python-social-auth settings
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
-SOCIAL_AUTH_LOGIN_URL = '/login'
+SOCIAL_AUTH_LOGIN_URL = '/login/'
 
 SOCIAL_AUTH_PIPELINE = (
     # Get the information we can about the user and return it in a simple

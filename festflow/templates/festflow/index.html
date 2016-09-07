@@ -1,112 +1,124 @@
-	<!DOCTYPE html>
-	<html lang="en">
-	<head> 
-		<meta charset="utf-8"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<meta name="description" content="ANK 2016 - The Knowledge Fest by National Institute Of Technology Durgapur Maths N Tech Club">
-		<meta name="keywords" content="MNTC,Ank 2K16" /> 
-		<meta name="author" content="Maths n Tech Club"> 
-		<title>ANK 2016!#LetTheFunBegin </title>	
-		
-		<!-- SOCIAL MEDIA META -->
-		<meta property="og:title" content="ANK 2016 | The Knowledge Fest"/>
-	    	<meta property="og:url" content="http://ank.mntc.in" />
-		<meta property="og:type" content="article" />
-		<meta property="og:description" content="MNTC NIT Durgapur presents ANK 2016 | The Knowledge Fest" />
-		
-		{% load staticfiles %}
-		<!-- STYLE SHEETS-->
-		<link href="/static/css/bootstrap.min.css" rel="stylesheet">
-		<link href="/static/css/prettyPhoto.css" rel="stylesheet"> 
-		<link href="/static/css/font-awesome.min.css" rel="stylesheet"> 
-		<link href="/static/css/animate.css" rel="stylesheet"> <!-- used for wow.js-->
-		<link href="/static/css/main.css" rel="stylesheet"><!----important---->
-		<link href="/static/css/responsive.css" rel="stylesheet">
-		<link rel="stylesheet" href="/static/css/style.css">
-		<link rel="/static/stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="/static/css/component.css" /><!--CSS for effect home-->
-		<link rel="stylesheet" href="/static/css/owl.carousel.css"><!-- Important Owl stylesheet -->
-		<link rel="stylesheet" href="/static/css/owl.theme.css">
-		
-		<!--[if lt IE 9]> <script src="js/html5shiv.js"></script> 
-		<script src="js/respond.min.js"></script> <![endif]--> 
-		
-		<link rel="shortcut icon" href="static/images/ico/favicon.png">  
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,800,400' rel='stylesheet' type='text/css'>
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="description" content="ANK 2016 - The Knowledge Fest by National Institute Of Technology Durgapur Maths N Tech Club">
+	<meta name="keywords" content="MNTC,Ank 2K16" /> 
+	<meta name="author" content="Maths n Tech Club"> 
+	<title>ANK 2016! #LetTheFunBegin </title>	
+	
+	<!-- SOCIAL MEDIA META -->
+	<meta property="og:title" content="ANK 2016 | The Knowledge Fest"/>
+	<meta property="og:url" content="http://ank.mntc.in" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="MNTC NIT Durgapur presents ANK 2016 | The Knowledge Fest" />
+	
+	{% load staticfiles %}
+	<!-- STYLE SHEETS-->
+	<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/static/css/prettyPhoto.css" rel="stylesheet">
+	<link href="/static/css/font-awesome.min.css" rel="stylesheet">
+	<link href="/static/css/animate.css" rel="stylesheet"> <!-- used for wow.js-->
+	<link href="/static/css/main.css" rel="stylesheet"><!-- - - important - - -->
+	<link href="/static/css/responsive.css" rel="stylesheet">
+	<link rel="stylesheet" href="/static/css/style.css">
+	<link rel="/static/stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/component.css" /><!--CSS for effect home-->
+	<link rel="stylesheet" href="/static/css/owl.carousel.css"><!-- Important Owl stylesheet -->
+	<link rel="stylesheet" href="/static/css/owl.theme.css">
+
+	<!--[if lt IE 9]> <script src="js/html5shiv.js"></script> 
+	<script src="js/respond.min.js"></script> <![endif]--> 
+
+	<link rel="shortcut icon" href="static/images/ico/favicon.png">  
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,800,400' rel='stylesheet' type='text/css'>
 
 
-		
-		<script src="http://maps.googleapis.com/maps/api/js"></script><!--GOOGLE MAP API-->
-		
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script><!----WOW.JS--->
-		<script>
+	
+	<script src="http://maps.googleapis.com/maps/api/js"></script><!--GOOGLE MAP API-->
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script><!-- WOW.JS -->
+	<script>
 		new WOW().init();
-		</script>
+	</script>
 
-				  
-	</head><!--/head-->
 	
-	<body data-spy="scroll" data-target=".navbar" data-offset="90" style="overflow-x:hidden">
+</head><!-- /head-->
+
+<body data-spy="scroll" data-target=".navbar" data-offset="90" style="overflow-x:hidden">
+
+	<!-- - - - - - - - - PRELOADER - - - - - - - - -->
 	
-		<!--------------PRELOADER----------->
-		
-		<div class="preloader">
-			<div class="preloder-wrap">
-				<div class="preloder-inner"> 
-					<div class="ball"></div> 
-					<div class="ball"></div> 
-					<div class="ball"></div> 
-					<div class="ball"></div> 
-					<div class="ball"></div> 
-					<div class="ball"></div> 
-					<div class="ball"></div>
-				</div>
+	<div class="preloader">
+		<div class="preloder-wrap">
+			<div class="preloder-inner"> 
+				<div class="ball"></div> 
+				<div class="ball"></div> 
+				<div class="ball"></div> 
+				<div class="ball"></div> 
+				<div class="ball"></div> 
+				<div class="ball"></div> 
+				<div class="ball"></div>
 			</div>
-		 </div><!--/.preloader-->
-		
-		<!------------------------NAVIGATION--------------------->
-		
-		<header id="navigation"> 
-			<div class="navbar navbar-inverse navbar-fixed-top" role="banner"> 
-				<div class="container"> 
-					<div class="navbar-header"> 
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
-							<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> 
-						</button> 
-						<a class="navbar-brand" href="index.html"><h1><img class="img-responsive" src="/static/images/logo-mntc.png" alt="logo"></h1></a> 
-					</div> 
-					<div class="collapse navbar-collapse"> 
-						<ul class="nav navbar-nav navbar-right"> 
-							<li class="scroll active"><a href="#effect">Home</a></li> 
-							<li class="scroll"><a href="#about-us">About ANK</a></li> 
-							<li class="scroll"><a href="#services">About MNTC</a></li> 
-							<li class="scroll"><a href="#portfolio">Events</a></li>  
-							<li class="scroll"><a href="#contact">Contact</a></li> 
-						</ul> 
-					</div> 
-				</div> 
-			</div><!--/navbar--> 
-		</header> <!--/#navigation-->
-
-	<!-------------HOME------------>
+		</div>
+	</div><!--/.preloader-->
 	
+	<!-- - - - - - - - - NAVIGATION - - - - - - - - -->
+	
+	<header id="navigation"> 
+		<div class="navbar navbar-inverse navbar-fixed-top" role="banner"> 
+			<div class="container"> 
+				<div class="navbar-header"> 
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+						<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> 
+					</button> 
+					<a class="navbar-brand" href="index.html"><h1><img class="img-responsive" src="/static/images/logo-mntc.png" alt="logo"></h1></a> 
+				</div> 
+				<div class="collapse navbar-collapse"> 
+					<ul class="nav navbar-nav navbar-right"> 
+						<li class="scroll active"><a href="#effect">Home</a></li> 
+						<li class="scroll"><a href="#about-us">About ANK</a></li> 
+						<li class="scroll"><a href="#services">About MNTC</a></li> 
+						<li class="scroll"><a href="#portfolio">Events</a></li>  
+						<li class="scroll"><a href="#contact">Contact</a></li> 
+					</ul> 
+				</div> 
+			</div> 
+		</div><!--/navbar--> 
+	</header> <!--/#navigation-->
+
+	<!-- - HOME - -->
+
 	<section id="effect">
 		<div class="demo-1">
 			<div class="content">
 				<div id="large-header" class="large-header wow zoomInUp" data-wow-duration="1s">
-					
-						
-	                                
-				<!--<p class="main-title col-sm-12 wow zoomInUp " data-wow-duration="3s"><a href="http://www.ank.mntc.in" target="_blank"><span class="thin">ANK</span></a><br> </p>-->
+					<!--{% if user.is_authenticated %}
+					User is logged in
+					<div class="user_details text-center auth">
+						<p>You are logged in as <b>{{ user.username }}</b>!</p>
+						<p>First Name: {{ user.first_name }}</p>
+						<p>Last Name: {{ user.last_name }}</p>
+						<p>Email: {{ user.email }}</p>
+						<a href="/logout"><button class="btn-lg default center-block">Logout</button></a>
+					</div>
+					{% else %}
+					User is not logged in 
+					<h2 class="main-title col-sm-12 text-center">{{ profiles_count }} users have already registered! Register NOW!</h2>
+					<a href="/login/facebook/?next=/"><button class="btn btn-primary auth center-block login-button facebook">FB</button></a>
+					<a href="/login/google-oauth2/?next=/"><button class="btn btn-primary auth center-block login-button google-oauth2">GOOGLE</button></a>
+					{% endif %}-->
 					<canvas id="demo-canvas"></canvas>
+
 				</div>
 			</div>
 		</div>
 	</section><!--/HOME-->	
-		
-		
-		<!-------------------ABOUT US---------------->
-		
+
+
+	<!-- - - ABOUT US - - - -->
+
 	<section id="about-us" >
 		<div class="container" >
 			<div class="text-center">
@@ -114,258 +126,261 @@
 				<div class="jumbotron wow bounceIn" data-wow-duration="1s">
 					<h2 class="title-one">About ANK</h2>
 					<div class="row">
-					<div class="col-sm-6">
-					    <img src="/static/images/aboutank1.jpg" class="img-responsive" alt="ank-img">
+						<div class="col-sm-6">
+							<img src="/static/images/aboutank1.jpg" class="img-responsive" alt="ank-img">
+						</div>
+						<div class="col-sm-6">
+							<p> Started in the year 2004, Maths and Tech club was initially conceived with the concept of creating  platform to engender in students fervor for the mathematics by emphasizing its benefits and the want for logic through through a multitude of intriguing challenges.<br/><br/>
+								Due to the uniqueness of our area of emphasis and the unending support of our faculty, Maths N Tech club conquers great heights with every passing year,as is evident from the grand success of ANK  2015. The aim is to imbue some gaiety in our intensely banal odd-semester,where students can enhance their aptitude, quench thier knowledge of thirst, and have a jovial time.<br/>
+								ANK is conceptuated to take these things into consideration.Coming up with  plethora of events like Simplex,Kryptic,Constructo,Clash of titans,Terrorist takedown etc,this fest guarantees to elevate student  aptitude to a new zenith of logic and free-thinking.
+							</p></div>
+						</div>
 					</div>
-					<div class="col-sm-6">
-					<p> Started in the year 2004, Maths and Tech club was initially conceived with the concept of creating  platform to engender in students fervor for the mathematics by emphasizing its benefits and the want for logic through through a multitude of intriguing challenges.<br/><br/>
-				Due to the uniqueness of our area of emphasis and the unending support of our faculty, Maths N Tech club conquers great heights with every passing year,as is evident from the grand success of ANK  2015. The aim is to imbue some gaiety in our intensely banal odd-semester,where students can enhance their aptitude, quench thier knowledge of thirst, and have a jovial time.<br/>
-				ANK is conceptuated to take these things into consideration.Coming up with  plethora of events like Simplex,Kryptic,Constructo,Clash of titans,Terrorist takedown etc,this fest guarantees to elevate student  aptitude to a new zenith of logic and free-thinking.
-	</p></div>
+
 				</div>
 			</div>
-			
-					</div>
-				</div>
-			</div>
-		</section><!--/#about-us-->
-		
-		<!-----------------------ABOUT US------------------->
-		
-		<section id="services" class="parallax-section">
-			<div class="container">
-				<div class="row text-center wow bounce" data-wow-duration="1s">
-					<div class="col-sm-8 col-sm-offset-2">
-						<h2 class="title-one">About MNTC</h2>
-						<p style="text-align:center;font-weight:900;color:#000;padding-top:0px">------------<span class="glyphicon glyphicon-screenshot"></span>-----------</p>
-					</div>
-				</div>
-				<div class="row wow fadeInRight" data-wow-duration="2s">
-					<div class="col-sm-12">
-						<div class="our-service">
-							<div class="services row">
-								<div class="col-sm-4">
-									<div class="single-service wow flipInY" data-wow-duration="1s" data-wow-delay="500ms">
-										<i class="fa fa-group"></i>
-										<h3>Who We Are?</h3>
-										<p>Mathematics,an abstract science of numbers, quantity and space,has held its place as prerequisite to flourish in today's world.At Maths n Tech Club,we realize the importance of analytical reasoning and rational thinking and hence organize a plethora of events which kindle students' interest in maths and the thirst of knowledge.</p>
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="single-service wow flipInY" data-wow-duration="1s" data-wow-delay="1000ms">
-										<i class="fa fa-asterisk"></i>
-										<h3>Story of Timeline</h3>
-										<p>Established in 2004, our club was,set up with the motive of creating a platform for mathematical fervor through a multitude of challenges. </p>
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="single-service wow flipInY" data-wow-duration="1s" data-wow-delay="1500ms">
-										<i class="fa fa-gears"></i>
-										<h3>Why We Do It?</h3>
-										<p>With the kind of support from our faculty and team members,MNTC has reached greater heights with every passing year.Our annual knowledge fest always keeps in promise to be the most happening fest for the inquisitive student minds.</p>
-									</div>
-								</div></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section><!--/#about mntc-->
+		</div>
+	</section><!--/#about-us-->
 
-			
-			<!------------------------EVENTS--------------------->
-			
-			<section id="portfolio">
-				
-					<div class="row text-center">
-						<div class="col-sm-8 col-sm-offset-2">
-							<h2 class="title-one wow rubberBand" data-wow-duration="2s">Events</h2>
-						</div>
-					</div>
-					<ul class="portfolio-filter text-center wow fadeInUp" data-wow-duration="2s">
-						<li><a class="btn btn-default active" href="#" data-filter="*">All</a></li>
-						<li><a class="btn btn-default" href="#" data-filter=".coding">Coding</a></li>
-						<li><a class="btn btn-default" href="#" data-filter=".creativity">Creativity</a></li>
-						<li><a class="btn btn-default" href="#" data-filter=".brain">Brain-Storming</a></li>
-						<li><a class="btn btn-default" href="#" data-filter=".title">Title</a></li>
-					</ul><!--/#portfolio-filter-->
-					<div class="portfolio-items wow fadeInUp" data-wow-duration="2s">
-						{% for event in all_events %}
-						<div class="col-sm-3 col-xs-12 portfolio-item {{ event.identifier }} event container">
-							<div class="view efffect">
-								<div class="portfolio-image">
-									{% if event.logo %}
-									<img src="{{ event.logo.url }}" alt= {{ event.name }}></div> 
-									{% endif %}
-									<div class="mask text-center">
-										<a href="{{ event.get_absolute_url }}"><h3>{{ event.name }}</h3></a>
-										<h4>{{ event.description }}</h4>
-
-										<a href="#"><i class="fa fa-link"></i></a>
-										<a href="{{ event.logo.url }}" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-									</div>
-								</div>
-							</div>
-							{% endfor %}
-							
-
-						</section> <!--/#events-->
-						
-						
-						<!---------------SPONSORS-------------->
-						
-						<section id="sponsors"class="jumbotron" >
-						<div class="text-center">
-						<p> <strong>PREVIOUS SPONSORS</strong></p>
-						</div>
-						<div id="owl-demo" class="owl-carousel container"><!--owl carousel-->
-							  <div class="item"><img src="/static/images/slider/logo1.png" alt="LEE Image"></div>
-							  <div class="item"><img src="/static/images/slider/logo2.png" alt="Career Launcher"></div>
-							  <div class="item"><img src="/static/images/slider/logo3.png" alt="Unison"></div>
-							  <div class="item"><img src="/static/images/slider/logo4.png" alt="Tvs"></div>
-								</div><!--/owl carousel-->
-								</section><!--/sponsors-->
-					
-						<!--------------- MAP GOOGLE---------------->
-						
-				 <div id="googleMap" style="width:100%px;height:480px;"></div>	
-								
-								
-						<!--------------CONTACT US------------------>
-						
-			<section id = "contact">
-			<section id="team" class="our-team section-padding">
+	<!-- - - - -ABOUT US- - - - - -->
+	
+	<section id="services" class="parallax-section">
 		<div class="container">
-		<div class="row">
-		  <div class="wow zoomIn col-xs-12 text-center p-padding" data-wow-duration="2s">
-			<p id="conhead"><strong>CONTACT US</strong></p>
-		  </div><!-- col-xs-12 -->
-		</div><!-- row -->
-		<div class="row">
-		  <div class="wow zoomIn col-xs-12 col-sm-6 col-md-3" data-wow-duration="2s">
-			<div class="grid">
-			  <figure class="effect-duke">
-				<img class="img-responsive" src="/static/images/contact/team1.jpg" alt="img09">
-				<figcaption>
-				  <div class="icon-holder">
-					<ul >
-					  <li><a href="https://www.facebook.com/sourav.pal.1428" target="_blank"><i class="fa fa-facebook"></i></a></li>
-					  <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-					  <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-					</ul>
-				  </div>
-				</figcaption>     
-			  </figure>
+			<div class="row text-center wow bounce" data-wow-duration="1s">
+				<div class="col-sm-8 col-sm-offset-2">
+					<h2 class="title-one">About MNTC</h2>
+					<p style="text-align:center;font-weight:900;color:#000;padding-top:0px">------------<span class="glyphicon glyphicon-screenshot"></span>-----------</p>
+				</div>
 			</div>
-			<div class="team-designation">
-			  <p>SOURAV PAL</p>
-			  <span>PRESIDENT</span>
+			<div class="row wow fadeInRight" data-wow-duration="2s">
+				<div class="col-sm-12">
+					<div class="our-service">
+						<div class="services row">
+							<div class="col-sm-4">
+								<div class="single-service wow flipInY" data-wow-duration="1s" data-wow-delay="500ms">
+									<i class="fa fa-group"></i>
+									<h3>Who We Are?</h3>
+									<p>Mathematics,an abstract science of numbers, quantity and space,has held its place as prerequisite to flourish in today's world.At Maths n Tech Club,we realize the importance of analytical reasoning and rational thinking and hence organize a plethora of events which kindle students' interest in maths and the thirst of knowledge.</p>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="single-service wow flipInY" data-wow-duration="1s" data-wow-delay="1000ms">
+									<i class="fa fa-asterisk"></i>
+									<h3>Story of Timeline</h3>
+									<p>Established in 2004, our club was,set up with the motive of creating a platform for mathematical fervor through a multitude of challenges. </p>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="single-service wow flipInY" data-wow-duration="1s" data-wow-delay="1500ms">
+									<i class="fa fa-gears"></i>
+									<h3>Why We Do It?</h3>
+									<p>With the kind of support from our faculty and team members,MNTC has reached greater heights with every passing year.Our annual knowledge fest always keeps in promise to be the most happening fest for the inquisitive student minds.</p>
+								</div>
+							</div></div>
+						</div>
+					</div>
+				</div>
 			</div>
-		  </div>
-		  <div class=" wow zoomIn col-xs-12 col-sm-6 col-md-3">
-			<div class="grid">
-			  <figure class="effect-duke">
-				<img class="img-responsive" src="/static/images/contact/team2.jpg" alt="img09">
-				<figcaption>
-				  <div class="icon-holder">
-					<ul >
-					  <li><a href="https://www.facebook.com/neelkumar01" target="_blank"><i class="fa fa-facebook"></i></a></li>
-					  <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-					  <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-					</ul>
-				  </div>
-				</figcaption>     
-			  </figure>
-			</div>
-			<div class="team-designation">
-			  <p>NEEL KUMAR</p>
-			  <span>TREASURER</span>
-			</div>
-		  </div>
-		  <div class="wow zoomIn col-xs-12 col-sm-6 col-md-3">
-			<div class="grid">
-			  <figure class="effect-duke">
-				<img class="img-responsive" src="/static/images/contact/team3.jpg" alt="img09">
-				<figcaption>
-				  <div class="icon-holder">
-					<ul >
-					  <li><a href="https://www.facebook.com/aditi.shrivastava.9634" target="_blank"><i class="fa fa-facebook"></i></a></li>
-					  <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-					  <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-					</ul>
-				  </div>
-				</figcaption>     
-			  </figure>
-			</div>
-			<div class="team-designation">
-			  <p>ADITI SRIVASTAVA</p>
-			  <span>CONVENOR</span>
-			</div>
-		  </div>
-		  <div class="wow zoomIn col-xs-12 col-sm-6 col-md-3">
-			<div class="grid">
-			  <figure class="effect-duke">
-				<img class="img-responsive" src="/static/images/contact/team4.jpg" alt="img09">
-				<figcaption>
-				  <div class="icon-holder">
-					<ul >
-					  <li><a href="https://www.facebook.com/dukedom26" target="_blank"><i class="fa fa-facebook"></i></a></li>
-					  <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-					  <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-					</ul>
-				  </div>
-				</figcaption>     
-			  </figure>
-			</div>
-			<div class="team-designation">
-			  <p>ANTARIN KARMAKAR</p>
-			  <span>GENERAL SECRETARY</span>
-			</div>
-		  </div>
-		</div><!-- row -->
-	  </div><!-- container -->
-	  </section>
-	</section><!--/contact us -->
+		</section><!--/#about mntc-->
 
-	<!------------------ FOOTER-------------------->
-		<footer id="footer"> 
-			<div class="container"> 
-				<div class="text-center wow fadeInRight" data-wow-duration="3s"> 
-					<p>Copyright &copy; 2016 - <a href="#">MNTC</a> | All Rights Reserved</p> 
-				</div> 
-			</div> 
-		</footer> <!--/#footer--> 
-	
-
-	<!-----SCRIPTS------------->
-	
-		<script type="text/javascript" src="/static/js/jquery.js"></script> 
-		<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.js"></script>
-		<script type="text/javascript" src="/static/js/smoothscroll.js"></script>
-		<script type="text/javascript" src="/static/js/jquery.isotope.min.js"></script>
-		<script type="text/javascript" src="/static/js/jquery.prettyPhoto.js"></script> 
-		<script type="text/javascript" src="/static/js/jquery.parallax.js"></script> 
-		<script type="text/javascript" src="/static/js/main.js"></script> 
-		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-		<script type="text/javascript" src='/static/js/velocity.min.js'></script>
-		<script type="text/javascript" src="/static/js/owl.carousel.js"></script>
-<!--------Script for home effect------->		
-		<script src="/static/js/TweenLite.min.js"></script>
-		<script src="/static/js/EasePack.min.js"></script>
-		<script src="/static/js/rAF.js"></script>
-		<script src="/static/js/demo-1.js"></script><!--/home effect-->
-			<script src="/static/js/index.js"></script><!--slider team-->
+		
+		<!-- - - - - -EVENTS- - - - - -->
+		
+		<section id="portfolio">
 			
-			<script>
-    $(document).ready(function() {
-      $("#owl-demo").owlCarousel({
-        autoPlay: 2000,
-        items : 4,
-        itemsDesktop : [1199,3],
-        itemsDesktopSmall : [979,3]
-      });
+			<div class="row text-center">
+				<div class="col-sm-8 col-sm-offset-2">
+					<h2 class="title-one wow rubberBand" data-wow-duration="2s">Events</h2>
+				</div>
+			</div>
+			<ul class="portfolio-filter text-center wow fadeInUp" data-wow-duration="2s">
+				<li><a class="btn btn-default active" href="#" data-filter="*">All</a></li>
+				<li><a class="btn btn-default" href="#" data-filter=".coding">Coding</a></li>
+				<li><a class="btn btn-default" href="#" data-filter=".creativity">Creativity</a></li>
+				<li><a class="btn btn-default" href="#" data-filter=".brain">Brain-Storming</a></li>
+				<li><a class="btn btn-default" href="#" data-filter=".title">Title</a></li>
+			</ul><!--/#portfolio-filter-->
+			<div class="portfolio-items wow fadeInLeft" data-wow-duration="2s">
+				{% for event in all_events %}
+				<div class="col-sm-3 col-xs-12 portfolio-item {{ event.identifier }} event container">
+					<div class="view efffect">
+						<div class="portfolio-image">
+							{% if event.logo %}
+							<img src="{{ event.logo.url }}" alt= {{ event.name }}></div> 
+							{% endif %}
+							<div class="mask text-center">
+								<h3>{{ event.name }}</h3>
+								<h4>{{ event.description }}</h4>
 
-    });
-    </script><!--/scripts-->
-	</body>
-	</html>
+								<a href="{{ event.get_absolute_url }}"><i class="fa fa-link"></i></a>
+								<a href="{{ event.logo.url }}" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+					
+
+				</section> <!--/#events-->
+				
+				
+				<!-- - - - SPONSORS- - - - - -->
+				
+				<section id="sponsors"class="jumbotron" >
+					<div class="text-center">
+						<p> <strong>PREVIOUS SPONSORS</strong></p>
+					</div>
+					<div id="owl-demo" class="owl-carousel container"><!--owl carousel-->
+						<div class="item"><img src="/static/images/slider/logo1.png" alt="LEE Image"></div>
+						<div class="item"><img src="/static/images/slider/logo2.png" alt="Career Launcher"></div>
+						<div class="item"><img src="/static/images/slider/logo3.png" alt="Unison"></div>
+						<div class="item"><img src="/static/images/slider/logo4.png" alt="Tvs"></div>
+					</div><!--/owl carousel-->
+				</section><!--/sponsors-->
+
+				<!--- - - - -  MAP GOOGLE- - - - - -->
+				
+				<div id="googleMap" style="width:100%px;height:480px;"></div>	
+
+
+				<!-- - - - - -CONTACT US- - - - - -->
+				
+				<section id = "contact">
+					<section id="team" class="our-team section-padding">
+						<div class="container">
+							<div class="row">
+								<div class="wow zoomIn col-xs-12 text-center p-padding" data-wow-duration="2s">
+									<p id="conhead"><strong>CONTACT US</strong></p>
+								</div><!-- col-xs-12 -->
+							</div><!-- row -->
+							<div class="row">
+								<div class="wow zoomIn col-xs-12 col-sm-6 col-md-3" data-wow-duration="2s">
+									<div class="grid">
+										<figure class="effect-duke">
+											<img class="img-responsive" src="/static/images/contact/team1.jpg" alt="img09">
+											<figcaption>
+												<div class="icon-holder">
+													<ul >
+														<li><a href="https://www.facebook.com/sourav.pal.1428" target="_blank"><i class="fa fa-facebook"></i></a></li>
+														<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+														<li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+													</ul>
+												</div>
+											</figcaption>     
+										</figure>
+									</div>
+									<div class="team-designation">
+										<p>SOURAV PAL</p>
+										<span>PRESIDENT</span>
+									</div>
+								</div>
+								<div class=" wow zoomIn col-xs-12 col-sm-6 col-md-3">
+									<div class="grid">
+										<figure class="effect-duke">
+											<img class="img-responsive" src="/static/images/contact/team2.jpg" alt="img09">
+											<figcaption>
+												<div class="icon-holder">
+													<ul >
+														<li><a href="https://www.facebook.com/neelkumar01" target="_blank"><i class="fa fa-facebook"></i></a></li>
+														<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+														<li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+													</ul>
+												</div>
+											</figcaption>     
+										</figure>
+									</div>
+									<div class="team-designation">
+										<p>NEEL KUMAR</p>
+										<span>TREASURER</span>
+									</div>
+								</div>
+								<div class="wow zoomIn col-xs-12 col-sm-6 col-md-3">
+									<div class="grid">
+										<figure class="effect-duke">
+											<img class="img-responsive" src="/static/images/contact/team3.jpg" alt="img09">
+											<figcaption>
+												<div class="icon-holder">
+													<ul >
+														<li><a href="https://www.facebook.com/aditi.shrivastava.9634" target="_blank"><i class="fa fa-facebook"></i></a></li>
+														<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+														<li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+													</ul>
+												</div>
+											</figcaption>     
+										</figure>
+									</div>
+									<div class="team-designation">
+										<p>ADITI SRIVASTAVA</p>
+										<span>CONVENOR</span>
+									</div>
+								</div>
+								<div class="wow zoomIn col-xs-12 col-sm-6 col-md-3">
+									<div class="grid">
+										<figure class="effect-duke">
+											<img class="img-responsive" src="/static/images/contact/team4.jpg" alt="img09">
+											<figcaption>
+												<div class="icon-holder">
+													<ul >
+														<li><a href="https://www.facebook.com/dukedom26" target="_blank"><i class="fa fa-facebook"></i></a></li>
+														<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+														<li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+													</ul>
+												</div>
+											</figcaption>     
+										</figure>
+									</div>
+									<div class="team-designation">
+										<p>ANTARIN KARMAKAR</p>
+										<span>GENERAL SECRETARY</span>
+									</div>
+								</div>
+							</div><!-- row -->
+						</div><!-- container -->
+					</section>
+				</section><!--/contact us -->
+
+				<!--- - - - - - - FOOTER- - - - - -  -->
+				<footer id="footer"> 
+					<div class="container"> 
+						<div class="text-center wow fadeInRight" data-wow-duration="3s"> 
+							<p>Copyright &copy; 2016 - <a href="#">MNTC</a> | All Rights Reserved</p> 
+						</div> 
+					</div> 
+				</footer> <!--/#footer--> 
+
+
+
+				<!-- - - - -Script files- - - - -->
+
+				<script type="text/javascript" src="/static/js/jquery.js"></script> 
+				<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.js"></script>
+				<script type="text/javascript" src="/static/js/smoothscroll.js"></script>
+				<script type="text/javascript" src="/static/js/jquery.isotope.min.js"></script>
+				<script type="text/javascript" src="/static/js/jquery.prettyPhoto.js"></script> 
+				<script type="text/javascript" src="/static/js/jquery.parallax.js"></script> 
+				<script type="text/javascript" src="/static/js/main.js"></script> 
+				<script type="text/javascript" src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+				<script type="text/javascript" src='/static/js/velocity.min.js'></script>
+				<script type="text/javascript" src="/static/js/owl.carousel.js"></script>
+
+				<!-- - - - -Script for home effect- - - - -->
+
+				<script src="/static/js/TweenLite.min.js"></script>
+				<script src="/static/js/EasePack.min.js"></script>
+				<script src="/static/js/rAF.js"></script>
+				<script src="/static/js/demo-1.js"></script><!--/home effect-->
+				<script src="/static/js/index.js"></script><!--slider team-->
+
+				<script>
+					$(document).ready(function() {
+						$("#owl-demo").owlCarousel({
+							autoPlay: 2000,
+							items : 4,
+							itemsDesktop : [1199,3],
+							itemsDesktopSmall : [979,3]
+						});
+
+					});
+				</script><!--/scripts-->
+			</body>
+			</html>

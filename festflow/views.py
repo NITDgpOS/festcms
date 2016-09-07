@@ -17,6 +17,8 @@ def index(request):
     context['all_events'] = all_events
     return render(request, 'festflow/index.html', context)
 
+def login_page(request):
+    return render(request, 'festflow/login_page.html', {})
 
 def event_view(request, event_identifier):
     context = {}

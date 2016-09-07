@@ -14,6 +14,7 @@
 	background-size: cover;
 	background-position: center center;
 	z-index: 1;
+	
 }
 
 .demo-1 .large-header {
@@ -23,41 +24,27 @@
 .main-title {
 	margin: 0;
 	padding: 0;
-	color: #f9f1e9;
+	color: #ffffff;
 	text-align: center;
-	top: 50%;
+	top: 80%;
 	left: 50%;
 	-webkit-transform: translate3d(-50%,-50%,0);
 	transform: translate3d(-50%,-50%,0);
-}
-
-.title-main {
-	margin: 0;
-	padding: 0;
-	color: #f9f1e9;
-	text-align: center;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate3d(-50%,-50%,0);
-	transform: translate3d(-50%,-50%,0);
-	font-size:2em;
 }
 
 .demo-1 .main-title {  
 	text-transform: uppercase;
-	font-size: 4.2em;
 	letter-spacing: 0.1em;
 }
 
-.main-title .thin {
-	font-weight: 500;
-	font-size:80px;
-	font-family: 'Covered By Your Grace', cursive;
-}
+.auth{
+	top:80%;
+	color: #ffffff;
 
+}
 @media only screen and (max-width : 768px) {
 	.demo-1 .main-title {
-		font-size: 3em;
+		font-size: 1em;
 	}
 }
 

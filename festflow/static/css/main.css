@@ -351,107 +351,15 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
 }
 
-.about-us .col-sm-6 {
+/*.about-us .col-sm-6 {
 	margin-top:50px
-}
+}*/
 
 .about-us h3 {
 	font-size: 20px;
 	margin-bottom: 18px;
 	text-transform: uppercase;
 }
-
-.about-us .tab-content {
-	background:#FFFFFF;
-	border-bottom: 1px solid #DDDDDD;
-	border-left: 1px solid #DDDDDD;
-	border-right: 1px solid #DDDDDD;
-	padding: 25px;
-}
-
-.about-us .nav-tabs li a {
-	border-top:2px solid #f6f6f6;
-	color:#fc7700
-}
-
-.about-us .nav-tabs li.active a, 
-.about-us .nav-tabs li.active a:hover, 
-.about-us .nav-tabs li.active a:focus {
-	border-radius: 0;
-	border-top: 2px solid #fc7700;
-	color: #333333;
-}
-
-.about-us .tab-content 
-.pull-left.media-object {
-	background-color: #F6F6F6;
-	margin-right: 20px;
-	padding: 5px;
-}
-
-.skillbar {
-	position:relative;
-	display:block;
-	margin-bottom:18px;
-	box-shadow:1px 1px 0 0 #333333;
-	width:100%;
-	background:#43484E;
-	height:35px;
-	-webkit-transition:0.4s linear;
-	-moz-transition:0.4s linear;
-	-ms-transition:0.4s linear;
-	-o-transition:0.4s linear;
-	transition:0.4s linear;
-	-webkit-transition-property:width, background-color;
-	-moz-transition-property:width, background-color;
-	-ms-transition-property:width, background-color;
-	-o-transition-property:width, background-color;
-	transition-property:width, background-color;
-}
-
-.skillbar-title {
-	position:absolute;
-	top:0;
-	left:0;
-	width:25%;
-	font-weight:bold;
-	font-size:13px;
-	color:#fff;
-	background-color:#fc7700;
-}
-
-.skillbar-title span {
-	float: none;
-	margin-bottom: 0;
-	margin-right: 0;
-	margin-top: 0;
-	text-align: left;
-	display:block;
-	background-color:#fc7700;
-	padding:0 15px;
-	height:35px;
-	line-height:35px;
-}
-
-
-.skillbar-bar {
-	height:35px;
-	width:0px;
-	background-color:#fc7700;
-	box-shadow:0 1px 0 0 #333333;
-}
-
-.skill-bar-percent {
-	position:absolute;
-	right:10px;
-	top:0;
-	font-size:11px;
-	height:35px;
-	line-height:35px;
-	color:#ffffff;
-}
-
-
 
 /*====================
 ======Service CSS(About MNTC)=====
