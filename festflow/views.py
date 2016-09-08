@@ -25,7 +25,7 @@ def event_view(request, event_identifier):
     except ObjectDoesNotExist:
         raise Http404
 
-    if request.user.is_authenticated:
+    if request.user.is_authenticated():
         user_profile = Profile.objects.get(user=request.user)
         context['user_profile'] = user_profile
 
