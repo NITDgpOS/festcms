@@ -37,11 +37,6 @@
 	letter-spacing: 0.1em;
 }
 
-.auth{
-	top:80%;
-	color: #ffffff;
-
-}
 @media only screen and (max-width : 768px) {
 	.demo-1 .main-title {
 		font-size: 1em;

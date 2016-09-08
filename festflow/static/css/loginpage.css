@@ -1,7 +1,6 @@
 @import 'https://fonts.googleapis.com/css?family=Baloo+Paaji';
-@import 'https://fonts.googleapis.com/css?family=Lobster';
-@import 'https://fonts.googleapis.com/css?family=Itim';
-
+@import 'https://fonts.googleapis.com/css?family=Fredericka+the+Great';
+@import 'https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica|Katibeh|Petrona';
 
 #navigation  .navbar-nav  .active  a,  
 #navigation  .navbar-nav  .active  a:focus, 
@@ -25,17 +24,24 @@
 	padding: 22px 15px;
 }
 
-.event_container h1{
-	font-family:  'Baloo Paaji', cursive;
-	font-size:4em;
+.content h1{
+	font-family: 'Baloo Paaji' ,cursive;
 }
 
-.row h2{
-	font-family: 'Itim', cursive;
-	font-size:3em;
+.content h2{
+	font-family:'Fredericka the Great', cursive;
 }
 
-.row p{
-	font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-	font-size:17px;
+.count{
+	color:#000;
 }
+
+.user_details{
+	font-family: 'Petrona', serif;
+	font-size: 2em;
+}
+
+.user_details a{
+	font-family: 'Baloo Paaji' ,cursive;
+}
+

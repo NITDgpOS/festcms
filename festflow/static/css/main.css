@@ -25,17 +25,6 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:700,100,400,300);
 @import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
 
-/* Content with Video Background */
-.video-bg{ width:100%;height:800px; position:relative; overflow:hidden;}
-.video-bg video{width:100%; position:absolute; left:0; top:0; -webkit-filter: brightness(.5);
-    filter: brightness(.5);}
-.video-bg .container{ position:relative; z-index:2;}
-.video-bg .space{ padding:0 40px;}
-.video-bg figure{ width:100%; float:left; margin-bottom:30px;margin-top:200px}
-.video-bg figrue img{ display:inline-block;}
-.video-bg h2{ color:#fff; line-height:44px; margin-bottom:60px; font-size:56px;}
-.video-bg a{ color:#fff; display:inline-block; padding:8px 20px; border:1px solid #fff;}
-.video-bg a:hover{ background:#ef3c3c; text-decoration:none; color:#fff; border:1px solid #ef3c3c; }
 
 
 body {
@@ -71,35 +60,6 @@ a {
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Roboto', sans-serif;
 }
-
-.slider-btn {
-	background-color:#fc7700;
-	color: #FFF;
-	-webkit-box-shadow: inset 0 0 0 2px #fc7700;
-	box-shadow: inset 0 0 0 2px #fc7700;
-	text-transform: uppercase;
-	width: 190px;
-	text-align: center;
-	height: 55px;
-	line-height:55px;
-	padding: 0;
-	font-size: 18px;
-	font-weight:800;
-	border: 0;
-	-webkit-transition: all 0.3s ease 0s;
-	-moz-transition: all 0.3s ease 0s;
-	-o-transition: all 0.3s ease 0s;
-	-ms-transition: all 0.3s ease 0s;
-	transition: all 0.3s ease 0s;
-}
-
-.slider-btn:hover {
-	background-color:#43484E;
-	-webkit-box-shadow: inset 0 0 0 2px #43484E;
-	box-shadow: inset 0 0 0 2px #43484E;
-	color:#fff
-}
-
 
 .parallax-section{
 	min-height: 300px;
@@ -139,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 10px auto;
 	border-radius: 50px;
 }
-  
+
 .ball:nth-child(1) {
 	background: #ff005d;
 	-webkit-animation: right 1s infinite ease-in-out;
@@ -166,7 +126,7 @@ h1, h2, h3, h4, h5, h6 {
 	-webkit-animation: left 1.15s infinite ease-in-out;
 	-moz-animation: left 1.15s infinite ease-in-out;
 	animation: left 1.15s infinite ease-in-out;
- }
+}
 
 .ball:nth-child(5) {
 	background: #2d3443;  
@@ -243,21 +203,21 @@ h1, h2, h3, h4, h5, h6 {
 ======================*/
 
 #navigation .navbar {
-  border-radius: 0;
-  border-bottom: 0;
-  box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 3px;
-  padding-bottom: 8px;
-  background-color:rgba(40, 40, 46, 0.32941);
+	border-radius: 0;
+	border-bottom: 0;
+	box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 3px;
+	padding-bottom: 8px;
+	background-color:rgba(40, 40, 46, 0.32941);
 }
 
 #navigation .navbar-toggle{
-  margin-top: 20px;
-  //background-color: #333;
+	margin-top: 20px;
+	//background-color: #333;
 }
 
 #navigation .navbar-brand h1{
-  padding: 0;
-  margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
 #navigation .navbar-nav.navbar-right li {
@@ -270,7 +230,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #navigation .navbar-nav.navbar-right li a {
 	//color: #43484E;
-      color:#fff;
+	color:#fff;
 	font-family: 'Roboto',sans-serif;
 	font-size: 14px;
 	padding: 0;
@@ -347,29 +307,28 @@ h1, h2, h3, h4, h5, h6 {
 #about-us p {
 	font-weight:500;
 	font-size:17px;
-	//font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
 }
 
 /*.about-us .col-sm-6 {
 	margin-top:50px
-}*/
+	}*/
 
-.about-us h3 {
-	font-size: 20px;
-	margin-bottom: 18px;
-	text-transform: uppercase;
-}
+	.about-us h3 {
+		font-size: 20px;
+		margin-bottom: 18px;
+		text-transform: uppercase;
+	}
 
 /*====================
 ======Service CSS(About MNTC)=====
 ======================*/
 
 #services {
-  background-image: url("../images/services/service-bg1.jpg");
-  color:#eee;
-  text-align:center;
-  //background-color:	#F6F6F6;
+	background-image: url("../images/services/service-bg1.jpg");
+	color:#eee;
+	text-align:center;
+	//background-color:	#F6F6F6;
 }
 
 .services {
@@ -379,9 +338,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #services h2{
-  color: #000;
-  border-color: #fff;
-  margin-bottom:5px;
+	color: #000;
+	border-color: #fff;
+	margin-bottom:5px;
 	font-size:40px
 }
 
@@ -404,7 +363,7 @@ h1, h2, h3, h4, h5, h6 {
 	text-align:justify;
 	font-size:15px;
 	font-family: 'Raleway', sans-serif;
-	 //font-family: 'Vollkorn', serif;
+	//font-family: 'Vollkorn', serif;
 	padding-top:10px;
 }
 
@@ -448,9 +407,9 @@ h1, h2, h3, h4, h5, h6 {
 ========================*/
 
 #portfolio {
-  padding-top:70px;
-  padding-bottom: 100px;
-  background-image: url("../images/shatteredagain.png");
+	padding-top:70px;
+	padding-bottom: 100px;
+	background-image: url("../images/shatteredagain.png");
 }
 
 #portfolio p, 
@@ -461,14 +420,14 @@ h1, h2, h3, h4, h5, h6 {
 
 #portfolio 
 .portfolio-filter {
-  margin-bottom:40px;
-  margin-top:10px;
+	margin-bottom:40px;
+	margin-top:10px;
 }
 
 #portfolio 
 .portfolio-filter li {
-  display: inline-block;
-  
+	display: inline-block;
+
 }
 
 #portfolio 
@@ -499,20 +458,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .portfolio-items > div{
-  padding:0;
+	padding:0;
 }
 
 .portfolio-items img{
-  width:100%;
+	width:100%;
 }
 
 .view {  
-  cursor: default;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  width:100%;
+	cursor: default;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	width:100%;
 }
 
 .efffect h4 {  
@@ -550,7 +509,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .efffect .mask {
 	background-color: #ef3c3c;
-    //border:4px solid #333333;
+	//border:4px solid #333333;
 	-webkit-transition: all 0.5s linear 0s;
 	-moz-transition: all 0.5s linear 0s;
 	-ms-transition: all 0.5s linear 0s;
@@ -618,16 +577,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #owl-demo{
-  background-color:#000;
+	background-color:#000;
 }
 
 #owl-demo .item{
-  margin: 3px;
+	margin: 3px;
 }
 #owl-demo .item img{
-  display: block;
-  width: 100%;
-  height: auto;
+	display: block;
+	width: 100%;
+	height: auto;
 }
 
 
@@ -643,63 +602,63 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .our-team .col-md-3{
-    padding-top     : 50px;
+	padding-top     : 50px;
 }
 
- .our-team .icon-holder ul li{
+.our-team .icon-holder ul li{
 
-    display             : inline-block;
-    margin              : 0 10px;
+	display             : inline-block;
+	margin              : 0 10px;
 }
 
 .our-team .icon-holder ul li:first-child{
 
-    margin  : 0 10px 0 0;
+	margin  : 0 10px 0 0;
 }
 
 .our-team .icon-holder ul li:last-child{
 
-    margin  : 0 0 0 10px;
+	margin  : 0 0 0 10px;
 }
 .our-team .icon-holder ul li a{
 
-     color  : #ffffff;
+	color  : #ffffff;
 }
 
 .our-team .icon-holder ul li a  .fa{
-    
-    height              : 45px;
-    width               : 45px;
-    border-radius       : 50%;
-    padding             : 14px;
-    border              : 1px solid;
-    font-size           : 20px;
-    line-height         : 15px;
-    background          : rgba(232, 71, 0, 0);
-    -webkit-transition  : background  ease 0.50s;
-    -moz-transition     : background  ease 0.50s;
-    -ms-transition      : background  ease 0.50s;
-    -o-transition       : background  ease 0.50s;
-    transition          : background ease 0.50s;
+
+	height              : 45px;
+	width               : 45px;
+	border-radius       : 50%;
+	padding             : 14px;
+	border              : 1px solid;
+	font-size           : 20px;
+	line-height         : 15px;
+	background          : rgba(232, 71, 0, 0);
+	-webkit-transition  : background  ease 0.50s;
+	-moz-transition     : background  ease 0.50s;
+	-ms-transition      : background  ease 0.50s;
+	-o-transition       : background  ease 0.50s;
+	transition          : background ease 0.50s;
 
 
 }
 .our-team .icon-holder ul li:hover a .fa{
-background      : rgba(232, 71, 0, 1);
-border-color    : rgba(255,255,255,0.5);
+	background      : rgba(232, 71, 0, 1);
+	border-color    : rgba(255,255,255,0.5);
 
 }
 
 .our-team .team-designation{
-width               : 100%;
-background          : #ffffff;
-padding             : 10px 0 5px 0;
--webkit-box-shadow  : 0px 2px 0px #ebeaea;
--moz-box-shadow     : 0px 2px 0px #ebeaea;
--ms-box-shadow      : 0px 2px 0px #ebeaea;
--o-box-shadow       : 0px 2px 0px #ebeaea;
-box-shadow          : 0px 2px 0px #ebeaea;
-text-align          : center;
+	width               : 100%;
+	background          : #ffffff;
+	padding             : 10px 0 5px 0;
+	-webkit-box-shadow  : 0px 2px 0px #ebeaea;
+	-moz-box-shadow     : 0px 2px 0px #ebeaea;
+	-ms-box-shadow      : 0px 2px 0px #ebeaea;
+	-o-box-shadow       : 0px 2px 0px #ebeaea;
+	box-shadow          : 0px 2px 0px #ebeaea;
+	text-align          : center;
 
 }
 
@@ -707,26 +666,26 @@ text-align          : center;
 
 .our-team .zoomIn .team-designation p{
 
-    font-family         : 'Roboto Condensed', sans-serif;
-    color               : #707070;
-    font-size           : 14px;
-    font-weight         : bold;
-    letter-spacing      : 1.5px;
-    line-height         : 17px;
-    text-transform      : uppercase;
-    line-height         : 10px;
+	font-family         : 'Roboto Condensed', sans-serif;
+	color               : #707070;
+	font-size           : 14px;
+	font-weight         : bold;
+	letter-spacing      : 1.5px;
+	line-height         : 17px;
+	text-transform      : uppercase;
+	line-height         : 10px;
 }
 
 
 
 .our-team .team-designation span{
 
-    font-family     : 'Roboto Condensed', sans-serif;
-    color           : #989898;
-    font-size       : 11px;
-    font-weight     : bold;
-    letter-spacing  : 1.5px;
-    text-transform  : uppercase;
+	font-family     : 'Roboto Condensed', sans-serif;
+	color           : #989898;
+	font-size       : 11px;
+	font-weight     : bold;
+	letter-spacing  : 1.5px;
+	text-transform  : uppercase;
 
 }
 
@@ -842,49 +801,49 @@ figure.effect-duke:hover p {
 
 /**** Isotope Filtering ****/
 .isotope-item {
-  z-index: 2;
+	z-index: 2;
 }
 
 .isotope-hidden.isotope-item {
-  pointer-events: none;
-  z-index: 1;
+	pointer-events: none;
+	z-index: 1;
 }
 
 /**** Isotope CSS3 transitions ****/
 .isotope,
 .isotope .isotope-item {
-  -webkit-transition-duration: 0.8s;
-  -moz-transition-duration: 0.8s;
-  -ms-transition-duration: 0.8s;
-  -o-transition-duration: 0.8s;
-  transition-duration: 0.8s;
+	-webkit-transition-duration: 0.8s;
+	-moz-transition-duration: 0.8s;
+	-ms-transition-duration: 0.8s;
+	-o-transition-duration: 0.8s;
+	transition-duration: 0.8s;
 }
 
 .isotope {
-  -webkit-transition-property: height, width;
-  -moz-transition-property: height, width;
-  -ms-transition-property: height, width;
-  -o-transition-property: height, width;
-  transition-property: height, width;
+	-webkit-transition-property: height, width;
+	-moz-transition-property: height, width;
+	-ms-transition-property: height, width;
+	-o-transition-property: height, width;
+	transition-property: height, width;
 }
 
 .isotope .isotope-item {
-  -webkit-transition-property: -webkit-transform, opacity;
-  -moz-transition-property: -moz-transform, opacity;
-  -ms-transition-property: -ms-transform, opacity;
-  -o-transition-property: -o-transform, opacity;
-  transition-property: transform, opacity;
+	-webkit-transition-property: -webkit-transform, opacity;
+	-moz-transition-property: -moz-transform, opacity;
+	-ms-transition-property: -ms-transform, opacity;
+	-o-transition-property: -o-transform, opacity;
+	transition-property: transform, opacity;
 }
 
 /**** disabling Isotope CSS3 transitions ****/
 .isotope.no-transition,
 .isotope.no-transition .isotope-item,
 .isotope .isotope-item.no-transition {
-  -webkit-transition-duration: 0s;
-  -moz-transition-duration: 0s;
-  -ms-transition-duration: 0s;
-  -o-transition-duration: 0s;
-  transition-duration: 0s;
+	-webkit-transition-duration: 0s;
+	-moz-transition-duration: 0s;
+	-ms-transition-duration: 0s;
+	-o-transition-duration: 0s;
+	transition-duration: 0s;
 }
 /* End: Recommended Isotope styles */
 
@@ -897,96 +856,96 @@ figure.effect-duke:hover p {
 
 
 .efffect img {
-   -webkit-transform: scaleY(1);
-   -moz-transform: scaleY(1);
-   -o-transform: scaleY(1);
-   -ms-transform: scaleY(1);
-   transform: scaleY(1);
-   -webkit-transition: all 0.7s ease-in-out;
-   -moz-transition: all 0.7s ease-in-out;
-   -o-transition: all 0.7s ease-in-out;
-   -ms-transition: all 0.7s ease-in-out;
-   transition: all 0.7s ease-in-out;
+	-webkit-transform: scaleY(1);
+	-moz-transform: scaleY(1);
+	-o-transform: scaleY(1);
+	-ms-transform: scaleY(1);
+	transform: scaleY(1);
+	-webkit-transition: all 0.7s ease-in-out;
+	-moz-transition: all 0.7s ease-in-out;
+	-o-transition: all 0.7s ease-in-out;
+	-ms-transition: all 0.7s ease-in-out;
+	transition: all 0.7s ease-in-out;
 }
 .efffect .mask {
-   -webkit-transition: all 0.5s linear;
-   -moz-transition: all 0.5s linear;
-   -o-transition: all 0.5s linear;
-   -ms-transition: all 0.5s linear;
-   transition: all 0.5s linear;
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-   filter: alpha(opacity=0);
-   opacity: 0;
-   cursor: zoom-in;
+	-webkit-transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	-ms-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+	-ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+	cursor: zoom-in;
 }
 .efffect h4 {   
-   background: transparent;
-   -webkit-transform: scale(0);
-   -moz-transform: scale(0);
-   -o-transform: scale(0);
-   -ms-transform: scale(0);
-   transform: scale(0);
-   -webkit-transition: all 0.5s linear;
-   -moz-transition: all 0.5s linear;
-   -o-transition: all 0.5s linear;
-   -ms-transition: all 0.5s linear;
-   transition: all 0.5s linear;
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-   filter: alpha(opacity=0);
-   opacity: 0;
+	background: transparent;
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-o-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	-ms-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+	-ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
 }
 .efffect h3 {
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-   filter: alpha(opacity=0);
-   opacity: 0;
-   font-size:22px;
-   -webkit-transform: scale(0);
-   -moz-transform: scale(0);
-   -o-transform: scale(0);
-   -ms-transform: scale(0);
-   transform: scale(0);
-   -webkit-transition: all 0.5s linear;
-   -moz-transition: all 0.5s linear;
-   -o-transition: all 0.5s linear;
-   -ms-transition: all 0.5s linear;
-   transition: all 0.5s linear;
+	-ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+	font-size:22px;
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-o-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	-ms-transition: all 0.5s linear;
+	transition: all 0.5s linear;
 }
 .mask a i {
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-   filter: alpha(opacity=0);
-   opacity: 0;
-   -webkit-transform:rotate(-180deg);
-   -moz-transform:rotate(-180deg);
-   -o-transform:rotate(-180deg);
-   -ms-transform:rotate(-180deg);
-   transform:rotate(-180deg);
-   -webkit-transition:all 0.5s linear 0.7s;
-   -moz-transition: all 0.5s linear 0.7s;
-   -o-transition:all 0.5s linear 0.7s;
-   -ms-transition:all 0.5s linear 0.7s;
-   transition:all 0.5s linear 0.7s;
+	-ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+	-webkit-transform:rotate(-180deg);
+	-moz-transform:rotate(-180deg);
+	-o-transform:rotate(-180deg);
+	-ms-transform:rotate(-180deg);
+	transform:rotate(-180deg);
+	-webkit-transition:all 0.5s linear 0.7s;
+	-moz-transition: all 0.5s linear 0.7s;
+	-o-transition:all 0.5s linear 0.7s;
+	-ms-transition:all 0.5s linear 0.7s;
+	transition:all 0.5s linear 0.7s;
 }
 .efffect:hover img {
-   -webkit-transform: scale(10);
-   -moz-transform: scale(10);
-   -o-transform: scale(10);
-   -ms-transform: scale(10);
-   transform: scale(10);
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-   filter: alpha(opacity=0);
-   opacity: 0;
+	-webkit-transform: scale(10);
+	-moz-transform: scale(10);
+	-o-transform: scale(10);
+	-ms-transform: scale(10);
+	transform: scale(10);
+	-ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
 }
 .efffect:hover .mask {
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
-   filter: alpha(opacity=100);
-   opacity: 1;
+	-ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
 }
 .efffect:hover h4,.efffect:hover h3,.efffect:hover a i {
-   -webkit-transform: scale(1);
-   -moz-transform: scale(1);
-   -o-transform: scale(1);
-   -ms-transform: scale(1);
-   transform: scale(1);
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
-   filter: alpha(opacity=100);
-   opacity: 1;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	-ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;

@@ -16,17 +16,17 @@
 	
 	{% load staticfiles %}
 	<!-- STYLE SHEETS-->
-	<link href="/static/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/static/css/prettyPhoto.css" rel="stylesheet">
-	<link href="/static/css/font-awesome.min.css" rel="stylesheet">
-	<link href="/static/css/animate.css" rel="stylesheet"> <!-- used for wow.js-->
-	<link href="/static/css/main.css" rel="stylesheet"><!-- - - important - - -->
-	<link href="/static/css/responsive.css" rel="stylesheet">
-	<link rel="stylesheet" href="/static/css/style.css">
-	<link rel="/static/stylesheet" type="text/css" href="css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="/static/css/component.css" /><!--CSS for effect home-->
-	<link rel="stylesheet" href="/static/css/owl.carousel.css"><!-- Important Owl stylesheet -->
-	<link rel="stylesheet" href="/static/css/owl.theme.css">
+	<link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+	<link href="{% static "css/prettyPhoto.css" %}" rel="stylesheet">
+	<link href="{% static "css/font-awesome.min.css" %}" rel="stylesheet">
+	<link href="{% static "css/animate.css" %}" rel="stylesheet"> <!-- used for wow.js-->
+	<link href="{% static "css/main.css" %}" rel="stylesheet"><!-- - - important - - -->
+	<link href="{% static "css/responsive.css" %}" rel="stylesheet">
+	<link href="{% static "css/style.css" %}" rel="stylesheet">
+	<!--<link href="{% static "css/normalize.css" %}" rel="stylesheet">-->
+	<link href="{% static "css/component.css" %}" rel="stylesheet"><!--CSS for effect home-->
+	<link href="{% static "css/owl.carousel.css" %}" rel="stylesheet"><!-- Important Owl stylesheet -->
+	<link href="{% static "css/owl.theme.css" %}" rel="stylesheet">
 
 	<!--[if lt IE 9]> <script src="js/html5shiv.js"></script> 
 	<script src="js/respond.min.js"></script> <![endif]--> 
@@ -83,7 +83,7 @@
 						<li class="scroll"><a href="#portfolio">Events</a></li>  
 						<li class="scroll"><a href="#contact">Contact</a></li> 
 						{% if user.is_authenticated %}
-						<li class="scroll"><a href="/login">{{ user.username }}</a></li>
+						<li class="scroll"><a href="/login"><span class="glyphicon glyphicon-user"></span> {{ user.username }}</a></li>
 						{% else %}
 						<li class="scroll"><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Register</a></li>
 						{% endif %}
@@ -98,7 +98,7 @@
 	<section id="effect">
 		<div class="demo-1">
 			<div class="content">
-				<div id="large-header" class="large-header wow zoomInUp" data-wow-duration="1s">
+				<div id="large-header" class="large-header wow bounceInDown" data-wow-duration="2s">
 					<!--{% if user.is_authenticated %}
 					User is logged in
 					<div class="user_details text-center auth">
@@ -132,7 +132,7 @@
 		<div class="container" >
 			<div class="text-center">
 				<!--<div class="col-sm-8 col-sm-offset-2">-->
-				<div class="jumbotron wow bounceIn" data-wow-duration="1s">
+				<div class="jumbotron wow pulse" data-wow-duration="1s">
 					<h2 class="title-one">About ANK</h2>
 					<div class="row">
 						<div class="col-sm-6">
@@ -202,14 +202,14 @@
 					<h2 class="title-one wow rubberBand" data-wow-duration="2s">Events</h2>
 				</div>
 			</div>
-			<ul class="portfolio-filter text-center wow fadeInUp" data-wow-duration="2s">
+			<ul class="portfolio-filter text-center wow fadeIn" data-wow-duration="3s">
 				<li><a class="btn btn-default active" href="#" data-filter="*">All</a></li>
 				<li><a class="btn btn-default" href="#" data-filter=".coding">Coding</a></li>
 				<li><a class="btn btn-default" href="#" data-filter=".creativity">Creativity</a></li>
 				<li><a class="btn btn-default" href="#" data-filter=".brain">Brain-Storming</a></li>
 				<li><a class="btn btn-default" href="#" data-filter=".title">Title</a></li>
 			</ul><!--/#portfolio-filter-->
-			<div class="portfolio-items wow fadeInLeft" data-wow-duration="2s">
+			<div class="portfolio-items wow fadeIn" data-wow-duration="5s" data-wow-delay="1s">
 				{% for event in all_events %}
 				<div class="col-sm-3 col-xs-12 portfolio-item {{ event.identifier }} event container">
 					<div class="view efffect">
@@ -227,9 +227,7 @@
 						</div>
 					</div>
 					{% endfor %}
-					
-
-				</section> <!--/#events-->
+				</section> <br><br><br><!--/#events-->
 				
 				
 				<!-- - - - SPONSORS- - - - - -->
@@ -244,7 +242,7 @@
 						<div class="item"><img src="/static/images/slider/logo3.png" alt="Unison"></div>
 						<div class="item"><img src="/static/images/slider/logo4.png" alt="Tvs"></div>
 					</div><!--/owl carousel-->
-				</section><!--/sponsors-->
+				</section><br><br><br><br><!--/sponsors-->
 
 				<!--- - - - -  MAP GOOGLE- - - - - -->
 				
