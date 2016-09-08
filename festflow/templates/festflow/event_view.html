@@ -17,24 +17,14 @@
   {% load staticfiles %}
   <!-- STYLE SHEETS-->
   <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/static/css/font-awesome.min.css" rel="stylesheet">
-  <link href="/static/css/animate.css" rel="stylesheet"> <!-- used for wow.js-->
-  <link href="/static/css/main.css" rel="stylesheet"><!-- - - important - - -->
-  <link href="/static/css/responsive.css" rel="stylesheet">
-  <link rel="stylesheet" href="/static/css/style.css">
-  <link rel="/static/stylesheet" type="text/css" href="css/normalize.css" />
-
+  <link href="/static/css/eventview.css" rel="stylesheet"><!-- - - important - - -->
   <!--[if lt IE 9]> <script src="js/html5shiv.js"></script> 
   <script src="js/respond.min.js"></script> <![endif]--> 
 
   <link rel="shortcut icon" href="static/images/ico/favicon.png">  
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,800,400' rel='stylesheet' type='text/css'>
-
-
   
-  <script src="http://maps.googleapis.com/maps/api/js"></script><!--GOOGLE MAP API-->
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script><!-- WOW.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script><!-- WOW.JS -->  
   <script>
     new WOW().init();
   </script>
@@ -63,21 +53,23 @@
   <!-- - - - - - - - - NAVIGATION - - - - - - - - -->
   
   <header id="navigation"> 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="banner"> 
-      <div class="container"> 
-        <div class="navbar-header"> 
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
-            <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> 
-          </button> 
-          <a class="navbar-brand" href="index.html"><h1><img class="img-responsive" src="/static/images/logo-mntc.png" alt="logo"></h1></a> 
-        </div> 
-        <div class="collapse navbar-collapse"> 
-          <ul class="nav navbar-nav navbar-right"> 
-            <li class="scroll"><a href="#effect">Home</a></li> 
-          </ul> 
-        </div> 
-      </div> 
-    </div><!--/navbar--> 
+   <nav class="navbar">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><h1><img class="img-responsive" src="/static/images/logo-mntc.png" alt="logo"></h1></a> 
+    </div>
+    <div class="collapse navbar-collapse" class=".navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/">Home</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
   </header> <!--/#navigation-->
   
 <section>
