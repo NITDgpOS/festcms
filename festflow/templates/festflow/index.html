@@ -128,17 +128,17 @@
 
 	<!-- - - ABOUT US - - - -->
 
-	<section id="about-us" >
+	<section id="about-us" class="wow fadeInUp" data-wow-duration="2s">
 		<div class="container" >
 			<div class="text-center">
 				<!--<div class="col-sm-8 col-sm-offset-2">-->
-				<div class="jumbotron wow pulse" data-wow-duration="1s">
+				<div class="jumbotron wow pulse" data-wow-duration="1s" data-wow-delay="500ms">
 					<h2 class="title-one">About ANK</h2>
 					<div class="row">
-						<div class="col-sm-6">
+						<div class="col-sm-6 wow fadeIn" data-wow-duration="2s" data-wow-delay="1000ms">
 							<img src="/static/images/aboutank1.jpg" class="img-responsive" alt="ank-img">
 						</div>
-						<div class="col-sm-6">
+						<div class="col-sm-6 wow fadeIn" data-wow-duration="2s" data-wow-delay="1500ms">
 							<p> Started in the year 2004, Maths and Tech club was initially conceived with the concept of creating  platform to engender in students fervor for the mathematics by emphasizing its benefits and the want for logic through through a multitude of intriguing challenges.<br/><br/>
 								Due to the uniqueness of our area of emphasis and the unending support of our faculty, Maths N Tech club conquers great heights with every passing year,as is evident from the grand success of ANK  2015. The aim is to imbue some gaiety in our intensely banal odd-semester,where students can enhance their aptitude, quench thier knowledge of thirst, and have a jovial time.<br/>
 								ANK is conceptuated to take these things into consideration.Coming up with  plethora of events like Simplex,Kryptic,Constructo,Clash of titans,Terrorist takedown etc,this fest guarantees to elevate student  aptitude to a new zenith of logic and free-thinking.
@@ -195,21 +195,21 @@
 		
 		<!-- - - - - -EVENTS- - - - - -->
 		
-		<section id="portfolio">
+		<section id="portfolio" class="wow fadeInUp" data-wow-duration="1s">
 			
 			<div class="row text-center">
 				<div class="col-sm-8 col-sm-offset-2">
-					<h2 class="title-one wow rubberBand" data-wow-duration="2s">Events</h2>
+					<h2 class="title-one wow fadeInUp" data-wow-duration="1s" data-wow-delay="1000ms">Events</h2>
 				</div>
 			</div>
-			<ul class="portfolio-filter text-center wow fadeIn" data-wow-duration="3s">
+			<ul class="portfolio-filter text-center">
 				<li><a class="btn btn-default active" href="#" data-filter="*">All</a></li>
 				<li><a class="btn btn-default" href="#" data-filter=".coding">Coding</a></li>
 				<li><a class="btn btn-default" href="#" data-filter=".creativity">Creativity</a></li>
 				<li><a class="btn btn-default" href="#" data-filter=".brain">Brain-Storming</a></li>
 				<li><a class="btn btn-default" href="#" data-filter=".title">Title</a></li>
 			</ul><!--/#portfolio-filter-->
-			<div class="portfolio-items wow fadeIn" data-wow-duration="5s" data-wow-delay="1s">
+			<div class="portfolio-items wow fadeIn" data-wow-duration="2s" data-wow-delay="1500ms">
 				{% for event in all_events %}
 				<div class="col-sm-3 col-xs-12 portfolio-item {{ event.identifier }} event container">
 					<div class="view efffect">
@@ -236,7 +236,7 @@
 					<div class="text-center">
 						<p> <strong>PREVIOUS SPONSORS</strong></p>
 					</div>
-					<div id="owl-demo" class="owl-carousel container"><!--owl carousel-->
+					<div id="owl-demo" class="owl-carousel container wow fadeIn" data-wow-duration="2s"><!--owl carousel-->
 						<div class="item"><img src="/static/images/slider/logo1.png" alt="LEE Image"></div>
 						<div class="item"><img src="/static/images/slider/logo2.png" alt="Career Launcher"></div>
 						<div class="item"><img src="/static/images/slider/logo3.png" alt="Unison"></div>
