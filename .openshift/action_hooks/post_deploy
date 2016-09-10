@@ -1,6 +1,6 @@
-source ${OPENSHIFT_HOMEDIR}python-3.3/virtenv/bin/activate
+source ${OPENSHIFT_HOMEDIR}python/virtenv/venv/bin/activate
 
-export PYTHON_EGG_CACHE=${OPENSHIFT_HOME_DIR}python-3.3/virtenv/lib/python-3.3/site-packages
+export PYTHON_EGG_CACHE=${OPENSHIFT_HOME_DIR}python/virtenv/venv/lib/python-3.3/site-packages
 
 echo "Executing 'python ${OPENSHIFT_REPO_DIR}festcms/manage.py migrate --noinput'"
 python "$OPENSHIFT_REPO_DIR"manage.py migrate --noinput
