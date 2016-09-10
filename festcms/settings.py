@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
+# import for openshift
+import urlparse
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -85,6 +88,18 @@ DATABASES = {
     }
 }
 
+
+db_url = urlparse.urlparse(os.environ.get('OPENSHIFT_POSTGRESQL_DB_URL'))
+
+DATABASES = {'default': {
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': os.environ['OPENSHIFT_APP_NAME'],
+    'USER': db_url.username,
+    'PASSWORD': db_url.password,
+    'HOST': db_url.hostname,
+    'PORT': db_url.port,
+}
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
