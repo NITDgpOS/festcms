@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "Executing 'python ${OPENSHIFT_REPO_DIR}festcms/manage.py migrate --noinput'"
+python "$OPENSHIFT_REPO_DIR"manage.py migrate --noinput
+
+echo "Executing 'python ${OPENSHIFT_REPO_DIR}festcms/manage.py collectstatic --noinput -v0'"
+python "$OPENSHIFT_REPO_DIR"manage.py collectstatic --noinput -v0
