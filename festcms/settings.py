@@ -122,7 +122,7 @@ STATIC_URL = '/static/'
 
 # open shift static root settings
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'wsgi/static')
 
 # Media files
 # example:
