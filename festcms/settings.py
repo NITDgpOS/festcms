@@ -89,7 +89,7 @@ DATABASES = {
 }
 
 
-db_url = urlparse.urlparse(os.environ.get('OPENSHIFT_POSTGRESQL_DB_URL'))
+db_url = urlparse(os.environ.get('OPENSHIFT_POSTGRESQL_DB_URL'))
 
 DATABASES = {'default': {
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
