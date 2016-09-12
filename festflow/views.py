@@ -18,6 +18,13 @@ def index(request):
     return render(request, 'festflow/index.html', context)
 
 
+def login_page(request):
+    context = {}
+    profiles_count = Profile.objects.count()
+    context['profiles_count'] = profiles_count
+    return render(request, 'festflow/login_page.html', context)
+
+
 def event_view(request, event_identifier):
     context = {}
     try:

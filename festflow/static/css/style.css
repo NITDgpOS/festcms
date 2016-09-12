@@ -1,0 +1,204 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+@import url(http://fonts.googleapis.com/css?family=Raleway:700,100,400,300);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  
+}
+
+ul li {
+  list-style-type: none;
+}
+
+#teams{
+background-image: url("../images/shattered.png");
+margin-top:200px;
+}
+.slider--teams {
+  position: relative;
+  //padding-top:28%;
+//margin-bottom:-200px;
+  //top: 80%;
+  left: 50%;
+  max-width: 750px;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.slider--teams .slider--teams__team {
+  position: relative;
+  overflow: hidden;
+
+}
+
+#list {
+  position: relative;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+#list li {
+  position: relative;
+  display: inline-block;
+  float: left;
+  text-align: center;
+}
+#list li figure {
+  cursor: pointer;
+  margin: 1em;
+  opacity: 0.5;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: opacity 450ms ease-in-out, -webkit-transform 450ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: opacity 450ms ease-in-out, -webkit-transform 450ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: transform 450ms cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 450ms ease-in-out;
+  transition: transform 450ms cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 450ms ease-in-out, -webkit-transform 450ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-transform: scale(0.5) translateZ(0px);
+          transform: scale(0.5) translateZ(0px);
+}
+#list li figure:hover {
+  opacity: 0.8;
+  -webkit-transform: scale(0.6) translateZ(0px);
+          transform: scale(0.6) translateZ(0px);
+}
+#list li figure:active {
+  opacity: 1;
+  -webkit-transform: scale(0.7) translateZ(0px);
+          transform: scale(0.7) translateZ(0px);
+}
+#list li figure > div {
+  border-radius: 5px;
+  position: relative;
+  margin: 2rem auto;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  -webkit-transform: rotate(45deg) translateZ(0px);
+          transform: rotate(45deg) translateZ(0px);
+}
+#list li figure > div > div {
+  background: url("../rahilteam.jpg") no-repeat;
+  background-size: cover;
+  background-position: 0px 0px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 170px;
+  height: 170px;
+  -webkit-transform: rotate(-45deg) translate(0%, -70%);
+          transform: rotate(-45deg) translate(0%, -70%);
+}
+#list li figure figcaption h2 {
+  color: #333;
+  font-size: 25px;
+  font-weight: 800;
+}
+#list li figure figcaption p {
+  color: #666;
+  font-size: 15px;
+  font-weight: 400;
+}
+#list li:nth-child(1) figure > div > div {
+  background-position: 0px 0px !important;
+}
+#list li:nth-child(2) figure > div > div {
+  background-position: 0px 5.55% !important;
+}
+#list li:nth-child(3) figure > div > div {
+  background-position: 0px 11.11% !important;
+}
+#list li:nth-child(4) figure > div > div {
+  background-position: 0px 16.66% !important;
+}
+#list li:nth-child(5) figure > div > div {
+  background-position: 0px 22.22% !important;
+}
+#list li:nth-child(6) figure > div > div {
+  background-position: 0px 27.77% !important;
+}
+#list li:nth-child(7) figure > div > div {
+  background-position: 0px 33.33% !important;
+}
+#list li:nth-child(8) figure > div > div {
+  background-position: 0px 38.88% !important;
+}
+#list li:nth-child(9) figure > div > div {
+  background-position: 0px 44.44% !important;
+}
+#list li:nth-child(10) figure > div > div {
+  background-position: 0px 50% !important;
+}
+#list li:nth-child(11) figure > div > div {
+  background-position: 0px 55.55% !important;
+}
+#list li:nth-child(12) figure > div > div {
+  background-position: 0px 61.11% !important;
+}
+#list li:nth-child(13) figure > div > div {
+  background-position: 0px 66.66% !important;
+}
+#list li:nth-child(14) figure > div > div {
+  background-position: 0px 72.22% !important;
+}
+#list li:nth-child(15) figure > div > div {
+  background-position: 0px 77.77% !important;
+}
+#list li:nth-child(16) figure > div > div {
+  background-position: 0px 83.33% !important;
+}
+#list li:nth-child(17) figure > div > div {
+  background-position: 0px 88.88% !important;
+}
+#list li:nth-child(18) figure > div > div {
+  background-position: 0px 94.44% !important;
+}
+#list li:nth-child(19) figure > div > div {
+  background-position: 0px 100% !important;
+}
+
+.active {
+  opacity: 1 !important;
+  -webkit-transform: scale(1) translateZ(0px) !important;
+          transform: scale(1) translateZ(0px) !important;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+#headin{
+font-size:40px;
+font-family: 'Vollkorn',sans-serif;
+font-weight:700px;
+}

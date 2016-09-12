@@ -1,27 +1,112 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>ANK 2016 - The Knowledge Fest</title>
+<html lang="en">
+<head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="description" content="ANK 2016 - The Knowledge Fest by National Institute Of Technology Durgapur Maths N Tech Club">
+  <meta name="keywords" content="MNTC,Ank 2K16" /> 
+  <meta name="author" content="Maths n Tech Club"> 
+  <title>ANK 2016! #LetTheFunBegin </title> 
+  
+  <!-- SOCIAL MEDIA META -->
+  <meta property="og:title" content="ANK 2016 | The Knowledge Fest"/>
+  <meta property="og:url" content="http://ank.mntc.in" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="MNTC NIT Durgapur presents ANK 2016 | The Knowledge Fest" />
+  {% load staticfiles %}
+  <!-- STYLE SHEETS-->
+  <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+  <link href="{% static "css/eventview.css" %}" rel="stylesheet"><!-- - - important - - -->
+  <link href="{% static "css/animate.css" %}" rel="stylesheet"> <!-- used for wow.js-->
+  <!--[if lt IE 9]> <script src="js/html5shiv.js"></script> 
+  <script src="js/respond.min.js"></script> <![endif]--> 
 
-  <!-- Include bootstrap -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link rel="shortcut icon" href="static/images/ico/favicon.png">  
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,800,400' rel='stylesheet' type='text/css'>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script><!-- WOW.JS -->  
+  <script>
+    new WOW().init();
+  </script>
 
-</head>
-<body>
-  <div class="event_container">
-      <a href="{{ event.get_absolute_url }}"><h2>{{ event.name }}</h2></a>
+  
+</head><!-- /head-->
+
+<body data-spy="scroll" data-target=".navbar" data-offset="90" style="overflow-x:hidden">
+
+  <!-- - - - - - - - - PRELOADER - - - - - - - - -->
+  
+  <div class="preloader">
+    <div class="preloder-wrap">
+      <div class="preloder-inner"> 
+        <div class="ball"></div> 
+        <div class="ball"></div> 
+        <div class="ball"></div> 
+        <div class="ball"></div> 
+        <div class="ball"></div> 
+        <div class="ball"></div> 
+        <div class="ball"></div>
+      </div>
+    </div>
+  </div><!--/.preloader-->
+  
+  <!-- - - - - - - - - NAVIGATION - - - - - - - - -->
+  
+  <header id="navigation"> 
+   <nav class="navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/"><h1><img class="img-responsive" src="/static/images/logo-mntc.png" alt="logo"></h1></a> 
+      </div>
+      <div class="collapse navbar-collapse" class=".navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/">Home</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header> <!--/#navigation-->
+
+<section>
+  <div class="event_container container">
+    <h1>{{ event.name }}</h1>
+    <div class="row">
+     <div class="col-sm-6">
       {% if event.logo %}
-        <img src="{{ event.logo.url }}" width="200px">
+      <img src="{{ event.logo.url }}" alt="Oops!" width="100%">
       {% endif %}
-      <p>{{ event.description }}</p>
-      <p>{{ event.venue }}</p>
-      {% if event in user_profile.registered_events.all %}
-        <h3>You have already registered for this event</h3>
-      {% else %}
-        <a href="/register_event/{{ event.identifier }}"><h3>Register</h2></a>
-      {% endif %}
-  </div>
+    </div>
+    <div class="col-sm-6 text-center wow fadeIn" data-wow-duration="2s">
+     <h2>About the Event</h2>
+     <p>{{ event.description }}</p>
+     <p><strong>venue</strong>: {{ event.venue }}</p>
+     <p>{{ event.problem_statement_file }}</p><br>
+     {% if event in user_profile.registered_events.all %}
+     <h3>You have already registered for this event</h3>
+     {% else %}
+     <a href="/register_event/{{ event.identifier }}"><button class="btn btn-lg btn-primary"> Register</button></a>
+     {% endif %}
+   </div>
+ </div>
+</div>
+<section>
+
+  <script type="text/javascript" src="/static/js/jquery.js"></script> 
+  <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.js"></script>
+  <script type="text/javascript" src="/static/js/smoothscroll.js"></script>
+  <script type="text/javascript" src="/static/js/jquery.isotope.min.js"></script>
+  <script type="text/javascript" src="/static/js/jquery.prettyPhoto.js"></script> 
+  <script type="text/javascript" src="/static/js/jquery.parallax.js"></script> 
+  <script type="text/javascript" src="/static/js/main.js"></script> 
+  <script type="text/javascript" src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script type="text/javascript" src='/static/js/velocity.min.js'></script>
+  <script type="text/javascript" src="/static/js/owl.carousel.js"></script>
+
 </body>
 </html>

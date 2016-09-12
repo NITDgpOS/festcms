@@ -1,32 +1,85 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Hello</title>
-</head>
+<html lang="en">
+<head> 
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="description" content="ANK 2016 - The Knowledge Fest by National Institute Of Technology Durgapur Maths N Tech Club">
+	<meta name="keywords" content="MNTC,Ank 2K16" /> 
+	<meta name="author" content="Maths n Tech Club"> 
+	<title>ANK 2016! #LetTheFunBegin </title> 
+	
+	<!-- SOCIAL MEDIA META -->
+	<meta property="og:title" content="ANK 2016 | The Knowledge Fest"/>
+	<meta property="og:url" content="http://ank.mntc.in" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="MNTC NIT Durgapur presents ANK 2016 | The Knowledge Fest" />
+	
+	{% load staticfiles %}
+	<!-- STYLE SHEETS-->
+	<link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+	<link href="{% static "css/completeprofile.css" %}" rel="stylesheet">
+  <!--[if lt IE 9]> <script src="js/html5shiv.js"></script> 
+  <script src="js/respond.min.js"></script> <![endif]--> 
+
+  <link rel="shortcut icon" href="static/images/ico/favicon.png">  
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,800,400' rel='stylesheet' type='text/css'>
+  
+</head><!-- /head-->
 <body>
+	<section>
+		<div class="container">
+			<div class="content text-center">
+				<h2>Complete Profile!</h2><br>
 
-<h1>Complete Profile!</h1>
+				{% if user.is_authenticated %}
+				<!-- User is logged in -->
+				<div class="user-details">
+					<p>Welcome <b>{{ user.first_name }}</b>!</p>
+					<h5>Here is your profile information:</h5>
+					<p>First Name: <b>{{ user.first_name }}</b></p>
+					<p>Last Name: <b>{{ user.last_name }}</b></p>
+					<p>Email: {{ user.email }}</p>
+				</div><br>
+				{% endif %}
 
-{% if user.is_authenticated %}
-	<!-- User is logged in -->
-	<div class="user-details">
-	<p>Welcome <b>{{ user.first_name }}</b>!</p>
-	<p>Here is your profile information:</p>
-	<p>First Name: {{ user.first_name }}</p>
-	<p>Last Name: {{ user.last_name }}</p>
-	<p>Email: {{ user.email }}</p>
-	</div>
-{% endif %}
+				<h2>Please complete your profile to continue:</h2><br>
+				{% if profile_form %}
+				<form action="." method="post" class="form-horizontal">
+					{% csrf_token %}
+					<div class="form-group">
+						<label class="control-label col-sm-4" for="id_institute_name">Institute name:</label>
+						<div class="col-sm-6">
+							<input class="form-control" id="id_institute_name" maxlength="255" name="institute_name" type="text" required />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-4" for="id_degree_name">Degree name:</label>
+						<div class="col-sm-6">
+							<input class="form-control" id="id_degree_name" maxlength="255" name="degree_name" type="text" placeholder="eg: B.Tech"required />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-4" for="id_major_subject_name">Major subject name:</label>
+						<div class="col-sm-6">
+							<input class="form-control" id="id_major_subject_name" maxlength="255" name="major_subject_name" type="text" placeholder="eg: ECE or CSE....etc "required />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-4" for="id_phone_number">Phone number:</label>
+						<div class="col-sm-6">
+							<input class="form-control" id="id_phone_number" maxlength="15" name="phone_number" type="text" required />
+						</div>
+					</div>
+					<input type="submit" value="Submit" />
+				</form>
+				{% endif %}
+			</div>
+		</div>
+	</section>
 
-<h2>Please complete your profile to continue:</h2>
-{% if profile_form %}
-	<form action="." method="post">
-	    {% csrf_token %}
-	    {{ profile_form }}
-	    <input type="submit" value="Submit" />
-	</form>
-{% endif %}
-
+	<script type="text/javascript" src="/static/js/jquery.js"></script> 
+	<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/static/js/smoothscroll.js"></script>
 </body>
 </html>
 

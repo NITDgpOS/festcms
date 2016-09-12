@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="description" content="ANK 2016 - The Knowledge Fest by National Institute Of Technology Durgapur Maths N Tech Club">
+	<meta name="keywords" content="MNTC,Ank 2K16" /> 
+	<meta name="author" content="Maths n Tech Club"> 
+	<title>ANK 2016! #LetTheFunBegin </title> 
+	
+	<!-- SOCIAL MEDIA META -->
+	<meta property="og:title" content="ANK 2016 | The Knowledge Fest"/>
+	<meta property="og:url" content="http://ank.mntc.in" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="MNTC NIT Durgapur presents ANK 2016 | The Knowledge Fest" />
+	
+	{% load staticfiles %}
+	<!-- STYLE SHEETS-->
+	<link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+	<link href="{% static "css/font-awesome.min.css" %}" rel="stylesheet">
+	<link href="{% static "css/loginpage.css" %}" rel="stylesheet"><!-- - - important - - -->
+  <!--[if lt IE 9]> <script src="js/html5shiv.js"></script> 
+  <script src="js/respond.min.js"></script> <![endif]--> 
+
+  <link rel="shortcut icon" href="static/images/ico/favicon.png">  
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,800,400' rel='stylesheet' type='text/css'>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script><!-- WOW.JS -->  
+  <script>
+  	new WOW().init();
+  </script>
+
+  
+</head><!-- /head-->
+
+<body data-spy="scroll" data-target=".navbar" data-offset="90" style="overflow-x:hidden">
+
+	<!-- - - - - - - - - PRELOADER - - - - - - - - -->
+	
+	<div class="preloader">
+		<div class="preloder-wrap">
+			<div class="preloder-inner"> 
+				<div class="ball"></div> 
+				<div class="ball"></div> 
+				<div class="ball"></div> 
+				<div class="ball"></div> 
+				<div class="ball"></div> 
+				<div class="ball"></div> 
+				<div class="ball"></div>
+			</div>
+		</div>
+	</div><!--/.preloader-->
+	
+	<!-- - - - - - - - - NAVIGATION - - - - - - - - -->
+	
+	<header id="navigation"> 
+		<nav class="navbar">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/"><h1><img class="img-responsive" src="/static/images/logo-mntc.png" alt="logo"></h1></a> 
+				</div>
+				<div class="collapse navbar-collapse" class=".navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/">Home</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header> <!--/#navigation-->
+	
+	<section>
+		<div class="content container text-center">
+			{% if user.is_authenticated %}
+			<!--User is logged in-->
+			<div class="user_details text-center">
+				<p>You are logged in as : <i> {{ user.username }}</i> !</p>
+				<p>First Name: <strong>{{ user.first_name }}</strong></p>
+				<p>Last Name: <strong>{{ user.last_name }}</strong></p>
+				<p>Email: {{ user.email }}</p>
+				<a href="/logout"><button class="btn btn-lg btn-danger center-block"> LogOut</button></a>
+			</div>
+			{% else %}
+			<!--User is not logged in-->
+			<h1>Please login / register to continue</h1>
+			<h2>{{ profiles_count }} users have already registered! Register NOW!</h2><br><br>
+			<div class="btn-group">
+				<div class="btn-group">
+					<a href="/login/facebook/?next=/"><button class="btn btn-lg btn-primary center-block login-button facebook"><i class="fa fa-facebook"></i> Sign in with facebook</button></a>
+				</div>
+				<div class="btn btn-group">
+					<a href="/login/google-oauth2/?next=/"><button class="btn btn-lg btn-danger center-block login-button google-oauth2"><i class="fa fa-google"></i> Sign in with Google</button></a>
+				</div>
+			</div>
+			{% endif %}
+		</div>
+		<section>
+
+			<script type="text/javascript" src="/static/js/jquery.js"></script> 
+			<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.js"></script>
+			<script type="text/javascript" src="/static/js/smoothscroll.js"></script>
+			<script type="text/javascript" src="/static/js/jquery.isotope.min.js"></script>
+			<script type="text/javascript" src="/static/js/jquery.prettyPhoto.js"></script> 
+			<script type="text/javascript" src="/static/js/jquery.parallax.js"></script> 
+			<script type="text/javascript" src="/static/js/main.js"></script> 
+			<script type="text/javascript" src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+			<script type="text/javascript" src='/static/js/velocity.min.js'></script>
+			<script type="text/javascript" src="/static/js/owl.carousel.js"></script>
+
+		</body>
+		</html>
+		

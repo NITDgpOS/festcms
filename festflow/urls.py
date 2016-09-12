@@ -14,6 +14,10 @@ urlpatterns = [
     url(r'^register_event/(?P<event_identifier>[a-z]*)/$',
         views.register_event, name='register_event'),
 
+    # Login Page
+    url(r'^login/$',
+        views.login_page, name='login_page'),
+
 
     # social login urls
     url('', include('social.apps.django_app.urls', namespace='social')),
