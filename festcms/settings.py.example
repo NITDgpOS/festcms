@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'cnqb74h4hy0)g^@4jwaj2bh@!f25rm@$b2%(1z)o97dx!#3is7'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -88,17 +88,19 @@ DATABASES = {
     }
 }
 
-db_url = urlparse(os.environ.get('OPENSHIFT_POSTGRESQL_DB_URL'))
 
-DATABASES = {'default': {
-    'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': os.environ['OPENSHIFT_APP_NAME'],
-    'USER': db_url.username,
-    'PASSWORD': db_url.password,
-    'HOST': db_url.hostname,
-    'PORT': db_url.port,
-}
-}
+# openshift settings
+# db_url = urlparse(os.environ.get('OPENSHIFT_POSTGRESQL_DB_URL'))
+
+# DATABASES = {'default': {
+#     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#    'NAME': os.environ['OPENSHIFT_APP_NAME'],
+#    'USER': db_url.username,
+#    'PASSWORD': db_url.password,
+#    'HOST': db_url.hostname,
+#    'PORT': db_url.port,
+# }
+# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
@@ -119,6 +121,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# open shift static root settings
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+STATIC_ROOT = os.path.join(BASE_DIR, 'wsgi/static')
 
 # Media files
 # example:
@@ -131,12 +136,12 @@ MEDIA_URL = '/media/'
 
 # django auth settings
 LOGIN_REDIRECT_URL = '/'
-LOGIN_URL = '/login'
+LOGIN_URL = '/login/'
 
 
 # python-social-auth settings
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
-SOCIAL_AUTH_LOGIN_URL = '/login'
+SOCIAL_AUTH_LOGIN_URL = '/login/'
 
 SOCIAL_AUTH_PIPELINE = (
     # Get the information we can about the user and return it in a simple
@@ -188,7 +193,7 @@ SOCIAL_AUTH_PIPELINE = (
 
 AUTHENTICATION_BACKENDS = (
     'social.backends.google.GoogleOAuth2',
-    'social.backends.google.Facebook2OAuth2',
+    'social.backends.facebook.Facebook2OAuth2',
     'django.contrib.auth.backends.ModelBackend',
 )
 
