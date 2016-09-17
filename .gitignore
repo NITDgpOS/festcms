@@ -2,3 +2,4 @@
 venv
 *.sqlite3
 festcms/media
+settings.py
