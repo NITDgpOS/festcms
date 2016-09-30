@@ -1,57 +1,5 @@
 jQuery(function($) {'use strict',
 
-	
-	// all Parallax Section
-	$(window).load(function(){'use strict',
-		$("#services").parallax("90%", 0.3);
-		$("#clients").parallax("50%", 0.3);
-		// var aboutUs = $('#about-us').find('.jumbotron');
-		// aboutUs.css('opacity',0);
-		// new Waypoint({
-			// element: $('#about-us'),
-			// handler: function(){
-				// aboutUs.addClass('animated fadeInUp');
-			// },
-			// offset: '90%'
-		// });
-	});
-	
-	// portfolio filter
-	$(window).load(function(){'use strict',
-		$portfolio_selectors = $('.portfolio-filter >li>a');
-		if($portfolio_selectors!='undefined'){
-			$portfolio = $('.portfolio-items');
-			$portfolio.isotope({
-				itemSelector : '.col-sm-3',
-				layoutMode : 'fitRows'
-			});
-			
-			$portfolio_selectors.on('click', function(){
-				$portfolio_selectors.removeClass('active');
-				$(this).addClass('active');
-				var selector = $(this).attr('data-filter');
-				$portfolio.isotope({ filter: selector });
-				return false;
-			});
-		}
-	});
-	
-	//Pretty Photo
-	 $("a[data-gallery^='prettyPhoto']").prettyPhoto({
-	  social_tools: false
-	 });
-
-
-	// Contact form validation
-	var form = $('.contact-form');
-	form.submit(function () {'use strict',
-		$this = $(this);
-		$.post($(this).attr('action'), function(data) {
-			$this.prev().text(data.message).fadeIn().delay(3000).fadeOut();
-		},'json');
-		return false;
-	});
-
 
 	// Navigation Scroll
 	$(window).scroll(function(event) {
@@ -135,12 +83,3 @@ marker.setMap(map);
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
-	// Skill bar Function
-
-	jQuery(document).ready(function(){
-	jQuery('.skillbar').each(function(){
-		jQuery(this).find('.skillbar-bar').animate({
-			width:jQuery(this).attr('data-percent')
-		},6000);
-	});
-});
