@@ -47,16 +47,16 @@
                     </a>
                 </li>
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="/">Home</a>
                 </li>
 		<li>
-                    <a href="event.html">Events</a>
+                    <a href="/events">Events</a>
                 </li>
                 <li>
-                    <a href="sponsor.html">Sponsors</a>
+                    <a href="/sponsors">Sponsors</a>
                 </li>
                 <li>
-                    <a href="contact.html">Contact Us</a>
+                    <a href="/contact">Contact Us</a>
                 </li>
                 
             </ul>
@@ -75,7 +75,7 @@
 					<h1 class="title-one">About ANK</h1>
 					<div class="row">
 						<div class="col-sm-6 wow fadeIn" data-wow-duration="2s" data-wow-delay="1000ms">
-							<img src="static/images/aboutank1.jpg" id="image" class="img-responsive" alt="ank-img">
+							<img src="{% static "images/aboutank1.jpg" %}" id="image" class="img-responsive" alt="ank-img">
 						</div>
 						<div class="col-sm-6 wow fadeIn" data-wow-duration="2s" data-wow-delay="1500ms">
 							<p> Started in the year 2004, Maths and Tech club was initially conceived with the concept of creating  platform to engender in students fervor for the mathematics by emphasizing its benefits and the want for logic through through a multitude of intriguing challenges.<br/><br/>
@@ -94,10 +94,10 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="static/js/jquery.js"></script>
+    <script src="{% static "js/jquery.js" %}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="static/js/bootstrap.min.js"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
 
     <!-- Menu Toggle Script -->
     <script>
@@ -108,8 +108,8 @@
     </script>
 				
 				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.js"></script>
-				<script type="text/javascript" src="static/js/jquery.isotope.min.js"></script>
-				<script type="text/javascript" src="static/js/main.js"></script>
+				<script type="text/javascript" src="{% static "js/jquery.isotope.min.js" %}"></script>
+				<script type="text/javascript" src="{% static "js/main.js" %}"></script>
 
 </body>
 

@@ -1,3 +1,4 @@
+{% load static %}
 <html>
 <head> 
 	<meta charset="utf-8"> 
@@ -24,8 +25,8 @@
 	<link href="{% static "css/font-awesome.min.css" %}" rel="stylesheet">
 	<!--[if lt IE 9]> <script src="js/html5shiv.js"></script> 
 	<script src="js/respond.min.js"></script> <![endif]--> 
-	<script src="static/js/snap.svg-min.js"></script>
-	<link rel="shortcut icon" href="static/images/ico/favicon.png">  
+	<script src="{% static "js/snap.svg-min.js" %}"></script>
+	<link rel="shortcut icon" href="{% static "images/ico/favicon.png" %}">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,800,400' rel='stylesheet' type='text/css'>
 
 
@@ -43,10 +44,10 @@
 <div class="menu-wrap">
 				<nav class="menu">
 					<div class="icon-list">
-						<a href="index.html"><span>Home</span></a>
-						<a href="about.html"><span>About Us</span></a>
-						<a href="sponsors.html"><span>Sponsors</span></a>
-						<a href="#"><span>Contact Us</span></a>
+						<a href="/"><span>Home</span></a>
+						<a href="/about"><span>About Us</span></a>
+						<a href="/sponsors"><span>Sponsors</span></a>
+						<a href="/contact"><span>Contact Us</span></a>
 					</div>
 				</nav>
 				<button class="close-button" id="close-button">Close Menu</button>
@@ -70,7 +71,7 @@
 			<div class="wow zoomIn col-xs-12 col-sm-6 col-md-3" data-wow-duration="2s">
 				<div class="grid">
 					<figure class="effect-duke">
-						<img class="img-responsive" src="static/images/contact/team1.jpg" alt="img09">
+						<img class="img-responsive" src="{% static "images/contact/team1.jpg" %}" alt="img09">
 						<figcaption>
 							<div class="icon-holder">
 								<ul >
@@ -90,7 +91,7 @@
 			<div class=" wow zoomIn col-xs-12 col-sm-6 col-md-3">
 				<div class="grid">
 					<figure class="effect-duke">
-						<img class="img-responsive" src="static/images/contact/team2.jpg" alt="img09">
+						<img class="img-responsive" src="{% static "images/contact/team2.jpg" %}" alt="img09">
 						<figcaption>
 							<div class="icon-holder">
 								<ul >
@@ -109,7 +110,7 @@
 			<div class="wow zoomIn col-xs-12 col-sm-6 col-md-3">
 				<div class="grid">
 					<figure class="effect-duke">
-						<img class="img-responsive" src="static/images/contact/team3.jpg" alt="img09">
+						<img class="img-responsive" src="{% static "images/contact/team3.jpg" %}" alt="img09">
 						<figcaption>
 							<div class="icon-holder">
 								<ul >
@@ -128,7 +129,7 @@
 			<div class="wow zoomIn col-xs-12 col-sm-6 col-md-3">
 				<div class="grid">
 					<figure class="effect-duke">
-						<img class="img-responsive" src="static/images/contact/team4.jpg" alt="img09">
+						<img class="img-responsive" src="{% static "images/contact/team4.jpg" %}" alt="img09">
 						<figcaption>
 							<div class="icon-holder">
 								<ul >
@@ -149,13 +150,13 @@
 </section>
 </section><!--/contact us -->
 
-<script src="static/js/classie.js"></script>
-		<script src="static/js/main4.js"></script>
-	<script type="text/javascript" src="static/js/jquery.js"></script> 
-				<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+<script src="{% static "js/classie.js" %}"></script>
+		<script src="{% static "js/main4.js" %}"></script>
+	<script type="text/javascript" src="{% static "js/jquery.js" %}"></script> 
+				<script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>
 				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.js"></script>
-				<script type="text/javascript" src="static/js/jquery.isotope.min.js"></script>
-				<script type="text/javascript" src="static/js/main.js"></script>
+				<script type="text/javascript" src="{% static "js/jquery.isotope.min.js" %}"></script>
+				<script type="text/javascript" src="{% static "js/main.js" %}"></script>
 			
 	
 </body>

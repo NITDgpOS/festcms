@@ -6,6 +6,18 @@ urlpatterns = [
     # Home Page
     url(r'^$', views.index, name='index'),
 
+    # About Page
+    url(r'^about/$', views.about, name='about'),
+
+    # Sponsors Page
+    url(r'^sponsors/$', views.sponsors, name='sponsors'),
+
+    # Contact Page
+    url(r'^contact/$', views.contact, name='contact'),
+
+    # Contact Page
+    url(r'^events/$', views.events, name='events'),
+
     # Event View Page
     url(r'^events/(?P<event_identifier>[a-z]*)/$', views.event_view,
         name='event_view'),

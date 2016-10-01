@@ -18,6 +18,26 @@ def index(request):
     return render(request, 'festflow/index.html', context)
 
 
+def about(request):
+    context = {}
+    return render(request, 'festflow/about.html', context)
+
+
+def events(request):
+    context = {}
+    return render(request, 'festflow/event.html', context)
+
+
+def sponsors(request):
+    context = {}
+    return render(request, 'festflow/sponsors.html', context)
+
+
+def contact(request):
+    context = {}
+    return render(request, 'festflow/contact.html', context)
+
+
 def login_page(request):
     context = {}
     profiles_count = Profile.objects.count()
