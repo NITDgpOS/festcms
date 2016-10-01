@@ -18,22 +18,18 @@
 }
 
 .demo-1 .large-header {
-	background-image: url('../img/demo-8-bg.jpg');
+	background-image: url('../img/demo-3-bg.jpg');
 }
 
 .main-title {
-	margin: 0;
-	padding: 0;
 	color: #ffffff;
 	text-align: center;
-	top: 80%;
-	left: 50%;
+	margin-top:15vh;
 	-webkit-transform: translate3d(-50%,-50%,0);
 	transform: translate3d(-50%,-50%,0);
 }
 
 .demo-1 .main-title {  
-	text-transform: uppercase;
 	letter-spacing: 0.1em;
 }
 
