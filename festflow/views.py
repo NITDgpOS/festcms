@@ -25,6 +25,8 @@ def about(request):
 
 def events(request):
     context = {}
+    all_events = Event.objects.all()
+    context['all_events'] = all_events
     return render(request, 'festflow/event.html', context)
 
 
