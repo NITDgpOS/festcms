@@ -53,7 +53,7 @@
   			</header>
   			<section id="grid" class="grid clearfix">
   				{% for event in all_events %}
-          <a href="http://cargocollective.com/isaac317" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+          <a href="{{ event.get_absolute_url }}" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
   					<figure>
               {% if event.logo %}
                 <img src="{{ event.logo.url }}" alt= {{ event.name }}>
