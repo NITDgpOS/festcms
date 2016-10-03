@@ -21,6 +21,8 @@
 	<link href="{% static "css/animate.css" %}"rel="stylesheet"> <!-- used for wow.js-->
 	<link href= "{% static "css/component.css" %}" rel="stylesheet"><!--CSS for effect home-->
 	<link href= "{% static "css/style5.css" %}" rel="stylesheet">
+	<link href= "{% static "css/index.css" %}" rel="stylesheet">
+
 	<!--[if lt IE 9]> <script src="js/html5shiv.js"></script> 
 	<script src="js/respond.min.js"></script> <![endif]--> 
 
@@ -69,9 +71,11 @@
 	<section id="effect">
 		<div class="demo-1">
 			<div class="content">
+				<div id="main-background"></div>
+				<canvas id="main-canvas"></canvas>
 				<div id="large-header" class="large-header wow fadeIn" data-wow-duration="4000ms">
-					<a href="/login"><button class="main-title btn btn-lg btn-danger pull-right wow bounceInDown" data-wow-duration="700ms" data-wow-delay="2s">Register Now..!!</button></a>
-					<canvas id="demo-canvas"></canvas>
+					<img id="logo" src="{% static "images/logo.png" %}">
+					<a href="/login"><button id="register-button" class="btn btn-lg btn-danger">Register Now..!!</button></a>
 					<!-- - - - - - - - - NAVIGATION - - - - - - - - -->
 					<div class="container">
 						<nav id="bt-menu" class="bt-menu">
@@ -112,8 +116,13 @@
 	<script src="{% static "js/TweenLite.min.js" %}"></script>
 	<script src="{% static "js/EasePack.min.js" %}"></script>
 	<script src="{% static "js/rAF.js" %}"></script>
-	<script src="{% static "js/demo-1.js" %}"></script><!--/home effect-->
-	
-	<!--/scripts-->
-</body>
-</html>
+
+	<script src="{% static "js/three.min.js" %}"></script>
+	<script src="{% static "js/Projector.js" %}"></script>
+	<script src="{% static "js/CanvasRenderer.js" %}"></script>
+	<script src="{% static "js/index.js" %}"></script>
+
+
+		<!--/scripts-->
+	</body>
+	</html>

@@ -1,0 +1,46 @@
+#register-button {
+	display: block;
+	margin: 0 auto;
+}
+
+#large-header {
+	width: 100vw;
+	height: 100vh;
+	z-index: 3;
+}
+#register-button a {
+	text-decoration: none;
+}
+
+#main-canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 2;
+	background: #d5d5d5;
+	opacity: 0.5;
+}
+
+#main-background {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1;
+	background-image: url('../images/main-background2.jpg');
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#logo {
+	display: block;
+	margin: 0px auto;
+	transform: scale(0.6);
+	margin-top: -5em;
+	filter: drop-shadow(0px 0px 16px RGBA(226, 255, 255, 0.34));
+}
