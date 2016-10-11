@@ -1,3 +1,57 @@
+/* main canvas styles */
+#main-canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 2;
+	background: #d5d5d5;
+	opacity: 0.5;
+}
+
+#main-background {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1;
+	background-image: url('../images/main-background2.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+/* main logo styles */
+#large-header {
+	position: relative;
+	z-index: 3;
+}
+
+/* animation for logo glow */
+@keyframes glow {
+	0%   {filter: drop-shadow(0px 0px 0px RGBA(226, 255, 255, 0.0));}
+	50%  {filter: drop-shadow(0px 0px 4px RGBA(226, 255, 255, 0.6)); transform: scale(1.01);}
+	100% {filter: drop-shadow(0px 0px 4px RGBA(226, 255, 255, 0.0));}
+}
+
+
+#logo {
+	display: block;
+	max-width: 100%;
+	width: 26em;
+	margin: 0 auto;
+	margin-bottom: 2em;
+	margin-top: 2em;
+	filter: drop-shadow(0px 0px 16px RGBA(226, 255, 255, 0.34));
+	animation-name: glow;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+}
+
+/* Animation for register button glow */
 @keyframes glow_button {
 	0%   {	background: rgba(255,255,255, 0.1);
 		border:  2px solid rgba(255,255,255, 0.3);
@@ -9,7 +63,7 @@
 		border:  2px solid rgba(255,255,255, 0.3);
 	}
 }
-
+/* register button styles */
 #register-button-link {
 	display: block;
 	margin: 0 auto;
@@ -41,56 +95,6 @@
 	transition: all 0.5s;
 }
 
-#large-header {
-	width: 100vw;
-	height: 100vh;
-	z-index: 3;
-}
 #register-button a {
 	text-decoration: none;
-}
-
-#main-canvas {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	z-index: 2;
-	background: #d5d5d5;
-	opacity: 0.5;
-}
-
-#main-background {
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	z-index: 1;
-	background-image: url('../images/main-background2.jpg');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-}
-
-@keyframes glow {
-	0%   {filter: drop-shadow(0px 0px 0px RGBA(226, 255, 255, 0.0));}
-	50%  {filter: drop-shadow(0px 0px 4px RGBA(226, 255, 255, 0.6)); transform: scale(1.01);}
-	100% {filter: drop-shadow(0px 0px 4px RGBA(226, 255, 255, 0.0));}
-}
-
-
-#logo {
-	display: block;
-	max-width: 100%;
-	width: 26em;
-	margin: 0 auto;
-	margin-bottom: 2em;
-	margin-top: 2em;
-	filter: drop-shadow(0px 0px 16px RGBA(226, 255, 255, 0.34));
-	animation-name: glow;
-	animation-duration: 6s;
-	animation-iteration-count: infinite;
 }
