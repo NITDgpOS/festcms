@@ -118,12 +118,12 @@
 
 @media all and (max-device-width: 640px){
     .countdown {
-        font-size: 2.4em;
+        font-size: 1.6em;
     }
 }
 
 @media all and (max-device-width: 320px){
     .countdown {
-        font-size: 2em;
+        font-size: 1.2em;
     }
 }
