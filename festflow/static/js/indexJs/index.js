@@ -1,3 +1,4 @@
+// CANVAS EFFECTS
 var SEPARATION = 100, AMOUNTX = 50, AMOUNTY = 50;
 
 var container;
@@ -148,3 +149,21 @@ function render() {
 	count += 0.1;
 
 }
+
+// COUNTDOWN
+$('#clock').countdown('2016/11/04 18:00:00')
+.on('update.countdown', function(event) {
+	var format = '%H:%M:%S';
+	if(event.offset.totalDays > 0) {
+		format = '%-d day%!d ' + format;
+	}
+	if(event.offset.weeks > 0) {
+		format = '%-w week%!w ' + format;
+	}
+	$(this).html(event.strftime(format));
+})
+.on('finish.countdown', function(event) {
+	$(this).html('ANK is here!')
+	.parent().addClass('disabled');
+
+});
