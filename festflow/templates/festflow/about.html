@@ -3,113 +3,86 @@
 
 <head>
 
-   <meta charset="utf-8"> 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-	<meta name="description" content="ANK 2016 - The Knowledge Fest by National Institute Of Technology Durgapur Maths N Tech Club">
-	<meta name="keywords" content="MNTC,Ank 2K16" /> 
-	<meta name="author" content="Maths n Tech Club"> 
-	<title>ANK 2016! #LetTheFunBegin </title>	
-	
-	<!-- SOCIAL MEDIA META -->
-	<meta property="og:title" content="ANK 2016 | The Knowledge Fest"/>
-	<meta property="og:url" content="http://ank.mntc.in" />
-	<meta property="og:type" content="website" />
-	<meta property="og:description" content="MNTC NIT Durgapur presents ANK 2016 | The Knowledge Fest" />
-	
-	{% load staticfiles %}
-    <!-- Bootstrap Core CSS -->
-    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+ <meta charset="utf-8"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="ANK 2016 - The Knowledge Fest by National Institute Of Technology Durgapur Maths N Tech Club">
+ <meta name="keywords" content="MNTC,Ank 2K16" />
+ <meta name="author" content="Maths n Tech Club">
+ <title>ANK 2016! #LetTheFunBegin </title>
 
-    <!-- Custom CSS -->
-    <link href="{% static "css/about.css" %}" rel="stylesheet">
-	 <link href="(% static "css/main.css" %}" rel="stylesheet">
+ <!-- SOCIAL MEDIA META -->
+ <meta property="og:title" content="ANK 2016 | The Knowledge Fest"/>
+ <meta property="og:url" content="http://ank.mntc.in" />
+ <meta property="og:type" content="website" />
+ <meta property="og:description" content="MNTC NIT Durgapur presents ANK 2016 | The Knowledge Fest" />
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+ {% load staticfiles %}
+ <!-- STYLE SHEETS-->
+ <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+ <link href= "{% static "css/nav.css" %}" rel="stylesheet">
+
+ <link href= "{% static "css/about.css" %}" rel="stylesheet">
+
+ <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+ <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        <![endif]-->
 
 
 </head>
 
 <body>
+    <!-- - NAVBAR - -->
+    <span id="nav_expand_button" class="glyphicon glyphicon-th-list"></span>
+    <nav id="main_nav">
+        <div id="menu_container">
+            <span id="menu_close" class="glyphicon glyphicon-remove-circle"></span>
 
-    <div id="wrapper">
+            <div id="nav_logo_container">
+                <img class="nav_logo" id="outer_logo_circle" src="{% static "images/logo_outer_circle.png" %}">
+                <img class="nav_logo" id="inner_logo_circle" src="{% static "images/logo_inner_circle.png" %}">
+                <img class="nav_logo" id="logo_inner_most" src="{% static "images/logo_inner_most.png" %}">
+            </div>
 
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                        
-                    </a>
-                </li>
-                <li>
-                    <a href="/">Home</a>
-                </li>
-		<li>
-                    <a href="/events">Events</a>
-                </li>
-                <li>
-                    <a href="/sponsors">Sponsors</a>
-                </li>
-                <li>
-                    <a href="/contact">Contact Us</a>
-                </li>
-                
+            <ul class="nav_list">
+                <a href="/"><li class="nav_list_item">Home</li></a>
+                <a href="/about"><li class="nav_list_item">About</li></a>
+                <a href="/events"><li class="nav_list_item">Events</li></a>
+                <a href="/sponsors"><li class="nav_list_item">Sponsors</li></a>
+                <a href=""><li class="nav_list_item">Contact Us</li></a>
             </ul>
         </div>
-        <!-- /#sidebar-wrapper -->
+    </nav>
+    <!-- NAVBAR END -->
 
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <a href="#menu-toggle"  id="menu-toggle"> <img src="http://f.cl.ly/items/1U2c3b1215383h3a2T2r/icon-menu.svg" width="30px" /></a>
-                    </div>
-			<div class="text-center">
-				<!--<div class="col-sm-8 col-sm-offset-2">-->
-					<h1 class="title-one">About ANK</h1>
-					<div class="row">
-						<div class="col-sm-6 wow fadeIn" data-wow-duration="2s" data-wow-delay="1000ms">
-							<img src="{% static "images/aboutank1.jpg" %}" id="image" class="img-responsive" alt="ank-img">
-						</div>
-						<div class="col-sm-6 wow fadeIn" data-wow-duration="2s" data-wow-delay="1500ms">
-							<p> Started in the year 2004, Maths and Tech club was initially conceived with the concept of creating  platform to engender in students fervor for the mathematics by emphasizing its benefits and the want for logic through through a multitude of intriguing challenges.<br/><br/>
-								Due to the uniqueness of our area of emphasis and the unending support of our faculty, Maths N Tech club conquers great heights with every passing year,as is evident from the grand success of ANK  2015. The aim is to imbue some gaiety in our intensely banal odd-semester,where students can enhance their aptitude, quench thier knowledge of thirst, and have a jovial time.<br/>
-								ANK is conceptuated to take these things into consideration.Coming up with  plethora of events like Simplex,Kryptic,Constructo,Clash of titans,Terrorist takedown etc,this fest guarantees to elevate student  aptitude to a new zenith of logic and free-thinking.
-							</p></div>
-						</div>
-					</div>
-
-			</div>
-		</div>
+    <!-- ABOUT -->
+    <div id="background-container">
+        <div class="container" id="about-content-contaier">
+            <div class="row about-content-row">
+                <div class="col-md-12 col-lg-12 col-sm-12">
+                <h1>About ANK</h1>
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-12">
+                    <img src="{% static "images/aboutank1.jpg" %}" id="image" class="img-responsive" alt="ank-img">
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-12">
+                    <p>
+                        Started in the year 2004, Maths and Tech club was initially conceived with the concept of creating  platform to engender in students fervor for the mathematics by emphasizing its benefits and the want for logic through through a multitude of intriguing challenges.<br/><br/>
+                        Due to the uniqueness of our area of emphasis and the unending support of our faculty, Maths N Tech club conquers great heights with every passing year,as is evident from the grand success of ANK  2015. The aim is to imbue some gaiety in our intensely banal odd-semester,where students can enhance their aptitude, quench thier knowledge of thirst, and have a jovial time.<br/>
+                        ANK is conceptuated to take these things into consideration.Coming up with  plethora of events like Simplex,Kryptic,Constructo,Clash of titans,Terrorist takedown etc,this fest guarantees to elevate student  aptitude to a new zenith of logic and free-thinking.
+                    </p>
+                </div>
+            </div>
         </div>
-        <!-- /#page-content-wrapper -->
-
     </div>
-    <!-- /#wrapper -->
 
-    <!-- jQuery -->
-    <script src="{% static "js/jquery.js" %}"></script>
+    <!-- - - - -Default Script files- - - - -->
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="{% static "js/bootstrap.min.js" %}"></script>
-
-    <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
-				
-				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.js"></script>
-				<script type="text/javascript" src="{% static "js/jquery.isotope.min.js" %}"></script>
-				<script type="text/javascript" src="{% static "js/main.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/jquery.js" %}"></script> 
+    <script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/nav.js" %}"></script>
 
 </body>
 

@@ -1,0 +1,29 @@
+@keyframes colorchange
+{
+  0%   {background: #0790e7;}
+  25%  {background: #07d7e7;}
+  50%  {background: #07e778;}
+  75%  {background: #07e778;}
+  100% {background: #0790e7;}
+}
+
+#background-container {
+	width: 100vw;
+	height: 100vh;
+	overflow: auto;
+	background: linear-gradient( 64deg, rgba(0,0,0,0.6), rgba(255,255,255,0.2) );
+	animation-name: colorchange;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+#about-content-contaier {
+	background: linear-gradient( 45deg, rgba(255,255,255,255.6), rgba(255,255,255,0.6) );
+}
+
+.about-content-row {
+	padding: 1em;
+	padding-bottom: 2em;
+	min-height: 100vh;
+}
