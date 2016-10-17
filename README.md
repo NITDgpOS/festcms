@@ -1,23 +1,33 @@
-# Fest Management System using Django
+# Fest Management System
 
+This is the Content management system of Ank 2016 - The Knowledge Fest of Maths N Tech club, NIT Durgapur. It is written in Django and uses basically a Bootstrap based UI.
 
-## Development Guidelines:
+## Prerequisites
 
-### Setting up development environment:
+### Database
 
-Use python3 for everything!
+Install sqlite3 for development
 
-1. Install pip
+* Mac OS X: Mac ships with sqlite3 already installed
+* Ubuntu/Debian: `sudo apt-get install sqlite3`
+* Fedora/Red Hat/CentOS: `sudo yum install sqlite`
 
-In ubuntu it will be sudo apt-get install python-pip'
-Search the internet on how to get it in your distro.
+### python-pip
 
-2. In command line go to the festcms folder
+Install pip for python3
 
-3. Now run 'pip install -r requirements.txt'
+* Mac OS (via easy_install): `sudo easy_install pip` 
+* Debian/Ubuntu: `sudo apt-get install python3-pip`
+* Fedora/CentOS: `sudo yum install python-pip python-wheel`
 
-4. run 'python manage.py migrate'
+## Deployment
 
-5. run 'python manage.py runserver'
-
-6. Visit http://localhost:8000 in your browser.
+1. Clone the repository with `git clone git@github.com:ghoshbishakh/festcms.git`
+2. Enter the directory using `cd festcms`
+3. Copy `festcms/settings.py.example` to `festcms/settings.py`
+4. Enter any arbitary key in the `SECRET_KEY` field in settings.py
+5. Ensure that you have python3 set as default. You can do this by `alias python=python3`
+6. Run `pip install -r requirements.txt` to install all dependencies
+7. Run migrations using `python manage.py migrate`
+8. Run server with `python manage.py runserver`
+9. Ok you are all set! Visit http://localhost:8000 in your browser
