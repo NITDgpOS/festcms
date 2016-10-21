@@ -17,147 +17,58 @@
 	
 	<!-- STYLE SHEETS-->
 	<link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
-	<link href="{% static "css/animate.css" %}" rel="stylesheet"> <!-- used for wow.js-->
-	<link href= "{% static "css/normalize.css" %}" rel="stylesheet">
-	<link href="{% static "css/contact.css" %}" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="{% static "css/menu_bubble.css" %}" />
-	<link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}" />
-	<link href="{% static "css/font-awesome.min.css" %}" rel="stylesheet">
+	<link href= "{% static "css/nav.css" %}" rel="stylesheet">
+
+	<link href= "{% static "css/contact.css" %}" rel="stylesheet">
+
 	<!--[if lt IE 9]> <script src="js/html5shiv.js"></script> 
 	<script src="js/respond.min.js"></script> <![endif]--> 
-	<script src="{% static "js/snap.svg-min.js" %}"></script>
-	<link rel="shortcut icon" href="{% static "images/ico/favicon.png" %}">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,800,400' rel='stylesheet' type='text/css'>
-
-
-	
-	<script src="http://maps.googleapis.com/maps/api/js"></script><!--GOOGLE MAP API-->
-	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script><!-- WOW.JS -->
-	<script>
-		new WOW().init();
-	</script>
-
-	
 </head><!-- /head-->
-<body>
-<div class="menu-wrap">
-				<nav class="menu">
-					<div class="icon-list">
-						<a href="/"><span>Home</span></a>
-						<a href="/about"><span>About Us</span></a>
-						<a href="/sponsors"><span>Sponsors</span></a>
-						<a href="/contact"><span>Contact Us</span></a>
-					</div>
-				</nav>
-				<button class="close-button" id="close-button">Close Menu</button>
-				<div class="morph-shape" id="morph-shape" data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">
-					<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
-						<path d="M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z"/>
-					</svg>
-				</div>
-			</div>
-			<button class="menu-button" id="open-button">Open Menu</button>
-  
-<section id = "contact">
-					<section id="team" class="our-team section-padding">
-	<div class="container">
-		<div class="row">
-			<div class="wow zoomIn col-xs-12 text-center p-padding" data-wow-duration="2s">
-				<p id="conhead"><strong>CONTACT US</strong></p>
-			</div><!-- col-xs-12 -->
-		</div><!-- row -->
-		<div class="row">
-			<div class="wow zoomIn col-xs-12 col-sm-6 col-md-3" data-wow-duration="2s">
-				<div class="grid">
-					<figure class="effect-duke">
-						<img class="img-responsive" src="{% static "images/contact/team1.jpg" %}" alt="img09">
-						<figcaption>
-							<div class="icon-holder">
-								<ul >
-									<li><span></span>9999999999</li>
-									<li style="font-size:20px;margin-left:-43px;"><span></span>sourav.pal@gmail.com</li>
-									
-								</ul>
-							</div>
-						</figcaption>     
-					</figure>
-				</div>
-				<div class="team-designation">
-					<p>SOURAV PAL</p>
-					<span>PRESIDENT</span>
-				</div>
-			</div>
-			<div class=" wow zoomIn col-xs-12 col-sm-6 col-md-3">
-				<div class="grid">
-					<figure class="effect-duke">
-						<img class="img-responsive" src="{% static "images/contact/team2.jpg" %}" alt="img09">
-						<figcaption>
-							<div class="icon-holder">
-								<ul >
-									<li><span></span>9999999999</li>
-									<li style="font-size:20px;margin-left:-43px;"><span></span>sourav.pal@gmail.com</li>
-								</ul>
-							</div>
-						</figcaption>     
-					</figure>
-				</div>
-				<div class="team-designation">
-					<p>NEEL KUMAR</p>
-					<span>TREASURER</span>
-				</div>
-			</div>
-			<div class="wow zoomIn col-xs-12 col-sm-6 col-md-3">
-				<div class="grid">
-					<figure class="effect-duke">
-						<img class="img-responsive" src="{% static "images/contact/team3.jpg" %}" alt="img09">
-						<figcaption>
-							<div class="icon-holder">
-								<ul >
-	<li><span></span>9999999999</li>
-									<li style="font-size:20px;margin-left:-43px;"><span></span>sourav.pal@gmail.com</li>
-</ul>
-							</div>
-						</figcaption>     
-					</figure>
-				</div>
-				<div class="team-designation">
-					<p>ADITI SRIVASTAVA</p>
-					<span>CONVENOR</span>
-				</div>
-			</div>
-			<div class="wow zoomIn col-xs-12 col-sm-6 col-md-3">
-				<div class="grid">
-					<figure class="effect-duke">
-						<img class="img-responsive" src="{% static "images/contact/team4.jpg" %}" alt="img09">
-						<figcaption>
-							<div class="icon-holder">
-								<ul >
-									<li><span></span>9999999999</li>
-									<li style="font-size:20px;margin-left:-43px;"><span></span>sourav.pal@gmail.com</li>
-								</ul>
-							</div>
-						</figcaption>     
-					</figure>
-				</div>
-				<div class="team-designation">
-					<p>ANTARIN KARMAKAR</p>
-					<span>GENERAL SECRETARY</span>
-				</div>
-			</div>
-		</div><!-- row -->
-	</div><!-- container -->
-</section>
-</section><!--/contact us -->
 
-<script src="{% static "js/classie.js" %}"></script>
-		<script src="{% static "js/main4.js" %}"></script>
-	<script type="text/javascript" src="{% static "js/jquery.js" %}"></script> 
-				<script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>
-				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.js"></script>
-				<script type="text/javascript" src="{% static "js/jquery.isotope.min.js" %}"></script>
-				<script type="text/javascript" src="{% static "js/main.js" %}"></script>
+<body>
+  <!-- - NAVBAR - -->
+  <span id="nav_expand_button" class="glyphicon glyphicon-th-list"></span>
+  <nav id="main_nav">
+    <div id="menu_container">
+      <span id="menu_close" class="glyphicon glyphicon-remove-circle"></span>
+
+      <div id="nav_logo_container">
+        <img class="nav_logo" id="outer_logo_circle" src="{% static "images/logo_outer_circle.png" %}">
+        <img class="nav_logo" id="inner_logo_circle" src="{% static "images/logo_inner_circle.png" %}">
+        <img class="nav_logo" id="logo_inner_most" src="{% static "images/logo_inner_most.png" %}">
+      </div>
+
+      <ul class="nav_list">
+        <a href="/"><li class="nav_list_item">Home</li></a>
+        <a href="/about"><li class="nav_list_item">About</li></a>
+        <a href="/events"><li class="nav_list_item">Events</li></a>
+        <a href="/sponsors"><li class="nav_list_item">Sponsors</li></a>
+        <a href="/contact"><li class="nav_list_item">Contact Us</li></a>
+      </ul>
+    </div>
+  </nav>
+  <!-- NAVBAR END -->
+
+  <!-- CONTACTS -->
+  <div id="background-container">
+    <div id="contacts-container" class="container">
+      <div class="row">
+        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+          <div class="contact-wrapper">
+            <img src="">
+            <span>Name</span>
+            <span>Contact Number</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 			
+  <!-- - - - -Default Script files- - - - -->
+
+  <script type="text/javascript" src="{% static "js/jquery.js" %}"></script> 
+  <script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>
+  <script type="text/javascript" src="{% static "js/nav.js" %}"></script>
 	
 </body>
 </html>

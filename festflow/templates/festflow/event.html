@@ -16,95 +16,68 @@
 	
 	{% load staticfiles %}
 	<!-- STYLE SHEETS-->
-	<link rel="stylesheet" type="text/css" href="{% static "css/normalize.css" %}" />
-	<link rel="stylesheet" type="text/css" href="{% static "css/demoevents.css" %}" />
-	<link rel="stylesheet" type="text/css" href="{% static "css/componentevents.css" %}" />
-	<link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}" />
-	<script src="{% static "js/snap.svg-min.js" %}"></script>
-		
-		<link rel="stylesheet" type="text/css" href="{% static "css/font-awesome.min.css" %}" />
-		<link rel="stylesheet" type="text/css" href="{% static "css/menu_bubble.css" %}" />
+  <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+  <link href= "{% static "css/nav.css" %}" rel="stylesheet">
+
+  <link href= "{% static "css/event.css" %}" rel="stylesheet">
+
 		<!--[if IE]>
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   		<![endif]-->
-  	</head>
-  	<body>
-  		<div class="container">
-		<div class="menu-wrap">
-				<nav class="menu">
-					<div class="icon-list">
-						<a href="/"><span>Home</span></a>
-						<a href="/about"><span>About Us</span></a>
-						<a href="/sponsors"><span>Sponsors</span></a>
-						<a href="/contact"><span>Contact Us</span></a>
-					</div>
-				</nav>
-				<button class="close-button" id="close-button">Close Menu</button>
-				<div class="morph-shape" id="morph-shape" data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">
-					<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
-						<path d="M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z"/>
-					</svg>
-				</div>
-			</div>
-			<button class="menu-button" id="open-button">Open Menu</button>
-  			<!-- Top Navigation -->
-  			<header class="codrops-header">
-  				<h1>EVENTS</h1>
-  			</header>
-  			<section id="grid" class="grid clearfix">
-  				{% for event in all_events %}
-          <a href="{{ event.get_absolute_url }}" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
-  					<figure>
-              {% if event.logo %}
-                <img src="{{ event.logo.url }}" alt= {{ event.name }}>
-              {% else %}
-                <img src="{% static "img/1.png" %}" />
-              {% endif %}
-  						<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z "/></svg>
-  						<figcaption>
-  							<h2>{{ event.name }}</h2>
-  							<p>{{ event.description }}</p>
-  							<button>View</button>
-  						</figcaption>
-  					</figure>
-  				</a>
+</head>
+<body>
+  <!-- - NAVBAR - -->
+  <span id="nav_expand_button" class="glyphicon glyphicon-th-list"></span>
+  <nav id="main_nav">
+    <div id="menu_container">
+      <span id="menu_close" class="glyphicon glyphicon-remove-circle"></span>
+
+      <div id="nav_logo_container">
+        <img class="nav_logo" id="outer_logo_circle" src="{% static "images/logo_outer_circle.png" %}">
+        <img class="nav_logo" id="inner_logo_circle" src="{% static "images/logo_inner_circle.png" %}">
+        <img class="nav_logo" id="logo_inner_most" src="{% static "images/logo_inner_most.png" %}">
+      </div>
+
+      <ul class="nav_list">
+        <a href="/"><li class="nav_list_item">Home</li></a>
+        <a href="/about"><li class="nav_list_item">About</li></a>
+        <a href="/events"><li class="nav_list_item">Events</li></a>
+        <a href="/sponsors"><li class="nav_list_item">Sponsors</li></a>
+        <a href="/contact"><li class="nav_list_item">Contact Us</li></a>
+      </ul>
+    </div>
+  </nav>
+  <!-- NAVBAR END -->
+
+  <!-- EVENTS -->
+  <div id="background-container">
+    <div id="events-container" class="container">
+      <div class="row">
+        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+          <div class="event-wrapper">
+          {% for event in all_events %}
+          <a href="{{ event.get_absolute_url }}">
+            {% if event.logo %}
+            <img src="{{ event.logo.url }}" alt= {{ event.name }} class="img-responsive">
+            {% else %}
+            <img src="{% static "img/1.png" %}" />
+            {% endif %}
+            <h2>{{ event.name }}</h2>
+            <p>{{ event.description }}</p>
+            <button>View</button>
+          </a>
           {% endfor %}
-  			</section>
-  		</div><!-- /container -->
-  		<script>
-  			(function() {
-  				
-  				function init() {
-  					var speed = 300,
-  					easing = mina.backout;
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  					[].slice.call ( document.querySelectorAll( '#grid > a' ) ).forEach( function( el ) {
-  						var s = Snap( el.querySelector( 'svg' ) ), path = s.select( 'path' ),
-  						pathConfig = {
-  							from : path.attr( 'd' ),
-  							to : el.getAttribute( 'data-path-hover' )
-  						};
+  <!-- - - - -Default Script files- - - - -->
 
-  						el.addEventListener( 'mouseenter', function() {
-  							path.animate( { 'path' : pathConfig.to }, speed, easing );
-  						} );
+  <script type="text/javascript" src="{% static "js/jquery.js" %}"></script> 
+  <script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>
+  <script type="text/javascript" src="{% static "js/nav.js" %}"></script>
 
-  						el.addEventListener( 'mouseleave', function() {
-  							path.animate( { 'path' : pathConfig.from }, speed, easing );
-  						} );
-  					} );
-  				}
-
-  				init();
-
-  			})();
-  		</script>
-		<script src="{% static "js/classie.js" %}"></script>
-		<script src="{% static "js/main4.js" %}"></script>
-		<script type="text/javascript" src="{% static "js/jquery.js" %}"></script> 
-		<script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.js"></script>
-		<script type="text/javascript" src="{% static "js/jquery.isotope.min.js" %}"></script>
-		<script type="text/javascript" src="{% static "js/main.js" %}"></script>
-  	</body>
-  	</html>
+</body>
+</html>
