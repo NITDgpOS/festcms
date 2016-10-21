@@ -67,3 +67,17 @@ class Profile(models.Model):
 
     def get_absolute_url(self):
         return '/events/%s/' % self.user.username
+
+
+class organizerMember(models.Model):
+    """Stores information about the members of the organization
+    that is conducting the fest"""
+
+    name = models.CharField(max_length=100)
+
+    contactNumber = models.CharField(max_length=15)
+
+    contactURL = models.URLField()
+
+    def __str__(self):
+        return self.name
