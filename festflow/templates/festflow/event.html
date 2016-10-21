@@ -56,15 +56,16 @@
         <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
           <div class="event-wrapper">
           {% for event in all_events %}
-          <a href="{{ event.get_absolute_url }}">
+          <a href="{{ event.get_absolute_url }}" class="event-link">
             {% if event.logo %}
             <img src="{{ event.logo.url }}" alt= {{ event.name }} class="img-responsive">
             {% else %}
             <img src="{% static "img/1.png" %}" />
             {% endif %}
-            <h2>{{ event.name }}</h2>
-            <p>{{ event.description }}</p>
-            <button>View</button>
+            <div class="event-text-wrapper">
+              <h2 class="event-name">{{ event.name }}</h2>
+              <p class="event-description">{{ event.description }}</p>
+            </div>
           </a>
           {% endfor %}
           </div>
