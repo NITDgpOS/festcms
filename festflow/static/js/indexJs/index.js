@@ -151,13 +151,16 @@ function render() {
 // COUNTDOWN
 $('#clock').countdown('2016/11/04 18:00:00')
 .on('update.countdown', function(event) {
-	var format = '%H:%M:%S';
-	if(event.offset.totalDays > 0) {
-		format = '%-d day%!d ' + format;
-	}
-	if(event.offset.weeks > 0) {
-		format = '%-w week%!w ' + format;
-	}
+	var format = '<span class="clock-unit">%-D<br/><span class="clock-unit-sub">days</span></span>\
+				<span class="clock-unit">%-D<br/><span class="clock-unit-sub">hr</span></span>\
+				<span class="clock-unit">%-M<br/><span class="clock-unit-sub">min</span></span>\
+				<span class="clock-unit">%-S<br/><span class="clock-unit-sub">sec</span></span>';
+	// if(event.offset.totalDays > 0) {
+	// 	format = '%-D day%!d ' + format;
+	// }
+	// if(event.offset.weeks > 0) {
+	// 	format = '%-w week%!w ' + format;
+	// }
 	$(this).html(event.strftime(format));
 })
 .on('finish.countdown', function(event) {

@@ -106,13 +106,45 @@
     text-align: center;
     font-size: 2em;
     color: #e5e5e5;
-    text-shadow: 0px 1px 2px #fff;
+    /* text-shadow: 0px 1px 2px #fff; */
     padding: 1em;
+}
+
+@keyframes glow-clock {
+	0% {transform: scale(1);
+    box-shadow: 0 0 0.1em 0 #fff;
+	}
+	100% {transform: scale(0.9);
+    box-shadow: none;
+	}
+}
+.clock-unit {
+    display: block;
+    float: left;
+    width: 2.8em;
+    border-radius: 50%;
+    height: 2.8em;
+    text-align: center;
+    box-shadow: 0 0 0.1em 0 #fff;
+    margin: 0.2em;
+    animation-name: glow-clock;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+
+}
+
+.clock-unit-sub {
+	font-size: 0.7em;
+}
+
+.countdown {
+	width: 14.9em;
+	margin: 0 auto;
 }
 
 @media all {
     .countdown {
-        font-size: 3em;
+        font-size: 2em;
     }
 }
 
