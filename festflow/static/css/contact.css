@@ -2,5 +2,72 @@
 	width: 100vw;
 	height: 100vh;
 	overflow: auto;
-	background: #e5e5b5;
+	background: url("../images/contacts-background.jpg") center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+@keyframes colorchange
+{
+  0%   {background: #0790e7;}
+  25%  {background: #07d7e7;}
+  50%  {background: #07e778;}
+  75%  {background: #07e778;}
+  100% {background: #0790e7;}
+}
+
+#color-background-overlay {
+	position: absolute;
+	background:  #e5e5e5;
+	width: 100vw;
+	height: 100vh;
+	opacity: 0.5;
+	animation-name: colorchange;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+}
+
+.contact-wrapper {
+	background: #fff;
+	border-radius: 0.2em;
+	overflow: hidden;
+	box-shadow: 0 0 0.4em 0 #fff;
+	transition: all 0.2s;
+}
+
+.contact-wrapper:hover {
+	box-shadow: 0 0 0.8em 0 #fff;
+	transform: scale(1.01);
+}
+
+.contact-name {
+	display: block;
+	font-size: 1.2em;
+	text-align: center;
+	padding: 0.4em;
+}
+
+.contact-number {
+	background: #e2f2ff;
+	display: block;
+	font-size: 1.2em;
+	text-align: center;
+	padding: 0.4em;
+}
+
+.contact-link {
+	text-decoration: none;
+	color: inherit;
+}
+
+.contact-link:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+.glyphicon, .glyphicon-earphone {
+	text-align: left;
+	display: inline block;
 }

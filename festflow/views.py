@@ -37,6 +37,8 @@ def sponsors(request):
 
 def contact(request):
     context = {}
+    all_contacts = organizerMember.objects.all()
+    context['all_contacts'] = all_contacts
     return render(request, 'festflow/contact.html', context)
 
 

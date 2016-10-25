@@ -51,15 +51,27 @@
 
   <!-- CONTACTS -->
   <div id="background-container">
+    <div id="color-background-overlay"></div>
     <div id="contacts-container" class="container">
       <div class="row">
-        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-          <div class="contact-wrapper">
-            <img src="">
-            <span>Name</span>
-            <span>Contact Number</span>
-          </div>
+        <div class="col-md-12 col-lg-12">
+          <h1>Team ANK</h1>
         </div>
+        {% for contact in all_contacts %}
+        <div class="col-md-3 col-lg-3 col-sm-4 col-xs-6">
+          <a href="{{contact.contactURL}}" target="_blank" class="contact-link">
+          <div class="contact-wrapper">
+            {% if contact.avatar_img %}
+            <img class="img-responsive" src="{{contact.avatar_img.url}}">
+            {% else %}
+            <img class="img-responsive" src="{% static "images/contact/avatar.png" %}">
+            {% endif %}
+            <span class="contact-name">{{contact.name}}</span>
+            <span class="contact-number"><span class="glyphicon glyphicon-earphone"></span> {{contact.contactNumber}}</span>
+          </div>
+          </a>
+        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
