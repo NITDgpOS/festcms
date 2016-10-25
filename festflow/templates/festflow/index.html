@@ -17,112 +17,75 @@
 	{% load staticfiles %}
 	<!-- STYLE SHEETS-->
 	<link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
-	<link href="{% static "css/main.css" %}" rel="stylesheet">
-	<link href="{% static "css/animate.css" %}"rel="stylesheet"> <!-- used for wow.js-->
-	<link href= "{% static "css/component.css" %}" rel="stylesheet"><!--CSS for effect home-->
-	<link href= "{% static "css/style5.css" %}" rel="stylesheet">
+	<link href= "{% static "css/nav.css" %}" rel="stylesheet">
+
 	<link href= "{% static "css/index.css" %}" rel="stylesheet">
+
 
 	<!--[if lt IE 9]> <script src="js/html5shiv.js"></script> 
 	<script src="js/respond.min.js"></script> <![endif]--> 
 
 	<link rel="shortcut icon" href="{% static "images/ico/favicon.png" %}">  
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,800,400' rel='stylesheet' type='text/css'>
-	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script><!-- WOW.JS -->
-	<script>
-		new WOW().init();
-	</script>
-
-	<style>
-		.social:hover{
-			-ms-transform: scale(1.5); /* IE 9 */
-			-webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
-			transform: scale(1.5);
-			
-			-webkit-transition: all 0.3s ease;
-			-moz-transition: all 0.3s ease;
-			-o-transition: all 0.3s ease;
-			transition: all 0.5s ease;
-		}
-	</style>
 </head><!-- /head-->
 
-<body data-spy="scroll" data-target=".navbar" data-offset="90" style="overflow-x:hidden">
+<body>	
 
-	<!-- - - - - - - - - PRELOADER - - - - - - - - -->
-	
-	<div class="preloader">
-		<div class="preloder-wrap">
-			<div class="preloder-inner"> 
-				<div class="ball"></div> 
-				<div class="ball"></div> 
-				<div class="ball"></div> 
-				<div class="ball"></div> 
-				<div class="ball"></div> 
-				<div class="ball"></div> 
-				<div class="ball"></div>
+	<!-- - NAVBAR - -->
+	<span id="nav_expand_button" class="glyphicon glyphicon-th-list"></span>
+	<nav id="main_nav">
+		<div id="menu_container">
+			<span id="menu_close" class="glyphicon glyphicon-remove-circle"></span>
+			
+			<div id="nav_logo_container">
+				<img class="nav_logo" id="outer_logo_circle" src="{% static "images/logo_outer_circle.png" %}">
+				<img class="nav_logo" id="inner_logo_circle" src="{% static "images/logo_inner_circle.png" %}">
+				<img class="nav_logo" id="logo_inner_most" src="{% static "images/logo_inner_most.png" %}">
 			</div>
-		</div>
-	</div><!--/.preloader-->
-	
-	<!-- - HOME - -->
 
-	<section id="effect">
-		<div class="demo-1">
-			<div class="content">
-				<div id="main-background"></div>
-				<canvas id="main-canvas"></canvas>
-				<div id="large-header" class="large-header wow fadeIn" data-wow-duration="4000ms">
-					<img id="logo" src="{% static "images/logo.png" %}">
-					<a href="/login" id="register-button-link"><button id="register-button" class="btn btn-lg btn-danger">Register Now</button></a>
-					<!-- - - - - - - - - NAVIGATION - - - - - - - - -->
-					<div class="container">
-						<nav id="bt-menu" class="bt-menu">
-							<a href="#" class="bt-menu-trigger"><span>Menu</span></a>
-							<ul>
-								<li><a href="about">About Us</a></li>
-								<li><a href="events">Events</a></li>
-								<li><a href="sponsors">Sponsors</a></li>
-								<li><a href="contact">Contact Us</a></li>
-							</ul>
-							<ul>
-								<li><a href="http://www.twitter.com/" ><img src="{% static "img/twitter.svg" %}"  width= "40%" class="social"/></a></li>
-								<li><a href="https://www.facebook.com/mathsntechclub/" ><img src="{% static "img/fb.svg" %}"  width= "40%" class="social"/></a></li>
-								<li><a href="https://www.youtube.com/channel/UCQMKQOji7qul1pwDpkeOa8A" ><img src="{% static "img/youtube.svg" %}"  width= "45%" class="social"/></a></li>
-								<li><a href="http://www.linkedin.com/" ><img src="{% static "img/linkedin.svg" %}"  width= "40%" class="social"/></a></li>
-							</ul>
-						</nav>
-					</div><!-- /container -->
-					
+			<ul class="nav_list">
+				<a href="/"><li class="nav_list_item">Home</li></a>
+				<a href="/about"><li class="nav_list_item">About</li></a>
+				<a href="/events"><li class="nav_list_item">Events</li></a>
+				<a href="/sponsors"><li class="nav_list_item">Sponsors</li></a>
+				<a href="/contact"><li class="nav_list_item">Contact Us</li></a>
+			</ul>
+		</div>
+	</nav>
+	<!-- NAVBAR END -->
+
+	<!-- HOME -->
+	<section>
+		<div>
+			<div id="main-background"></div>
+			<canvas id="main-canvas"></canvas>
+			<div id="large-header">
+				<img id="logo" src="{% static "images/logo.png" %}">
+				<a href="/login" id="register-button-link"><button id="register-button" class="btn btn-lg btn-danger">Register Now</button></a>
+				<div class="countdown">
+					<span id="clock"></span>
 				</div>
 			</div>
 		</div>
 	</section><!--/HOME-->	
 
-	<!-- - - - -Script files- - - - -->
+	<!-- - - - -Default Script files- - - - -->
 
 	<script type="text/javascript" src="{% static "js/jquery.js" %}"></script> 
 	<script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.js"></script>
-	<script type="text/javascript" src="{% static "js/jquery.isotope.min.js" %}"></script>
-	<script type="text/javascript" src="{% static "js/main.js" %}"></script> 
-	<script type="text/javascript" src="{% static "js/borderMenu.js" %}"></script>
-	<script type="text/javascript" src="{% static "js/classie.js" %}"></script>
-	<script src="{% static "js/modernizr.custom.js" %}"></script>
+	<script type="text/javascript" src="{% static "js/nav.js" %}"></script>
 
 	<!-- - - - -Script for home effect- - - - -->
 
-	<script src="{% static "js/TweenLite.min.js" %}"></script>
-	<script src="{% static "js/EasePack.min.js" %}"></script>
-	<script src="{% static "js/rAF.js" %}"></script>
+	<!-- countdown -->
+	<script src="{% static "js/indexJs/jquery.countdown.min.js" %}"></script>
 
-	<script src="{% static "js/three.min.js" %}"></script>
-	<script src="{% static "js/Projector.js" %}"></script>
-	<script src="{% static "js/CanvasRenderer.js" %}"></script>
-	<script src="{% static "js/index.js" %}"></script>
+	<!-- canvas effect -->	
+	<script src="{% static "js/indexJs/mainCanvasJsFiles/three.min.js" %}"></script>
+	<script src="{% static "js/indexJs/mainCanvasJsFiles/Projector.js" %}"></script>
+	<script src="{% static "js/indexJs/mainCanvasJsFiles/CanvasRenderer.js" %}"></script>
+	<script src="{% static "js/indexJs/index.js" %}"></script>
 
 
-		<!--/scripts-->
-	</body>
-	</html>
+	<!--/scripts-->
+</body>
+</html>

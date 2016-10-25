@@ -1,160 +1,29 @@
-/*!
- * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
-
-html, body {
-    margin: 0;
-    height: 100%;
-}
- 
-
-body {
-    overflow-x: hidden;
-	background-color:#f5f5f500;
-	
- }
-#page-content-wrapper{
-color:#000000;
+@keyframes colorchange
+{
+  0%   {background: #0790e7;}
+  25%  {background: #07d7e7;}
+  50%  {background: #07e778;}
+  75%  {background: #07e778;}
+  100% {background: #0790e7;}
 }
 
-h1{
-padding:1em;
-padding-bottom:3em;
-}
-#image{
-padding:2em;
-padding-left:4em;
-}
-
-p{
-padding-top:3em;
-padding-right:2em;
-font-size:1.5em
-}
-/* Toggle Styles */
-
-#wrapper {
-    padding-left: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+#background-container {
+	width: 100vw;
+	height: 100vh;
+	overflow: auto;
+	background: linear-gradient( 64deg, rgba(0,0,0,0.6), rgba(255,255,255,0.2) );
+	animation-name: colorchange;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
 }
 
-#wrapper.toggled {
-    padding-left: 250px;
+#about-content-contaier {
+	background: linear-gradient( 45deg, rgba(255,255,255,255.6), rgba(255,255,255,0.6) );
 }
 
-#sidebar-wrapper {
-    z-index: 1000;
-    position: fixed;
-    left: 250px;
-    width: 0;
-    height: 100%;
-    margin-left: -250px;
-    overflow-y: auto;
-    background: #5f6063;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-#wrapper.toggled #sidebar-wrapper {
-    width: 250px;
-}
-
-#page-content-wrapper {
-    width: 100%;
-    position: absolute;
-    padding: 15px;
-}
-
-#wrapper.toggled #page-content-wrapper {
-    position: absolute;
-    margin-right: -250px;
-}
-
-/* Sidebar Styles */
-
-.sidebar-nav {
-    position: absolute;
-    top: 0;
-    width: 250px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.sidebar-nav li {
-    text-indent: 20px;
-    line-height: 40px;
-}
-
-.sidebar-nav li a {
-    display: block;
-    text-decoration: none;
-    color: #ffffff;
-	font-size:1.5em;
-	padding:0.5em;
-}
-
-.sidebar-nav li a:hover {
-    text-decoration: none;
-    color: #fff;
-    font-size:1.63em;
-    background: rgba(255,255,255,0.2);
-	-ms-transform: rotate(7deg); /* IE 9 */
-    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
-    transform: rotate(7deg);
-}
-
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
-    text-decoration: none;
-}
-
-.sidebar-nav > .sidebar-brand {
-    height: 65px;
-    font-size: 18px;
-    line-height: 60px;
-}
-
-.sidebar-nav > .sidebar-brand a {
-    color: #999999;
-}
-
-.sidebar-nav > .sidebar-brand a:hover {
-    color: #fff;
-    background: none;
-}
-
-@media(min-width:768px) {
-    #wrapper {
-        padding-left: 250px;
-    }
-
-    #wrapper.toggled {
-        padding-left: 0;
-    }
-
-    #sidebar-wrapper {
-        width: 250px;
-    }
-
-    #wrapper.toggled #sidebar-wrapper {
-        width: 0;
-    }
-
-    #page-content-wrapper {
-        padding: 20px;
-        position: relative;
-    }
-
-    #wrapper.toggled #page-content-wrapper {
-        position: relative;
-        margin-right: 0;
-    }
+.about-content-row {
+	padding: 1em;
+	padding-bottom: 2em;
+	min-height: 100vh;
 }

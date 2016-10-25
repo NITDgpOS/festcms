@@ -1,0 +1,44 @@
+#background-container {
+	width: 100vw;
+	height: 100vh;
+	overflow: auto;
+	background: #e5b5c4;
+	background: url(../images/events-background.jpg) center no-repeat;
+	background-size: cover;
+	padding-top: 2em;
+}
+
+.event-wrapper {
+	background: #fff;
+	border-radius: 0.2em;
+	overflow: auto;
+	box-shadow: 0em 0em 1em -0.2em #5D5A89;
+	transition: all 0.5s;
+}
+
+.event-wrapper:hover {
+	background: #fff;
+	border-radius: 0.2em;
+	overflow: auto;
+	box-shadow: 0em 0em 2em -0.8em #fff;
+	transition: all 0.5s;
+}
+
+.event-link {
+	text-decoration: none;
+	color: inherit;
+}
+
+.event-link:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+.event-name {
+	color: #1a1a1a;
+	text-decoration: none;
+}
+
+.event-text-wrapper {
+	padding: 0.4em;
+}
