@@ -75,6 +75,9 @@ class organizerMember(models.Model):
 
     name = models.CharField(max_length=100)
 
+    avatar_img = models.ImageField(upload_to='avatar_images/',
+                                   blank=True, null=True)
+
     contactNumber = models.CharField(max_length=15)
 
     contactURL = models.URLField()
