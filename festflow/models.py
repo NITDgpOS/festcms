@@ -75,6 +75,10 @@ class organizerMember(models.Model):
 
     name = models.CharField(max_length=100)
 
+    position = models.CharField(max_length=100)
+
+    rank = models.IntegerField(default=0)
+
     avatar_img = models.ImageField(upload_to='avatar_images/',
                                    blank=True, null=True)
 
