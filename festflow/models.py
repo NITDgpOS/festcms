@@ -84,6 +84,8 @@ class organizerMember(models.Model):
 
     contactNumber = models.CharField(max_length=15)
 
+    emailId = models.EmailField(blank=True, null=True)
+
     contactURL = models.URLField()
 
     def __str__(self):

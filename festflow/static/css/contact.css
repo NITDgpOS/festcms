@@ -55,6 +55,12 @@
 	font-size: 1.2em;
 	text-align: center;
 	padding: 0.4em;
+	transition: all 0.2s;
+}
+
+.contact-number:hover {
+	color: #000;
+	transform: scale(1.1);
 }
 
 .contact-link {
@@ -70,4 +76,20 @@
 .glyphicon, .glyphicon-earphone {
 	text-align: left;
 	display: inline block;
+}
+
+.contact-email {
+	display: block;
+	text-align: center;
+	font-size: 1.2em;
+	padding: 0.4em;
+	text-decoration: none;
+	color: inherit;
+	transition: all 0.2s;
+}
+
+.contact-email:hover {
+	color: #000;
+	background: #f2f2f2;
+	transform: scale(1.05);
 }

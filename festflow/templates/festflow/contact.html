@@ -67,7 +67,14 @@
             <img class="img-responsive" src="{% static "images/contact/avatar.png" %}">
             {% endif %}
             <span class="contact-name">{{contact.name}}</span>
+            <a class="contact-link" href="tel:{{contact.contactNumber}}">
             <span class="contact-number"><span class="glyphicon glyphicon-earphone"></span> {{contact.contactNumber}}</span>
+            </a>
+            <a class="contact-link" href="mailto:{{contact.emailId}}">
+              <span class="contact-email">
+                <span class="glyphicon glyphicon-send"></span> {{contact.emailId}}
+              </span>
+            </a>
           </div>
           </a>
         </div>
