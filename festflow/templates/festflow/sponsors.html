@@ -61,7 +61,18 @@
     <!-- SPONSORS -->
     <div id="background-container">
         <div class="container">
-            <h1>Sponsors</h1>            
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <h1>Sponsors</h1>
+                </div>
+                <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12">
+                    {% for sponsor in all_sponsors %}
+                    <div class="sponsor-wrapper">
+                        <img class="img-responsive" src="{{sponsor.logo.url}}">
+                    </div>
+                    {% endfor %}
+                </div>                
+            </div>
         </div>
     </div>
 

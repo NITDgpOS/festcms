@@ -88,3 +88,13 @@ class organizerMember(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class sponsor(models.Model):
+    """Stores information about fest sponsors
+    """
+    name = models.CharField(max_length=100)
+
+    logo = models.ImageField(upload_to='sponsor_logos/')
+
+    rank = models.IntegerField(default=0)
