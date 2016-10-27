@@ -17,7 +17,7 @@
 }
 
 #color-background-overlay {
-	position: absolute;
+	position: fixed;
 	background:  #e5e5e5;
 	width: 100vw;
 	height: 100vh;
@@ -35,6 +35,7 @@
 	overflow: hidden;
 	box-shadow: 0 0 0.4em 0 #fff;
 	transition: all 0.2s;
+	margin: 1em;
 }
 
 .contact-wrapper:hover {
