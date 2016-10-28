@@ -142,6 +142,22 @@
 	margin: 0 auto;
 }
 
+#share-buttons-wrapper {
+	position: fixed;
+	right: 0em;
+	top: 1em;
+	max-width: 50%;
+	width: 24em;
+	margin: 0 auto;
+}
+#share-buttons-wrapper li {
+	opacity: 0.6;
+	transition: opacity 0.2s;
+}
+#share-buttons-wrapper li:hover {
+	opacity: 1;
+}
+
 @media all {
     .countdown {
         font-size: 2em;
