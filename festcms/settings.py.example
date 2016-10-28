@@ -138,6 +138,7 @@ MEDIA_URL = '/media/'
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = '/login/'
 
+GOOGLE_API_KEY = ''
 
 # python-social-auth settings
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
