@@ -4,3 +4,4 @@ from .models import *
 admin.site.register(Profile)
 admin.site.register(Event)
 admin.site.register(organizerMember)
+admin.site.register(sponsor)

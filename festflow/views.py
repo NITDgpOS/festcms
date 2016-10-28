@@ -32,11 +32,15 @@ def events(request):
 
 def sponsors(request):
     context = {}
+    all_sponsors = sponsor.objects.all()
+    context['all_sponsors'] = all_sponsors
     return render(request, 'festflow/sponsors.html', context)
 
 
 def contact(request):
     context = {}
+    all_contacts = organizerMember.objects.all()
+    context['all_contacts'] = all_contacts
     return render(request, 'festflow/contact.html', context)
 
 
