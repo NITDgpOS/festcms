@@ -1,8 +1,10 @@
 #background-container {
+	position: fixed;
 	width: 100vw;
 	height: 100vh;
 	overflow: auto;
-	background: #e5e5e5;
+	background: url('../images/eventbg.jpg') center no-repeat;
+	opacity: 0.15;
 }
 
 #share-buttons-wrapper {

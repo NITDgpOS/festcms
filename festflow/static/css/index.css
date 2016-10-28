@@ -142,21 +142,41 @@
 	margin: 0 auto;
 }
 
+/* share button styles */
+
 #share-buttons-wrapper {
 	position: fixed;
 	right: 0em;
-	top: 1em;
+	bottom: 0em;
 	max-width: 50%;
-	width: 24em;
+	width: 12em;
 	margin: 0 auto;
 }
-#share-buttons-wrapper li {
-	opacity: 0.6;
-	transition: opacity 0.2s;
+
+.rrssb-buttons li a .rrssb-icon svg circle, .rrssb-buttons li a .rrssb-icon svg path {
+    fill: #000;
 }
-#share-buttons-wrapper li:hover {
-	opacity: 1;
+.rrssb-buttons li.rrssb-twitter a {
+	background: #fff;
 }
+.rrssb-buttons li.rrssb-twitter a {
+	background: #fff;
+}
+
+.rrssb-buttons li.rrssb-facebook a {
+	background: #fff;
+}
+.rrssb-buttons li.rrssb-facebook a {
+	background: #fff;
+}
+
+.rrssb-buttons li.rrssb-googleplus a {
+	background: #fff;
+}
+.rrssb-buttons li.rrssb-googleplus a {
+	background: #fff;
+}
+
 
 @media all {
     .countdown {
