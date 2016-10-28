@@ -18,6 +18,9 @@ urlpatterns = [
     # Contact Page
     url(r'^events/$', views.events, name='events'),
 
+    # Reach Us Page
+    url(r'^reachus/$', views.reachus, name='reachus'),
+
     # Event View Page
     url(r'^events/(?P<event_identifier>[a-z]*)/$', views.event_view,
         name='event_view'),

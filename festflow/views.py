@@ -44,6 +44,11 @@ def contact(request):
     return render(request, 'festflow/contact.html', context)
 
 
+def reachus(request):
+    context = {}
+    return render(request, 'festflow/reachus.html', context)
+
+
 def login_page(request):
     context = {}
     profiles_count = Profile.objects.count()

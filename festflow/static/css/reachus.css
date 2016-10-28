@@ -1,0 +1,24 @@
+#reachus-container {
+	background: #1a1a1a;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+#gmap_canvas {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.reachus-col {
+	padding: 0;
+	margin: 0;
+}
+
+#reachus-bg {
+	background: url('../images/nit.jpg') center no-repeat;
+	width: 100%;
+	height: 100%;
+}
