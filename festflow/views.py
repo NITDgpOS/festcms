@@ -1,5 +1,6 @@
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.decorators import login_required
+from django.conf import settings
 from django.shortcuts import render, redirect, Http404
 
 from .forms import EditProfileForm
@@ -46,6 +47,7 @@ def contact(request):
 
 def reachus(request):
     context = {}
+    context["google_api_key"] = settings.GOOGLE_API_KEY
     return render(request, 'festflow/reachus.html', context)
 
 
