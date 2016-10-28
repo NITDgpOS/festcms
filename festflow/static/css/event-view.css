@@ -4,3 +4,8 @@
 	overflow: auto;
 	background: #e5e5e5;
 }
+
+#share-buttons-wrapper {
+	padding: 1em;
+	margin: 1em;
+}
