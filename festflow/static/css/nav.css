@@ -118,10 +118,10 @@
 }
 .nav_list_item {
 	font-size: 1.2em;
-	padding: 0em;
 	text-align: center;
 	text-decoration: none;
-	padding: 1em;
+	padding: 0.7em;
+	font-weight: 800;
 	max-width: 100%;
 	transition: all 0.4s;
 	color: rgba(118, 176, 206, 0.5);

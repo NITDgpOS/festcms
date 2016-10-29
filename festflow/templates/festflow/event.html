@@ -44,6 +44,11 @@
         <a href="/sponsors"><li class="nav_list_item">Sponsors</li></a>
         <a href="/contact"><li class="nav_list_item">Contact Us</li></a>
         <a href="/reachus"><li class="nav_list_item">Reach Us</li></a>
+        {% if user.is_authenticated %}
+        <a href="/logout"><li class="nav_list_item">Logout</li></a>
+        {% else %}
+        <a href="/login"><li class="nav_list_item">Login</li></a>
+        {% endif %}
       </ul>
     </div>
   </nav>
