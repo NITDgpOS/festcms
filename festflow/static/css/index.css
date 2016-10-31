@@ -142,6 +142,42 @@
 	margin: 0 auto;
 }
 
+/* share button styles */
+
+#share-buttons-wrapper {
+	position: fixed;
+	right: 0em;
+	bottom: 0em;
+	max-width: 50%;
+	width: 12em;
+	margin: 0 auto;
+}
+
+.rrssb-buttons li a .rrssb-icon svg circle, .rrssb-buttons li a .rrssb-icon svg path {
+    fill: #000;
+}
+.rrssb-buttons li.rrssb-twitter a {
+	background: #fff;
+}
+.rrssb-buttons li.rrssb-twitter a {
+	background: #fff;
+}
+
+.rrssb-buttons li.rrssb-facebook a {
+	background: #fff;
+}
+.rrssb-buttons li.rrssb-facebook a {
+	background: #fff;
+}
+
+.rrssb-buttons li.rrssb-googleplus a {
+	background: #fff;
+}
+.rrssb-buttons li.rrssb-googleplus a {
+	background: #fff;
+}
+
+
 @media all {
     .countdown {
         font-size: 2em;
