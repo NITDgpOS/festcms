@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Aclonica|Chewy|Baloo+Bhaina|Caveat+Brush|Coiny|Euphoria+Script|Lilita+One|Quintessential|Sigmar+One');
+
 #background-container {
 	width: 100vw;
 	height: 100vh;
@@ -93,4 +95,10 @@
 	color: #000;
 	background: #f2f2f2;
 	transform: scale(1.05);
+}
+h1{
+	font-family: 'Baloo Bhaina', Cursive;
+	font-size: 400%;
+	padding:1em;
+	color:#fff;
 }

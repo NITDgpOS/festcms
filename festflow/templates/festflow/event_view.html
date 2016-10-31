@@ -74,7 +74,7 @@
       <div id="background-container">
       </div>
       <div class="event_container container">
-        <h1>{{ event.name }}</h1>
+        <h1 class="text-center">{{ event.name }}</h1>
         <div class="row">
          <div class="col-sm-6">
           {% if event.logo %}
@@ -86,7 +86,7 @@
          <p>{{ event.description }}</p>
          <p><strong>venue</strong>: {{ event.venue }}</p>
          {% if event.problem_statement_file %}
-         <a href="{{ event.problem_statement_file.url }}"><h3>Download Problem Statement</h3></a>
+         <a href="{{ event.problem_statement_file.url }}" target="_blank"><h4>Problem Statement</h4></a>
          {% endif %}
          {% if event in user_profile.registered_events.all %}
          <h3>You have already registered for this event</h3>

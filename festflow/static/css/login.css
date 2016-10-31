@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Itim|Chewy|Baloo+Paaji|Caveat+Brush|Coiny|Lobster|Lilita+One|Quintessential|Sigmar+One');
 #background-div {
 	position: fixed;
 	z-index: -100;
@@ -24,4 +25,14 @@
 	margin: 0 auto;
 	width: 42em;
 	max-width: 100%;
+}
+h1{
+	font-family: 'Baloo Paaji', Cursive;
+	padding:1em;
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+h2{
+	
+	font-family: 'Itim', cursive;
 }

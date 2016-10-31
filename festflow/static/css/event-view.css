@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Itim|Chewy|Baloo+Bhaina|Caveat+Brush|Coiny|Lobster');
+
 #background-container {
 	position: fixed;
 	width: 100vw;
@@ -10,4 +12,31 @@
 #share-buttons-wrapper {
 	padding: 1em;
 	margin: 1em;
+}
+h1{
+	
+	font-family: 'Coiny', cursive;
+	font-size:400%; 
+	text-transform: uppercase;
+	padding-bottom:1.5em;
+	padding-top: 1em;
+	color: #000;
+}
+h2{
+ 	font-family: 'Chewy', cursive;
+ 	font-size: 300%;
+ 	font-weight:100;
+ 	color: #c33939;
+ }
+ p{
+ 	font-family: 'Caveat Brush', cursive;
+ 	font-size:200%;
+ 	font-weight: 100;
+ }
+
+h4{
+	padding-top: 1em;
+	padding-bottom: 1em;
+	color:#354d73;
+	font-weight: 800;
 }
