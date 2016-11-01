@@ -15,9 +15,9 @@ h1{
 	font-size: 300%;
 }
 p{
-	font-size: 2em;
+	font-size: 1.6em;
 	color:#fff;
-	font-family: 'Euphoria Script', cursive;
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; 
 	font-weight: 500;
 	letter-spacing: 1px;
 }
@@ -35,6 +35,10 @@ p{
     min-height: 260px;
     padding-bottom: 6%;
     overflow: hidden;
+}
+.large{
+	font-size: 1.2em;
+	font-style: italic;
 }
 
 @media screen and (max-width: 1536px) and (min-width: 1366px)
