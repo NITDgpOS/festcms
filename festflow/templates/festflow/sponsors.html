@@ -70,13 +70,13 @@
                 <div class="col-md-12 col-lg-12">
                     <h1 class="text-center">Sponsors</h1>
                 </div>
-                <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12">
                     {% for sponsor in all_sponsors %}
-                    <div class="sponsor-wrapper">
-                        <img class="img-responsive" src="{{sponsor.logo.url}}">
-                    </div>
+                    <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12">
+                        <div class="sponsor-wrapper">
+                            <img class="img-responsive" src="{{sponsor.logo.url}}">
+                        </div>
+                    </div>                
                     {% endfor %}
-                </div>                
             </div>
         </div>
     </div>
