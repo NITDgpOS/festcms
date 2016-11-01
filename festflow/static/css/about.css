@@ -1,29 +1,56 @@
-@keyframes colorchange
-{
-  0%   {background: #0790e7;}
-  25%  {background: #07d7e7;}
-  50%  {background: #07e778;}
-  75%  {background: #07e778;}
-  100% {background: #0790e7;}
-}
+@import url('https://fonts.googleapis.com/css?family=Aclonica|Chewy|Baloo+Bhaina|Caveat+Brush|Coiny|Euphoria+Script');
 
 #background-container {
+	background: url("../images/aboutbg.png");
+	//background: linear-gradient( 64deg, rgba(0,0,0,0.4), rgba(255,255,255,0.2) );
 	width: 100vw;
 	height: 100vh;
 	overflow: auto;
-	background: linear-gradient( 64deg, rgba(0,0,0,0.6), rgba(255,255,255,0.2) );
-	animation-name: colorchange;
-	animation-duration: 10s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
+}
+h1{
+	text-transform: uppercase;
+	color:#fff;
+	padding:1em;
+	font-family: 'Chewy', cursive;
+	font-size: 300%;
+}
+p{
+	font-size: 1.6em;
+	color:#fff;
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+.device{
+	background: url("../images/iphone.png") 50% no-repeat;
+	margin:8% auto;
+	position: relative;
+}
+.video-bg{
+	position:relative;
+	margin:8% auto;
+	width: 100%;
+    max-width: 450px;
+    height: auto;
+    min-height: 260px;
+    padding-bottom: 6%;
+    overflow: hidden;
+}
+.large{
+	font-size: 1.2em;
+	font-style: italic;
 }
 
-#about-content-contaier {
-	background: linear-gradient( 45deg, rgba(255,255,255,255.6), rgba(255,255,255,0.6) );
+@media screen and (max-width: 1536px) and (min-width: 1366px)
+.device {
+    margin: 9% auto;
+}
+@media only screen and (max-width: 1200px){
+	.device{
+		background: none;
+	}
+	iframe{
+		border:5px solid #fff;	
+	}
 }
 
-.about-content-row {
-	padding: 1em;
-	padding-bottom: 2em;
-	min-height: 100vh;
-}

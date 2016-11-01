@@ -20,7 +20,6 @@
 	<!-- STYLE SHEETS-->
     <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
     <link href= "{% static "css/nav.css" %}" rel="stylesheet">
-
     <link href= "{% static "css/sponsors.css" %}" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -69,7 +68,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-lg-12">
-                    <h1>Sponsors</h1>
+                    <h1 class="text-center">Sponsors</h1>
                 </div>
                 <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12">
                     {% for sponsor in all_sponsors %}

@@ -18,9 +18,13 @@
 	<!-- STYLE SHEETS-->
 	<link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
 	<link href= "{% static "css/nav.css" %}" rel="stylesheet">
-
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<link href= "{% static "css/login.css" %}" rel="stylesheet">
 
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
 
 </head><!-- /head-->
 <body>
@@ -40,17 +44,17 @@
 			<h1>Please login / register to continue</h1>
 			<h2>{{ profiles_count }} users have already registered! Register NOW!</h2><br><br>
 			<div id="login-button-wrapper">
-			<a href="/login/facebook/?next=/">
-				<button class="btn btn-lg btn-primary center-block login-button facebook login-btn">
-					Sign in with facebook
-				</button>
-			</a>
+				<a href="/login/facebook/?next=/">
+				<button class="btn btn-lg btn-primary center-block login-button facebook login-btn wow fadeInLeftBig" data-wow-duration="2s">
+						Sign in with facebook
+					</button>
+				</a>
 
-			<a href="/login/google-oauth2/?next=/">
-				<button class="btn btn-lg btn-danger center-block login-button google-oauth2 login-btn">
-					Sign in with Google
-				</button>
-			</a>
+				<a href="/login/google-oauth2/?next=/">
+					<button class="btn btn-lg btn-danger center-block login-button google-oauth2 login-btn wow fadeInRightBig" data-wow-duration="2s">
+						Sign in with Google
+					</button>
+				</a>
 			</div>
 			{% endif %}
 		</div>
