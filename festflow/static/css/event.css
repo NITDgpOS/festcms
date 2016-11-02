@@ -2,13 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Chewy|Faster+One|Kavoon|');
 
 #background-container {
+	background: url("../images/aboutbg.png");
+	//background: linear-gradient( 64deg, rgba(0,0,0,0.4), rgba(255,255,255,0.2) );
 	width: 100vw;
 	height: 100vh;
 	overflow: auto;
-	background: #e5b5c4;
-	background: url(../images/events-background.jpg) center no-repeat;
-	background-size: cover;
-	padding-top: 2em;
 }
 
 /* Common style */
