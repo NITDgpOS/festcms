@@ -11,15 +11,16 @@
 
 #share-buttons-wrapper {
 	padding: 1em;
-	margin: 1em;
+	margin: 0 auto;
+	width: 15em;
 }
+
 h1{
 	
 	font-family: 'Coiny', cursive;
 	font-size:400%; 
 	text-transform: uppercase;
-	padding-bottom:1.5em;
-	padding-top: 1em;
+	padding-bottom:1em;
 	color: #000;
 }
 h2{
