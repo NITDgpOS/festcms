@@ -85,6 +85,7 @@
          <h2>About the Event</h2>
          <p>{{ event.description }}</p>
          <p><strong>Venue</strong>: {{ event.venue }}</p>
+         <p><strong>Time</strong>: {{ event.date_time }}</p>
          {% if event.problem_statement_file %}
          <a href="{{ event.problem_statement_file.url }}" target="_blank" class="btn btn-info btn-lg">Problem Statement</a>
          {% endif %}
