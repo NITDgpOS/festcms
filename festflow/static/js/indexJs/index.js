@@ -152,7 +152,7 @@ function render() {
 $('#clock').countdown('2016/11/04 18:00:00')
 .on('update.countdown', function(event) {
 	var format = '<span class="clock-unit">%-D<br/><span class="clock-unit-sub">days</span></span>\
-				<span class="clock-unit">%-D<br/><span class="clock-unit-sub">hr</span></span>\
+				<span class="clock-unit">%-H<br/><span class="clock-unit-sub">hr</span></span>\
 				<span class="clock-unit">%-M<br/><span class="clock-unit-sub">min</span></span>\
 				<span class="clock-unit">%-S<br/><span class="clock-unit-sub">sec</span></span>';
 	// if(event.offset.totalDays > 0) {
