@@ -12,7 +12,8 @@
 #share-buttons-wrapper {
 	padding: 1em;
 	margin: 0 auto;
-	width: 15em;
+	width: 32em;
+	max-width: 100%;
 }
 
 h1{
