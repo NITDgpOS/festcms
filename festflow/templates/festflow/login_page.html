@@ -1,124 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-<head> 
-	<meta charset="utf-8"> 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-	<meta name="description" content="ANK 2016 - The Knowledge Fest by National Institute Of Technology Durgapur Maths N Tech Club">
-	<meta name="keywords" content="MNTC,Ank 2K16" /> 
-	<meta name="author" content="Maths n Tech Club"> 
-	<title>ANK 2016! #LetTheFunBegin </title> 
-	
-	<!-- SOCIAL MEDIA META -->
-	<meta property="og:title" content="ANK 2016 | The Knowledge Fest"/>
-	<meta property="og:url" content="http://ank.mntc.in" />
-	<meta property="og:type" content="website" />
-	<meta property="og:description" content="MNTC NIT Durgapur presents ANK 2016 | The Knowledge Fest" />
-	
-	{% load staticfiles %}
-	<!-- STYLE SHEETS-->
-	<link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
-	<link href= "{% static "css/nav.css" %}" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-	<link href= "{% static "css/login.css" %}" rel="stylesheet">
-	<link rel="stylesheet" href="{% static "rrssb-master/css/rrssb.css" %}" />
-
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-	<script>
-		new WOW().init();
-	</script>
-
-	<link rel="shortcut icon" href="{% static "images/ico/favicon.png" %}">
-</head><!-- /head-->
+<html>
+<head>
+	<title>Login</title>
+</head>
 <body>
-  <!-- - NAVBAR - -->
-  <span id="nav_expand_button" class="glyphicon glyphicon-th-list"></span>
-  <nav id="main_nav">
-    <div id="menu_container">
-      <span id="menu_close" class="glyphicon glyphicon-remove-circle"></span>
-
-      <div id="nav_logo_container">
-        <img class="nav_logo" id="outer_logo_circle" src="{% static "images/logo_outer_circle.png" %}">
-        <img class="nav_logo" id="inner_logo_circle" src="{% static "images/logo_inner_circle.png" %}">
-        <img class="nav_logo" id="logo_inner_most" src="{% static "images/logo_inner_most.png" %}">
-      </div>
-
-      <ul class="nav_list">
-        <a href="/"><li class="nav_list_item">Home</li></a>
-        <a href="/about"><li class="nav_list_item">About</li></a>
-        <a href="/events"><li class="nav_list_item">Events</li></a>
-        <a href="/sponsors"><li class="nav_list_item">Sponsors</li></a>
-        <a href="/contact"><li class="nav_list_item">Contact Us</li></a>
-        <a href="/reachus"><li class="nav_list_item">Reach Us</li></a>
-        {% if user.is_authenticated %}
-        <a href="/logout"><li class="nav_list_item">Logout</li></a>
-        {% else %}
-        <a href="/login"><li class="nav_list_item">Login</li></a>
-        {% endif %}
-      </ul>
-    </div>
-  </nav>
-  <!-- NAVBAR END -->
-	<div id="background-div">
-		<div class="container login-container">
-			{% if user.is_authenticated %}
-			<!--User is logged in-->
-			<div class="user_details text-center">
-				<p>You are logged in as : <i> {{ user.username }}</i> !</p>
-				<p>First Name: <strong>{{ user.first_name }}</strong></p>
-				<p>Last Name: <strong>{{ user.last_name }}</strong></p>
-				<p>Email: {{ user.email }}</p>
-				<a href="/logout"><button class="btn btn-lg btn-danger center-block"> LogOut</button></a>
-			</div>
-			{% else %}
-			<!--User is not logged in-->
-			<h1>Login / Register to be a part of Ank !</h1>
-			<h2>{{ profiles_count }} users have already registered! </h2>
-			<h2>Register NOW!</h2>
-			<!--<div id="login-button-wrapper">
-				<a href="/login/facebook/?next=/">
-				<button class="btn btn-lg btn-primary center-block login-button facebook login-btn wow fadeInLeftBig" data-wow-duration="2s">
-						<span class="rrssb-icon">
-									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29"><path d="M26.4 0H2.6C1.714 0 0 1.715 0 2.6v23.8c0 .884 1.715 2.6 2.6 2.6h12.393V17.988h-3.996v-3.98h3.997v-3.062c0-3.746 2.835-5.97 6.177-5.97 1.6 0 2.444.173 2.845.226v3.792H21.18c-1.817 0-2.156.9-2.156 2.168v2.847h5.045l-.66 3.978h-4.386V29H26.4c.884 0 2.6-1.716 2.6-2.6V2.6c0-.885-1.716-2.6-2.6-2.6z"/></svg>
-								</span>Sign in with facebook
-					</button>
-				</a>
-
-				<a href="/login/google-oauth2/?next=/">
-					<button class="btn btn-lg btn-danger center-block login-button google-oauth2 login-btn wow fadeInRightBig" data-wow-duration="2s">
-						<span class="rrssb-icon">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 8.29h-1.95v2.6h-2.6v1.82h2.6v2.6H21v-2.6h2.6v-1.885H21V8.29zM7.614 10.306v2.925h3.9c-.26 1.69-1.755 2.925-3.9 2.925-2.34 0-4.29-2.016-4.29-4.354s1.885-4.353 4.29-4.353c1.104 0 2.014.326 2.794 1.105l2.08-2.08c-1.3-1.17-2.924-1.883-4.874-1.883C3.65 4.586.4 7.835.4 11.8s3.25 7.212 7.214 7.212c4.224 0 6.953-2.988 6.953-7.082 0-.52-.065-1.104-.13-1.624H7.614z"/></svg> </span>Sign in with Google
-					</button>
-				</a>
-			</div>-->
-			<div id="login-button-wrapper">
-					<ul class="rrssb-buttons">
-						<li class="wow rrssb-facebook fadeInLeftBig"  data-wow-duration="2s">
-							<a href="/login/facebook/?next=/" class="popup">
-								<span class="rrssb-icon">
-									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29"><path d="M26.4 0H2.6C1.714 0 0 1.715 0 2.6v23.8c0 .884 1.715 2.6 2.6 2.6h12.393V17.988h-3.996v-3.98h3.997v-3.062c0-3.746 2.835-5.97 6.177-5.97 1.6 0 2.444.173 2.845.226v3.792H21.18c-1.817 0-2.156.9-2.156 2.168v2.847h5.045l-.66 3.978h-4.386V29H26.4c.884 0 2.6-1.716 2.6-2.6V2.6c0-.885-1.716-2.6-2.6-2.6z"/></svg>
-								</span>
-								<span class="rrssb-text"> Sign in with facebook</span>
-							</a>
-						</li>
-					<li class="wow rrssb-googleplus fadeInRightBig" data-wow-duration="2s">
-						<a href="/login/google-oauth2/?next=/" class="popup">
-							<span class="rrssb-icon">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 8.29h-1.95v2.6h-2.6v1.82h2.6v2.6H21v-2.6h2.6v-1.885H21V8.29zM7.614 10.306v2.925h3.9c-.26 1.69-1.755 2.925-3.9 2.925-2.34 0-4.29-2.016-4.29-4.354s1.885-4.353 4.29-4.353c1.104 0 2.014.326 2.794 1.105l2.08-2.08c-1.3-1.17-2.924-1.883-4.874-1.883C3.65 4.586.4 7.835.4 11.8s3.25 7.212 7.214 7.212c4.224 0 6.953-2.988 6.953-7.082 0-.52-.065-1.104-.13-1.624H7.614z"/></svg> </span>
-								<span class="rrssb-text"> Sign in with google</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-			{% endif %}
-		</div>
-	</div>
 
 
-	<!-- - - - -Default Script files- - - - -->
+	{% if user.is_authenticated %}
+	<!--User is logged in-->
+	<p>You are logged in as : <i> {{ user.username }}</i> !</p>
+	<p>First Name: <strong>{{ user.first_name }}</strong></p>
+	<p>Last Name: <strong>{{ user.last_name }}</strong></p>
+	<p>Email: {{ user.email }}</p>
+	<a href="/logout"><button> LogOut</button></a>
+	{% else %}
 
-	<script type="text/javascript" src="{% static "js/jquery.js" %}"></script> 
-	<script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>
-	<script type="text/javascript" src="{% static "js/nav.js" %}"></script>
+	<!--User is not logged in-->
+	<h2>Register NOW!</h2>
+
+	<a href="/login/facebook/?next=/">
+		<span>Sign in with facebook</span>
+	</a>
+	<a href="/login/google-oauth2/?next=/">
+		<span>Sign in with google</span>
+	</a>
+	{% endif %}
 
 </body>
 </html>
