@@ -1,135 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" class="events no-js">
+<html>
 <head>
-	<meta charset="utf-8"> 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-	<meta name="description" content="ANK 2016 - The Knowledge Fest by National Institute Of Technology Durgapur Maths N Tech Club">
-	<meta name="keywords" content="MNTC,Ank 2K16" /> 
-	<meta name="author" content="Maths n Tech Club"> 
-	<title>ANK 2016! #LetTheFunBegin </title>	
-	
-	<!-- SOCIAL MEDIA META -->
-	<meta property="og:title" content="ANK 2016 | The Knowledge Fest"/>
-	<meta property="og:url" content="http://ank.mntc.in" />
-	<meta property="og:type" content="website" />
-	<meta property="og:description" content="MNTC NIT Durgapur presents ANK 2016 | The Knowledge Fest" />
-	
-	{% load staticfiles %}
-	<!-- STYLE SHEETS-->
-  <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
-  <link href= "{% static "css/nav.css" %}" rel="stylesheet">
-  <link href= "{% static "css/event.css" %}" rel="stylesheet">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
-		<!--[if IE]>
-  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  		<![endif]-->
-  <link rel="shortcut icon" href="{% static "images/ico/favicon.png" %}">
+  <title>EVENTS</title>
 </head>
 <body>
-  <!-- - NAVBAR - -->
-  <span id="nav_expand_button" class="glyphicon glyphicon-th-list"></span>
-  <nav id="main_nav">
-    <div id="menu_container">
-      <span id="menu_close" class="glyphicon glyphicon-remove-circle"></span>
-
-      <div id="nav_logo_container">
-        <img class="nav_logo" id="outer_logo_circle" src="{% static "images/logo_outer_circle.png" %}">
-        <img class="nav_logo" id="inner_logo_circle" src="{% static "images/logo_inner_circle.png" %}">
-        <img class="nav_logo" id="logo_inner_most" src="{% static "images/logo_inner_most.png" %}">
-      </div>
-
-      <ul class="nav_list">
-        <a href="/"><li class="nav_list_item">Home</li></a>
-        <a href="/about"><li class="nav_list_item">About</li></a>
-        <a href="/events"><li class="nav_list_item">Events</li></a>
-        <a href="/sponsors"><li class="nav_list_item">Sponsors</li></a>
-        <a href="/contact"><li class="nav_list_item">Contact Us</li></a>
-        <a href="/reachus"><li class="nav_list_item">Reach Us</li></a>
-        {% if user.is_authenticated %}
-        <a href="/logout"><li class="nav_list_item">Logout</li></a>
-        {% else %}
-        <a href="/login"><li class="nav_list_item">Login</li></a>
-        {% endif %}
-      </ul>
-    </div>
-  </nav>
-  <!-- NAVBAR END -->
-
-  <!-- EVENTS -->
-  <div id="background-container">
-    <div id="background-container" class="container">
-    <section id="grid" class="grid clearfix">
-         {% for event in all_events %}
-        <a href="{{ event.get_absolute_url }}" class="event-link" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
-          <figure>
-          {% if event.logo %}
-            <img src="{{ event.logo.url }}" alt= "{{ event.name }}" />
-            {% else %}
-            <img src="{% static "img/1.png" %}" />
-            {% endif %}
-            <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
-            <figcaption>
-              <h2>{{ event.name }}</h2>
-              <button>View</button>
-            </figcaption>
-          </figure>
-        </a>
-        {% endfor %}
-      </section>
-     <!-- <div class="row">
-        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-          <div class="event-wrapper">
-          {% for event in all_events %}
-          <a href="{{ event.get_absolute_url }}" class="event-link">
-            {% if event.logo %}
-            <img src="{{ event.logo.url }}" alt= {{ event.name }} class="img-responsive">
-            {% else %}
-            <img src="{% static "img/1.png" %}" />
-            {% endif %}
-            <div class="event-text-wrapper">
-              <h2 class="event-name">{{ event.name }}</h2>
-              <p class="event-description">{{ event.description }}</p>
-            </div>
-          </a>
-          {% endfor %}
-          </div>
-        </div>
-      </div>-->
-    </div>
-  </div>
-
-  <!-- - - - -Default Script files- - - - -->
-
-  <script type="text/javascript" src="{% static "js/jquery.js" %}"></script> 
-  <script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>
-  <script type="text/javascript" src="{% static "js/nav.js" %}"></script>
-  <script>
-        (function() {
-
-          function init() {
-            var speed = 330,
-            easing = mina.backout;
-
-            [].slice.call ( document.querySelectorAll( '#grid > a' ) ).forEach( function( el ) {
-              var s = Snap( el.querySelector( 'svg' ) ), path = s.select( 'path' ),
-              pathConfig = {
-                from : path.attr( 'd' ),
-                to : el.getAttribute( 'data-path-hover' )
-              };
-
-              el.addEventListener( 'mouseenter', function() {
-                path.animate( { 'path' : pathConfig.to }, speed, easing );
-              } );
-
-              el.addEventListener( 'mouseleave', function() {
-                path.animate( { 'path' : pathConfig.from }, speed, easing );
-              } );
-            } );
-          }
-
-          init();
-
-        })();
-      </script>
+  {% for event in all_events %}
+  <a href="{{ event.get_absolute_url }}">
+    {% if event.logo %}
+    <img src="{{ event.logo.url }}" alt= "{{ event.name }}" />
+    {% endif %}
+    <h2>{{ event.name }}</h2>
+    <button>View</button>
+  </a>
+ {% endfor %}
 </body>
 </html>
