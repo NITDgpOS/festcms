@@ -1,6 +1,6 @@
 # Fest Management System
 
-![Join the chat at https://gitter.im/NIT-dgp/General](https://badges.gitter.im/gitterHQ/gitterHQ.github.io.svg)](https://gitter.im/NIT-dgp/General)
+[![Join the chat at https://gitter.im/NIT-dgp/General](https://badges.gitter.im/gitterHQ/gitterHQ.github.io.svg)](https://gitter.im/NIT-dgp/General)
 
 This is the Content management system of Ank 2016 - The Knowledge Fest of Maths N Tech club, NIT Durgapur. It is written in Django and uses basically a Bootstrap based UI.
 
