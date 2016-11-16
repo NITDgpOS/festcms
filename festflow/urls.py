@@ -15,7 +15,7 @@ urlpatterns = [
     # Contact Page
     url(r'^contact/$', views.contact, name='contact'),
 
-    # Contact Page
+    # Event Page
     url(r'^events/$', views.events, name='events'),
 
     # Reach Us Page
