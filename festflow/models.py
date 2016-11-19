@@ -86,7 +86,7 @@ class organizerMember(models.Model):
 
     emailId = models.EmailField(blank=True, null=True)
 
-    contactURL = models.URLField()
+    contactURL = models.URLField(blank=True, null=True)
 
     def __str__(self):
         return self.name
