@@ -4,6 +4,10 @@
     <title>ABOUT PAGE</title>
 </head>
 <body>
-    ABOUT PAGE
+    {% if content %}
+        {{ content | safe }}
+    {% else %}
+        ABOUT PAGE
+    {% endif %}
 </body>
 </html>
