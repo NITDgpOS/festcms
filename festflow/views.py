@@ -21,6 +21,7 @@ def index(request):
 
 def about(request):
     context = {}
+    context['content'] = About.objects.last()
     return render(request, 'festflow/about.html', context)
 
 
