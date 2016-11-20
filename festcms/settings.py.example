@@ -42,6 +42,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'social.apps.django_app.default',
     'festflow',
+    'ckeditor',
+    'ckeditor_uploader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -133,6 +135,10 @@ ENV_PATH = os.path.abspath(os.path.dirname(__file__))
 MEDIA_ROOT = os.path.join(ENV_PATH, 'media/')
 
 MEDIA_URL = '/media/'
+
+#ckeditor settings
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_ALLOW_NONIMAGE_FILES = False
 
 # django auth settings
 LOGIN_REDIRECT_URL = '/'

@@ -21,6 +21,7 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include('festflow.urls')),
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
 if settings.DEBUG is True:
