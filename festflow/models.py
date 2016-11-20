@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
 from django.db import models
+from ckeditor_uploader import fields
 
 
 lowercaseAlphabet = RegexValidator(
@@ -106,7 +107,7 @@ class About(models.Model):
     """Stores about content as raw html
     """
     identifier = models.CharField(max_length=50, unique=True)
-    content = models.TextField()
+    content = fields.RichTextUploadingField()
 
     def __str__(self):
         return self.content
