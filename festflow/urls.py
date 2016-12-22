@@ -21,6 +21,9 @@ urlpatterns = [
     # Reach Us Page
     url(r'^reachus/$', views.reachus, name='reachus'),
 
+    # Subscribe Page
+    url(r'^subscribe/$', views.subscribe, name='subscribe'),
+
     # Event View Page
     url(r'^events/(?P<event_identifier>[a-z]*)/$', views.event_view,
         name='event_view'),

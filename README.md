@@ -27,9 +27,10 @@ Install pip for python3
 1. Clone the repository with `git clone git@github.com:ghoshbishakh/festcms.git`
 2. Enter the directory using `cd festcms`
 3. Copy `festcms/settings.py.example` to `festcms/settings.py`
-4. Enter any arbitary key in the `SECRET_KEY` field in settings.py
-5. Ensure that you have python3 set as default. You can do this by `alias python=python3`
-6. Run `pip install -r requirements.txt` to install all dependencies
-7. Run migrations using `python manage.py migrate`
-8. Run server with `python manage.py runserver`
-9. Ok you are all set! Visit http://localhost:8000 in your browser
+4. Enter any arbitary key in the `SECRET_KEY` field in `settings.py`
+5. To setup mail server, enter the details in email testing section of `settings.py`
+6. Ensure that you have python3 set as default. You can do this by `alias python=python3`
+7. Run `pip install -r requirements.txt` to install all dependencies
+8. Run migrations using `python manage.py migrate`
+9. Run server with `python manage.py runserver`
+10. Ok you are all set! Visit http://localhost:8000 in your browser

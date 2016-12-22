@@ -7,3 +7,8 @@ class EditProfileForm(ModelForm):
         model = Profile
         fields = ['institute_name', 'degree_name',
                   'major_subject_name', 'phone_number']
+
+class SubscriptionForm(ModelForm):
+    class Meta:
+        model = Subscription
+        fields = ['contact_email']

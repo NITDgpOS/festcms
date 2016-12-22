@@ -2,9 +2,11 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
 from django.shortcuts import render, redirect, Http404
+from django.template.loader import get_template
 
-from .forms import EditProfileForm
+from .forms import *
 from .models import *
+from .utils import *
 
 # Create your views here.
 
@@ -16,6 +18,7 @@ def index(request):
 
     context['profiles_count'] = profiles_count
     context['all_events'] = all_events
+
     return render(request, 'festflow/index.html', context)
 
 
@@ -109,3 +112,30 @@ def complete_profile(request):
     context['backend'] = backend
     context['profile_form'] = profile_form
     return render(request, 'festflow/complete_profile.html', context)
+
+
+def subscribe(request):
+    context = {}
+
+    if request.method == 'POST':
+        form = SubscriptionForm(request.POST)
+        to_addr = request.POST.get('contact_email', '')
+        if Subscription.objects.filter(contact_email=to_addr).count():
+            context['result'] = ('Your email: %s has already'
+                                 ' been subscribed.' % to_addr)
+        elif form.is_valid():
+            form.save()
+            send_subscription_success(
+                from_addr=settings.DEFAULT_FROM_EMAIL,
+                to_addr=to_addr,
+                template=get_template('festflow/subscribed_email.html'),)
+            context['result'] = ('Your email: %s is successfully'
+                                 ' subscribed.' % to_addr)
+    else:
+        form = SubscriptionForm
+        context['subscription_form'] = form
+        id = request.GET.get('unsubscribe', '')
+        if len(id) != 0:
+            context['unsubscribe'] = unsubscribe(id)
+
+    return render(request, 'festflow/subscribe.html', context)
