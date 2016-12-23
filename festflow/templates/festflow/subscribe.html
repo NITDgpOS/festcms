@@ -1,0 +1,19 @@
+{% if result %}
+  <h3>Succesful Subscription!</h3>
+  <hr />
+  <p>{{ result }}</p>
+{% elif unsubscribe %}
+  <h3>Subscription cancelled!</h3>
+  <hr />
+  <p>Your email id: {{ modify }} has been unsubscribed.</p>
+{% else %}
+  <div>
+    <form method="post">
+      {% csrf_token %}
+      <table border="0">
+        {{ subscription_form.as_table }}
+      </table>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+{% endif %}

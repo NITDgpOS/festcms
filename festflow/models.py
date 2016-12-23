@@ -1,3 +1,5 @@
+import hashlib
+
 from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
 from django.db import models
@@ -115,3 +117,29 @@ class About(models.Model):
     class Meta:
         verbose_name = "about"
         verbose_name_plural = "about"
+
+class NewsLetter(models.Model):
+    """Stores newsletters sent to subscribed users
+    """
+    identifier = models.CharField(max_length=50, unique=True)
+    content = fields.RichTextUploadingField()
+
+    def __str__(self):
+        return self.identifier
+
+
+class Subscription(models.Model):
+    """Stores the details of subscribed users
+    """
+    identifier = models.CharField(max_length=50, unique=True)
+    contact_email = models.EmailField(unique=True)
+
+    def save(self, *args, **kwargs):
+        """On save, add unique identifier
+        """
+        hasher = hashlib.md5(self.contact_email.encode())
+        self.identifier = hasher.hexdigest()
+        return super(Subscription, self).save(*args, **kwargs)
+
+    def __str__(self):
+        return self.contact_email
