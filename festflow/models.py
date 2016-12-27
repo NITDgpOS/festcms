@@ -4,6 +4,8 @@ from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
 from django.db import models
 from ckeditor_uploader import fields
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 
 lowercaseAlphabet = RegexValidator(
@@ -71,6 +73,12 @@ class Profile(models.Model):
     def get_absolute_url(self):
         return '/events/%s/' % self.user.username
 
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    # create a dummy profile for superuser
+    if created and instance.is_superuser:
+        Profile.objects.create(user=instance)
+        instance.profile.save()
 
 class organizerMember(models.Model):
     """Stores information about the members of the organization
