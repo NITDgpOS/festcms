@@ -13,15 +13,19 @@ Including another URLconf
     1. Add an import:  from blog import urls as blog_urls
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
+import forms_builder.forms.urls
+
 from django.conf import settings
 from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib import admin
 
+admin.autodiscover()
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include('festflow.urls')),
+    url(r'^forms/', include(forms_builder.forms.urls)),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
+    url(r'^', include('festflow.urls')),
 ]
 
 if settings.DEBUG is True:

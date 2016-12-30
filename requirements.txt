@@ -9,3 +9,4 @@ requests==2.11.1
 requests-oauthlib==0.6.2
 six==1.10.0
 django-ckeditor==5.1.1
+django-forms-builder==0.13.0

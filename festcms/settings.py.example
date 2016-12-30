@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,6 +45,7 @@ INSTALLED_APPS = (
     'festflow',
     'ckeditor',
     'ckeditor_uploader',
+    'forms_builder.forms',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -225,3 +227,6 @@ EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = False
 EMAIL_HOST = ''
 EMAIL_PORT = 1025
+
+# Fix to disable admin-sites framework conflict
+SITE_ID = 1

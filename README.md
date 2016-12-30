@@ -34,3 +34,9 @@ Install pip for python3
 8. Run migrations using `python manage.py migrate`
 9. Run server with `python manage.py runserver`
 10. Ok you are all set! Visit http://localhost:8000 in your browser
+
+> We use [django-forms-builder][1] for making custom forms available via admin section.
+> A lot of stuff could be configured as mentioned [here][2] in `settings.py`.
+
+[1]:https://github.com/stephenmcd/django-forms-builder
+[2]:https://github.com/stephenmcd/django-forms-builder/blob/master/README.rst
