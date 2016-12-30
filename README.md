@@ -35,6 +35,14 @@ Install pip for python3
 9. Run server with `python manage.py runserver`
 10. Ok you are all set! Visit http://localhost:8000 in your browser
 
+### Setting up feedback form
+1. Create a `superuser` account with `python manage.py createsuperuser`, create your credentials.
+2. Go to `http://localhost:8000/admin` and enter your credentials.
+3. Create a new form in the forms section to your desire, by the name **feedback** and publish it.
+4. You're done. You can now test the form at `http://localhost:8000/forms/feedback`.
+5. You could check for submissions or make changes to the form via forms section in the admin panel.
+6. You could create any other form in a similar way.
+
 > We use [django-forms-builder][1] for making custom forms available via admin section.
 > A lot of stuff could be configured as mentioned [here][2] in `settings.py`.
 
