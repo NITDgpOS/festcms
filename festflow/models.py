@@ -151,3 +151,18 @@ class Subscription(models.Model):
 
     def __str__(self):
         return self.contact_email
+
+
+class FAQ(models.Model):
+    """Stores the frequently asked questions
+    """
+    identifier = models.CharField(max_length=50, unique=True)
+    question = fields.RichTextUploadingField()
+    answer = fields.RichTextUploadingField()
+
+    def __str__(self):
+        return self.identifier
+
+    class Meta:
+        verbose_name = 'FAQ'
+        verbose_name_plural = 'FAQs'

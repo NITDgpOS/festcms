@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FAQ</title>
+</head>
+<body>
+  <h1>Frequently Asked Questions</h1>
+  {% if not faq %}
+    <h3>None added so far, come back here later.</h3>
+  {% else %}
+    {% for faq in faqs %}
+      <hr />
+      <h2>{{ faq.question | safe }}</h2>
+      <p>{{ faq.answer | safe }}</p>
+    {% endfor %}
+  {% endif %}
+</body>
+</html>

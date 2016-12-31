@@ -21,6 +21,9 @@ urlpatterns = [
     # Reach Us Page
     url(r'^reachus/$', views.reachus, name='reachus'),
 
+    # FAQ Page
+    url(r'^faq/$', views.faq, name='FAQ'),
+
     # Subscribe Page
     url(r'^subscribe/$', views.subscribe, name='subscribe'),
 
