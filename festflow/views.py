@@ -54,6 +54,10 @@ def reachus(request):
     context["google_api_key"] = settings.GOOGLE_API_KEY
     return render(request, 'festflow/reachus.html', context)
 
+def faq(request):
+    context = {}
+    context['faqs'] = FAQ.objects.all()
+    return render(request, 'festflow/faq.html', context)
 
 def login_page(request):
     context = {}
