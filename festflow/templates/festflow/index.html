@@ -1,4 +1,5 @@
 {% load static %}
+{% load navbar %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +8,8 @@
   <link rel="stylesheet" type="text/css" href='{% static "css/bootstrap.min.css" %}'/>
 </head>
 <body>
-Home Page
+  {% navbar %}
+  <h1>Home Page</h1>
 </body>
 <script type="text/javascript" href='{% static "js/jquery.min.js"%}'></script>
 <script type="text/javascript" href='{% static "js/bootstrap.min.js"%}'></script>

@@ -20,5 +20,9 @@ class Migration(migrations.Migration):
                 ('question', ckeditor_uploader.fields.RichTextUploadingField()),
                 ('answer', ckeditor_uploader.fields.RichTextUploadingField()),
             ],
+            options={
+                'verbose_name_plural': 'FAQs',
+                'verbose_name': 'FAQ',
+            },
         ),
     ]
