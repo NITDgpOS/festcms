@@ -1,0 +1,12 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">festcms</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      {% for entry in entries %}
+      <li><a href="{{ entry.url }}">{{ entry.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

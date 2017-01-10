@@ -43,6 +43,10 @@ Install pip for python3
 5. You could check for submissions or make changes to the form via forms section in the admin panel.
 6. You could create any other form in a similar way.
 
+### Configuring the unified navbar
+1. Login the admin panel and create entries in the Navbar Entries section as per your requirement.
+2. Load and use the `navbar` tag if required in any of your custom pages.
+
 > We use [django-forms-builder][1] for making custom forms available via admin section.
 > A lot of stuff could be configured as mentioned [here][2] in `settings.py`.
 

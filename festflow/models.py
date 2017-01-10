@@ -166,3 +166,16 @@ class FAQ(models.Model):
     class Meta:
         verbose_name = 'FAQ'
         verbose_name_plural = 'FAQs'
+
+class NavbarEntry(models.Model):
+    """Stores the navigation bar entries
+    """
+    url = models.URLField(default="#")
+    name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Navbar Entry'
+        verbose_name_plural = 'Navbar Entries'
