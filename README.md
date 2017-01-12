@@ -18,7 +18,7 @@ Install sqlite3 for development
 
 Install pip for python3
 
-* Mac OS (via easy_install): `sudo easy_install pip` 
+* Mac OS (via easy_install): `sudo easy_install pip`
 * Debian/Ubuntu: `sudo apt-get install python3-pip`
 * Fedora/CentOS: `sudo yum install python-pip python-wheel`
 
@@ -47,8 +47,38 @@ Install pip for python3
 1. Login the admin panel and create entries in the Navbar Entries section as per your requirement.
 2. Load and use the `navbar` tag if required in any of your custom pages.
 
+### How to send Newsletters
+1. Login the admin panel and click on the Newsletters section.
+2. Create a new newsletter to your liking and save it.
+3. Now in the Newsletter section presented, mark the letters to be sent.
+4. Choose the action **Send email** from the **Actions menu** and click **Go**.
+5. This sends the marked Newsletters to subscribed users.
+
+### Setting up email templates and how to use them
+1. Create HTML(`.html`) and text(`.txt`) based templates for mail with the context as per your requirements.
+2. Place both the HTML and text based files in `festflow/templates/email_extras` directory.
+3. Now these templates could be used anywhere within the application by using the `send_mail_template`
+method of `email_extras.utils` package.
+Eg. Suppose we have `example_mail.html` and `example_mail.txt` as our text based and HTML based templates
+with some context `ctx`, attachments `atch` and headers `headers`, then we could do the following to use
+the template system.
+
+```
+from email_extras.utils import send_mail_template
+
+send_mail_template("Subject", 'example_mail', from_address, to_address,
+    fail_silently=False, attachments=atch, context=ctx, headers=headers)
+```
+
+> We use [django-email-extras][3] to send template based mails. The email templates should be placed in
+> `festflow/templates/email-extras/`.
+> PGP encrypted mails could also be sent via the **django-email-extras** module.
+> For more information on how to configure PGP encryption module, please refer [here][4].
+
 > We use [django-forms-builder][1] for making custom forms available via admin section.
 > A lot of stuff could be configured as mentioned [here][2] in `settings.py`.
 
 [1]:https://github.com/stephenmcd/django-forms-builder
 [2]:https://github.com/stephenmcd/django-forms-builder/blob/master/README.rst
+[3]:https://github.com/stephenmcd/django-email-extras
+[4]:https://github.com/stephenmcd/django-email-extras#configuration

@@ -1,0 +1,3 @@
+Dear {{ email }},
+You have successfully subscribed with us.
+You will now receive further updates from us.

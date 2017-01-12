@@ -132,7 +132,7 @@ def subscribe(request):
             send_subscription_success(
                 from_addr=settings.DEFAULT_FROM_EMAIL,
                 to_addr=to_addr,
-                template=get_template('festflow/subscribed_email.html'),)
+                template='subscribed_email',)
             context['result'] = ('Your email: %s is successfully'
                                  ' subscribed.' % to_addr)
     else:
