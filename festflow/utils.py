@@ -1,4 +1,4 @@
-from django.core.mail import send_mail
+from email_extras.utils import send_mail_template
 from django.shortcuts import Http404
 
 from .models import *
@@ -6,16 +6,14 @@ from .models import *
 
 
 def send_subscription_success(from_addr, to_addr, template):
-    content = template.render({
-        'email': to_addr
-    })
-
-    send_mail(
+    context = { 'email': to_addr }
+    send_mail_template(
         "New Subscription",
-        content,
+        template,
         from_addr,
-        [to_addr],
-        fail_silently=False,)
+        to_addr,
+        fail_silently=False,
+        context=context,)
 
 
 def unsubscribe(id):

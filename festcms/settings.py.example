@@ -46,6 +46,7 @@ INSTALLED_APPS = (
     'ckeditor',
     'ckeditor_uploader',
     'forms_builder.forms',
+    'email_extras',
 )
 
 MIDDLEWARE_CLASSES = (
