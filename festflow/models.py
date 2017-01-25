@@ -50,6 +50,34 @@ class Event(models.Model):
     def get_absolute_url(self):
         return '/events/%s/' % self.identifier
 
+class Keynote(models.Model):
+    "Stores information about the keynote speech or talk in the fest"
+
+    # keynote id
+    identifier = models.CharField(max_length=50, unique=True,
+                                  validators=[lowercaseAlphabet])
+
+    # keynote name
+    name = models.CharField(max_length=255)
+
+    # keynote description
+    description = models.TextField()
+
+    # keynote image
+    image = models.ImageField(upload_to='event_images/',
+                             blank=True, null=True)
+
+    # keynote venue
+    venue = models.CharField(max_length=255)
+    
+    # keynote date and time
+    date_time = models.DateTimeField()
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return '/keynote/%s/' % self.identifier
 
 class Profile(models.Model):
     "Stores additional information about the user"
