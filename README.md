@@ -10,6 +10,7 @@ This is a generic Content management system made specifically for the purpose of
 
 Install sqlite3 for development
 
+* Windows: Steps : http://www.sqlitetutorial.net/download-install-sqlite/
 * Mac OS X: Mac ships with sqlite3 already installed
 * Ubuntu/Debian: `sudo apt-get install sqlite3`
 * Fedora/Red Hat/CentOS: `sudo yum install sqlite`
@@ -18,9 +19,22 @@ Install sqlite3 for development
 
 Install pip for python3
 
+* Windows: pip is already installed if you're using Python 2 >=2.7.9 or Python 3 >=3.4
 * Mac OS (via easy_install): `sudo easy_install pip`
 * Debian/Ubuntu: `sudo apt-get install python3-pip`
 * Fedora/CentOS: `sudo yum install python-pip python-wheel`
+
+## Virtual Environment Setup
+### Windows
+1. Setup virtual environment with `pip install virtualenvwrapper-win`
+2. Then create a virtual environment for your project: `mkvirtualenv nameofyourproject`
+3. The virtual environment will be activated automatically and you’ll see “(nameofyourproject)” next to the command prompt to designate that. 
+4. If you start a new command prompt, you’ll need to activate the environment again using: `workon nameofproject` .
+
+### Linux
+1. Virtualenv is available on PyPI, we can install it with the pip command: `pip install virtualenv`
+2. Then create a virtual environment for your project: `virtualenv --python=python3 nameofproject`
+3. Log into the virtualenv created: `source nameofproject/bin/activate`
 
 ## Deployment
 
