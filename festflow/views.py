@@ -33,6 +33,12 @@ def events(request):
     all_events = Event.objects.all()
     context['all_events'] = all_events
     return render(request, 'festflow/event.html', context)
+    
+def keynotes(request):
+    context = {}
+    all_events = Keynote.objects.all()
+    context['all_keynotes'] = all_events
+    return render(request, 'festflow/keynote.html', context)
 
 
 def sponsors(request):
@@ -80,6 +86,21 @@ def event_view(request, event_identifier):
     context['event'] = event
 
     return render(request, 'festflow/event_view.html', context)
+
+def keynote_view(request, keynote_identifier):
+    context = {}
+    try:
+        keynote = Keynote.objects.get(identifier=keynote_identifier)
+    except ObjectDoesNotExist:
+        raise Http404
+
+    if request.user.is_authenticated():
+        user_profile = Profile.objects.get(user=request.user)
+        context['user_profile'] = user_profile
+
+    context['keynote'] = keynote
+
+    return render(request, 'festflow/keynote_view.html', context)
 
 
 @login_required

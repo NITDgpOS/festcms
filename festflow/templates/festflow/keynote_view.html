@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>{{ keynote.name }}</title>
+  </head>
+  <body>
+	<h1>{{ keynote.name }}</h1>
+
+	{% if keynote.image %}
+	<img src="{{ keynote.image.url }}">
+	{% endif %}
+
+	<h2>About the Speech</h2>
+	<p>{{ keynote.description }}</p>
+	<p><strong>Venue</strong>: {{ keynote.venue }}</p>
+	<p><strong>Time</strong>: {{ keynote.date_time }}</p>
+
+  </body>
+</html>
