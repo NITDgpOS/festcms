@@ -112,6 +112,9 @@ class sponsor(models.Model):
 
     rank = models.IntegerField(default=0)
 
+    def __str__(self):
+        return self.name
+
 
 class About(models.Model):
     """Stores about content as raw html
