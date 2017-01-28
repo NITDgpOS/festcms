@@ -21,17 +21,17 @@
     {% navbar %}
     <div class="container">
         <div class="jumbotron">
-            <h1>About Us</h1> 
-            <div class="dash"><div>
-                <br />
-                <div class="about-text">
-                    {% if content %}
-                    {{ content | safe }}
-                    {% endif %}
-                </div>
+            <h1 id='link'>About Us</h1> 
+            <div class="dash"></div>
+            <br />
+            <div class="about-text">
+                {% if content %}
+                {{ content | safe }}
+                {% endif %}
             </div>
         </div>
     </div>
+
     <!-- Jquery minified js -->
     <script type="text/javascript" href='{% static "js/jquery.min.js"%}'></script>
 

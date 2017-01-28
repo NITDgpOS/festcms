@@ -1,29 +1,67 @@
+{% load static %}
+{% load navbar %}
 <!DOCTYPE html>
 <html>
 <head>
-<title>{{ event.name }}</title>
+	<title>{{ event.name }}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- LOAD CSS AND BASIC JS -->
+
+	<!-- Bootstrap minified css -->
+	<link rel="stylesheet" type="text/css" href='{% static "css/bootstrap.min.css" %}'/>
+
+	<!-- Main CSS -->
+	<link rel="stylesheet" type="text/css" href='{% static "css/main.css" %}'/>
+	<!-- View CSS -->
+	<link rel="stylesheet" type="text/css" href='{% static "css/events.css" %}'/>
+
 </head>
 <body>
+	{% navbar %}
+	<div class="container">
+		<div class="jumbotron">
+			<h1 id='link'>{{ event.name }}</h1> 
+			<div class="dash"></div>
+			<br />
+			<br />
+			{% if event.logo %}
+			<img src="{{ event.logo.url }}" alt= "{{ event.name }}" class='img-responsive' />
+			<br />
+			{% endif %}
 
-<h1>{{ event.name }}</h1>
-{% if event.logo %}
-<img src="{{ event.logo.url }}">
-{% endif %}
+			<h3 id='link'><strong>About the Event</strong></h3>
+			<div class="subdash"></div>
+			<br />
+			<br />
+			<p>{{ event.description }}</p>
 
-<h2>About the Event</h2>
-<p>{{ event.description }}</p>
-<p><strong>Venue</strong>: {{ event.venue }}</p>
-<p><strong>Time</strong>: {{ event.date_time }}</p>
-{% if event.problem_statement_file %}
-<a href="{{ event.problem_statement_file.url }}" target="_blank">Problem Statement</a>
-{% endif %}
-{% if event in user_profile.registered_events.all %}
-<h3>You have already registered for this event</h3>
-{% else %}
-<a href="/register_event/{{ event.identifier }}"><button>Register</button></a>
-{% endif %}
+			<div class='sub-heading'>
+				<p><strong>Venue : </strong></p>
+				<p> {{ event.venue }}</p>
+			</div>
 
+			<div class='sub-heading'>
+				<p><strong>Time : </strong></p>
+				<p> {{ event.date_time }}</p>
+			</div>
 
+			{% if event.problem_statement_file %}
+			<a id='problem' href="{{ event.problem_statement_file.url }}" target="_blank" class="btn" role="button">PROBLEM STATEMENT</a>
+			{% endif %}
 
+			{% if event in user_profile.registered_events.all %}
+			<h3>You have already registered for this event !!!</h3>
+			{% else %}
+			<a id='register' href="/register_event/{{ event.identifier }}" class="btn" role="button">REGISTER</a>
+			{% endif %}            
+		</div>
+	</div>
+
+	<!-- Jquery minified js -->
+	<script type="text/javascript" href='{% static "js/jquery.min.js"%}'></script>
+
+	<!-- Bootstrap minified js -->
+	<script type="text/javascript" href='{% static "js/bootstrap.min.js"%}'></script>
 </body>
 </html>

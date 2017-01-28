@@ -16,6 +16,10 @@ body{
     width: 100%;
 }
 
+.navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
 .navbar a {
     color: #FFFFFF;
     text-transform: uppercase;

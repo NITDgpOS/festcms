@@ -1,7 +1,9 @@
 /*CSS file for the about.html view*/
 
-.jumbotron {
-    margin-top: 100px;
+div.jumbotron {
+    z-index: 2;
+    box-shadow: 0 8px 16px -6px #888;
+    background-color: rgba(238,238,238, 0.6);
 }
 
 .about-text {
@@ -11,7 +13,6 @@
 .about-text img{
     color: #4d4d4d;
     max-width: 100%;
-    object-fit: cover;
     margin: 50px 0px 50px 0px;
 }
 
@@ -22,3 +23,7 @@
     height: 5px;
 }
 
+/*Makr the page headers in small-caps*/
+h1#link {
+    font-variant: small-caps;
+}

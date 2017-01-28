@@ -1,30 +1,78 @@
+{% load static %}
+{% load navbar %}
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Login</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- LOAD CSS AND BASIC JS -->
+
+	<!-- Bootstrap minified css -->
+	<link rel="stylesheet" type="text/css" href='{% static "css/bootstrap.min.css" %}'/>
+
+	<!-- Main CSS -->
+	<link rel="stylesheet" type="text/css" href='{% static "css/main.css" %}'/>
+	<!-- View CSS -->
+	<link rel="stylesheet" type="text/css" href='{% static "css/login.css" %}'/>
 </head>
+
 <body>
+	{% navbar %}
+	<div class="container">
+		<div class="jumbotron">
+			{% if user.is_authenticated %}
+			<!--User is logged in-->
+			<h1 id='link'>Login Details</h1> 
+			<div class="dash"></div>
+			<br />
+			<br />
+			<table class="table ">
+				<tbody>
+					<tr>
+						<td>You are logged in as :</td>
+						<td><i> {{ user.username }}</i> !</td>
+					</tr>
+					<tr>
+						<td>First Name :</td>
+						<td><strong> {{ user.first_name }}</strong></td>
+					</tr>
+					<tr>
+						<td>Last Name :</td>
+						<td><strong> {{ user.last_name }}</strong></td>
+					</tr>
+					<tr>
+						<td>Email :</td>
+						<td><strong> {{ user.email }}</strong></td>
+					</tr>
+				</tbody>
+			</table>
+			<a id='logout' href="/logout" class="btn" role="button">LOGOUT</a>
 
+			{% else %}
+			<!--User is not logged in-->
+			<h1 id='link'>Register Now</h1> 
+			<div class="dash"></div>
+			<br />
+			<br />
+			<div class="login-btn">
+				<a href="/login/facebook/?next=/">
+					<img id='fb-login' src='{% static "images/fb-login-btn.png" %}' class='img-responsive' alt='fb login' />
+				</a>
+				<a href="/login/google-oauth2/?next=/">
+					<img id='google-login' src='{% static "images/google-login-btn.png" %}' class='img-responsive' alt='google login' />
+				</a>
+			</div>
+			{% endif %}
 
-	{% if user.is_authenticated %}
-	<!--User is logged in-->
-	<p>You are logged in as : <i> {{ user.username }}</i> !</p>
-	<p>First Name: <strong>{{ user.first_name }}</strong></p>
-	<p>Last Name: <strong>{{ user.last_name }}</strong></p>
-	<p>Email: {{ user.email }}</p>
-	<a href="/logout"><button> LogOut</button></a>
-	{% else %}
+		</div>
+	</div>
 
-	<!--User is not logged in-->
-	<h2>Register NOW!</h2>
+	<!-- Jquery minified js -->
+	<script type="text/javascript" href='{% static "js/jquery.min.js"%}'></script>
 
-	<a href="/login/facebook/?next=/">
-		<span>Sign in with facebook</span>
-	</a>
-	<a href="/login/google-oauth2/?next=/">
-		<span>Sign in with google</span>
-	</a>
-	{% endif %}
-
+	<!-- Bootstrap minified js -->
+	<script type="text/javascript" href='{% static "js/bootstrap.min.js"%}'></script>
 </body>
 </html>
+
