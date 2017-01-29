@@ -1,78 +1,62 @@
+{% extends "festflow/base.html" %}
 {% load static %}
-{% load navbar %}
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Login</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<!-- LOAD CSS AND BASIC JS -->
+{% block title %} LOGIN {% endblock %}
 
-	<!-- Bootstrap minified css -->
-	<link rel="stylesheet" type="text/css" href='{% static "css/bootstrap.min.css" %}'/>
+{% block extra_head %}
 
-	<!-- Main CSS -->
-	<link rel="stylesheet" type="text/css" href='{% static "css/main.css" %}'/>
-	<!-- View CSS -->
-	<link rel="stylesheet" type="text/css" href='{% static "css/login.css" %}'/>
-</head>
+<!-- View CSS -->
+<link rel="stylesheet" type="text/css" href='{% static "css/login.css" %}'/>
 
-<body>
-	{% navbar %}
-	<div class="container">
-		<div class="jumbotron">
-			{% if user.is_authenticated %}
-			<!--User is logged in-->
-			<h1 id='link'>Login Details</h1> 
-			<div class="dash"></div>
-			<br />
-			<br />
-			<table class="table ">
-				<tbody>
-					<tr>
-						<td>You are logged in as :</td>
-						<td><i> {{ user.username }}</i> !</td>
-					</tr>
-					<tr>
-						<td>First Name :</td>
-						<td><strong> {{ user.first_name }}</strong></td>
-					</tr>
-					<tr>
-						<td>Last Name :</td>
-						<td><strong> {{ user.last_name }}</strong></td>
-					</tr>
-					<tr>
-						<td>Email :</td>
-						<td><strong> {{ user.email }}</strong></td>
-					</tr>
-				</tbody>
-			</table>
-			<a id='logout' href="/logout" class="btn" role="button">LOGOUT</a>
+{% endblock %}
 
-			{% else %}
-			<!--User is not logged in-->
-			<h1 id='link'>Register Now</h1> 
-			<div class="dash"></div>
-			<br />
-			<br />
-			<div class="login-btn">
-				<a href="/login/facebook/?next=/">
-					<img id='fb-login' src='{% static "images/fb-login-btn.png" %}' class='img-responsive' alt='fb login' />
-				</a>
-				<a href="/login/google-oauth2/?next=/">
-					<img id='google-login' src='{% static "images/google-login-btn.png" %}' class='img-responsive' alt='google login' />
-				</a>
-			</div>
-			{% endif %}
+{% block body_contents %}
+<div class="container">
+	<div class="jumbotron">
+		{% if user.is_authenticated %}
+		<!--User is logged in-->
+		<h1 id='link'>Login Details</h1> 
+		<div class="dash"></div>
+		<br />
+		<br />
+		<table class="table ">
+			<tbody>
+				<tr>
+					<td>You are logged in as :</td>
+					<td><i> {{ user.username }}</i> !</td>
+				</tr>
+				<tr>
+					<td>First Name :</td>
+					<td><strong> {{ user.first_name }}</strong></td>
+				</tr>
+				<tr>
+					<td>Last Name :</td>
+					<td><strong> {{ user.last_name }}</strong></td>
+				</tr>
+				<tr>
+					<td>Email :</td>
+					<td><strong> {{ user.email }}</strong></td>
+				</tr>
+			</tbody>
+		</table>
+		<a id='logout' href="/logout" class="btn" role="button">LOGOUT</a>
 
+		{% else %}
+		<!--User is not logged in-->
+		<h1 id='link'>Register Now</h1> 
+		<div class="dash"></div>
+		<br />
+		<br />
+		<div class="login-btn">
+			<a href="/login/facebook/?next=/">
+				<img id='fb-login' src='{% static "images/fb-login-btn.png" %}' class='img-responsive' alt='fb login' />
+			</a>
+			<a href="/login/google-oauth2/?next=/">
+				<img id='google-login' src='{% static "images/google-login-btn.png" %}' class='img-responsive' alt='google login' />
+			</a>
 		</div>
+		{% endif %}
+
 	</div>
+</div>
 
-	<!-- Jquery minified js -->
-	<script type="text/javascript" href='{% static "js/jquery.min.js"%}'></script>
-
-	<!-- Bootstrap minified js -->
-	<script type="text/javascript" href='{% static "js/bootstrap.min.js"%}'></script>
-</body>
-</html>
-
+{% endblock %}

@@ -1,53 +1,39 @@
+{% extends "festflow/base.html" %}
 {% load static %}
-{% load navbar %}
-<!DOCTYPE html>
-<html>
-<head>
-    <title>EVENTS</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- LOAD CSS AND BASIC JS -->
+{% block title %} EVENTS {% endblock %}
 
-    <!-- Bootstrap minified css -->
-    <link rel="stylesheet" type="text/css" href='{% static "css/bootstrap.min.css" %}'/>
+{% block extra_head %}
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" type="text/css" href='{% static "css/main.css" %}'/>
-    <!-- View CSS -->
-    <link rel="stylesheet" type="text/css" href='{% static "css/events.css" %}'/>
+<!-- View CSS -->
+<link rel="stylesheet" type="text/css" href='{% static "css/other.css" %}'/>
 
-</head>
-<body>
-    {% navbar %}
-    <div class="container">
-        <div class="jumbotron">
-            <h1 id='link'>Events</h1> 
-            <div class="dash"></div>
-            <br />
-            <br />
-            <br />
-            <div class='row'>
-                {% for event in all_events %}
-                <div class='col-lg-4'>
-                    <a href="{{ event.get_absolute_url }}">
-                        {% if event.logo %}
-                        <img src="{{ event.logo.url }}" alt= "{{ event.name }}" class='img-responsive' />
-                        {% endif %}
-                        <div class='event-text'>
-                            <div class="subdash"></div>
-                            <p>{{ event.name }}</p>                            
-                        </div>
-                    </a>
-                </div>
-                {% endfor %}
+{% endblock %}
+
+{% block body_contents %}
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 id='link'>Events</h1> 
+        <div class="dash"></div>
+        <br />
+        <br />
+        <br />
+        <div class='row'>
+            {% for event in all_events %}
+            <div class='col-lg-4'>
+                <a href="{{ event.get_absolute_url }}">
+                    {% if event.logo %}
+                    <img src="{{ event.logo.url }}" alt= "{{ event.name }}" class='img-responsive' />
+                    {% endif %}
+                    <div class='event-text'>
+                        <div class="subdash"></div>
+                        <p>{{ event.name }}</p>                            
+                    </div>
+                </a>
             </div>
+            {% endfor %}
         </div>
     </div>
+</div>
 
-    <!-- Jquery minified js -->
-    <script type="text/javascript" href='{% static "js/jquery.min.js"%}'></script>
-
-    <!-- Bootstrap minified js -->
-    <script type="text/javascript" href='{% static "js/bootstrap.min.js"%}'></script>
-</body>
-</html>
+{% endblock %}

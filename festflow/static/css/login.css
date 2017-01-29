@@ -7,11 +7,11 @@ div.jumbotron {
 }
 
 #fb-login {
-    max-width: 300px;
+    max-width: 250px;
 }
 
 #google-login {
-    max-width: 300px;
+    max-width: 250px;
 }
 
 .dash {
@@ -32,7 +32,7 @@ a#logout {
 
 /*Style login buttons*/
 .login-btn img {
-    display: block;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
 }

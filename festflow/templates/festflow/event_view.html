@@ -1,67 +1,52 @@
+{% extends "festflow/base.html" %}
 {% load static %}
-{% load navbar %}
-<!DOCTYPE html>
-<html>
-<head>
-	<title>{{ event.name }}</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<!-- LOAD CSS AND BASIC JS -->
+{% block title %} {{ event.name }} {% endblock %}
 
-	<!-- Bootstrap minified css -->
-	<link rel="stylesheet" type="text/css" href='{% static "css/bootstrap.min.css" %}'/>
+{% block extra_head %}
 
-	<!-- Main CSS -->
-	<link rel="stylesheet" type="text/css" href='{% static "css/main.css" %}'/>
-	<!-- View CSS -->
-	<link rel="stylesheet" type="text/css" href='{% static "css/events.css" %}'/>
+<!-- View CSS -->
+<link rel="stylesheet" type="text/css" href='{% static "css/other.css" %}'/>
 
-</head>
-<body>
-	{% navbar %}
-	<div class="container">
-		<div class="jumbotron">
-			<h1 id='link'>{{ event.name }}</h1> 
-			<div class="dash"></div>
-			<br />
-			<br />
-			{% if event.logo %}
-			<img src="{{ event.logo.url }}" alt= "{{ event.name }}" class='img-responsive' />
-			<br />
-			{% endif %}
+{% endblock %}
 
-			<h3 id='link'><strong>About the Event</strong></h3>
-			<div class="subdash"></div>
-			<br />
-			<br />
-			<p>{{ event.description }}</p>
+{% block body_contents %}
 
-			<div class='sub-heading'>
-				<p><strong>Venue : </strong></p>
-				<p> {{ event.venue }}</p>
-			</div>
+<div class="container">
+    <div class="jumbotron">
+        <h1 id='link'>{{ event.name }}</h1> 
+        <div class="dash"></div>
+        <br />
+        <br />
+        {% if event.logo %}
+        <img src="{{ event.logo.url }}" alt= "{{ event.name }}" class='img-responsive' />
+        <br />
+        {% endif %}
 
-			<div class='sub-heading'>
-				<p><strong>Time : </strong></p>
-				<p> {{ event.date_time }}</p>
-			</div>
+        <h3 id='link'><strong>About the Event</strong></h3>
+        <div class="subdash"></div>
+        <br />
+        <br />
+        <p>{{ event.description|safe }}</p>
 
-			{% if event.problem_statement_file %}
-			<a id='problem' href="{{ event.problem_statement_file.url }}" target="_blank" class="btn" role="button">PROBLEM STATEMENT</a>
-			{% endif %}
+        <div class='sub-heading'>
+            <p><strong>Venue : </strong></p>
+            <p> {{ event.venue }}</p>
+        </div>
 
-			{% if event in user_profile.registered_events.all %}
-			<h3>You have already registered for this event !!!</h3>
-			{% else %}
-			<a id='register' href="/register_event/{{ event.identifier }}" class="btn" role="button">REGISTER</a>
-			{% endif %}            
-		</div>
-	</div>
+        <div class='sub-heading'>
+            <p><strong>Time : </strong></p>
+            <p> {{ event.date_time }}</p>
+        </div>
 
-	<!-- Jquery minified js -->
-	<script type="text/javascript" href='{% static "js/jquery.min.js"%}'></script>
+        {% if event.problem_statement_file %}
+        <a id='problem' href="{{ event.problem_statement_file.url }}" target="_blank" class="btn" role="button">PROBLEM STATEMENT</a>
+        {% endif %}
 
-	<!-- Bootstrap minified js -->
-	<script type="text/javascript" href='{% static "js/bootstrap.min.js"%}'></script>
-</body>
-</html>
+        {% if event in user_profile.registered_events.all %}
+        <h3>You have already registered for this event !!!</h3>
+        {% else %}
+        <a id='register' href="/register_event/{{ event.identifier }}" class="btn" role="button">REGISTER</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
