@@ -69,7 +69,7 @@ class Keynote(models.Model):
 
     # keynote venue
     venue = models.CharField(max_length=255)
-    
+
     # keynote date and time
     date_time = models.DateTimeField()
 

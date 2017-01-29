@@ -11,52 +11,52 @@
 
 {% block body_contents %}
 <div class="container">
-	<div class="jumbotron">
-		{% if user.is_authenticated %}
-		<!--User is logged in-->
-		<h1 id='link'>Login Details</h1> 
-		<div class="dash"></div>
-		<br />
-		<br />
-		<table class="table ">
-			<tbody>
-				<tr>
-					<td>You are logged in as :</td>
-					<td><i> {{ user.username }}</i> !</td>
-				</tr>
-				<tr>
-					<td>First Name :</td>
-					<td><strong> {{ user.first_name }}</strong></td>
-				</tr>
-				<tr>
-					<td>Last Name :</td>
-					<td><strong> {{ user.last_name }}</strong></td>
-				</tr>
-				<tr>
-					<td>Email :</td>
-					<td><strong> {{ user.email }}</strong></td>
-				</tr>
-			</tbody>
-		</table>
-		<a id='logout' href="/logout" class="btn" role="button">LOGOUT</a>
+    <div class="jumbotron">
+        {% if user.is_authenticated %}
+        <!--User is logged in-->
+        <h1 id='link'>Login Details</h1>
+        <div class="dash"></div>
+        <br />
+        <br />
+        <table class="table ">
+            <tbody>
+                <tr>
+                    <td>You are logged in as :</td>
+                    <td><i> {{ user.username }}</i> !</td>
+                </tr>
+                <tr>
+                    <td>First Name :</td>
+                    <td><strong> {{ user.first_name }}</strong></td>
+                </tr>
+                <tr>
+                    <td>Last Name :</td>
+                    <td><strong> {{ user.last_name }}</strong></td>
+                </tr>
+                <tr>
+                    <td>Email :</td>
+                    <td><strong> {{ user.email }}</strong></td>
+                </tr>
+            </tbody>
+        </table>
+        <a id='logout' href="/logout" class="btn" role="button">LOGOUT</a>
 
-		{% else %}
-		<!--User is not logged in-->
-		<h1 id='link'>Register Now</h1> 
-		<div class="dash"></div>
-		<br />
-		<br />
-		<div class="login-btn">
-			<a href="/login/facebook/?next=/">
-				<img id='fb-login' src='{% static "images/fb-login-btn.png" %}' class='img-responsive' alt='fb login' />
-			</a>
-			<a href="/login/google-oauth2/?next=/">
-				<img id='google-login' src='{% static "images/google-login-btn.png" %}' class='img-responsive' alt='google login' />
-			</a>
-		</div>
-		{% endif %}
+        {% else %}
+        <!--User is not logged in-->
+        <h1 id='link'>Register Now</h1>
+        <div class="dash"></div>
+        <br />
+        <br />
+        <div class="login-btn">
+            <a href="/login/facebook/?next=/">
+                <img id='fb-login' src='{% static "images/fb-login-btn.png" %}' class='img-responsive' alt='fb login' />
+            </a>
+            <a href="/login/google-oauth2/?next=/">
+                <img id='google-login' src='{% static "images/google-login-btn.png" %}' class='img-responsive' alt='google login' />
+            </a>
+        </div>
+        {% endif %}
 
-	</div>
+    </div>
 </div>
 
 {% endblock %}

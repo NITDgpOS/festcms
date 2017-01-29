@@ -10,7 +10,6 @@ from .utils import *
 
 # Create your views here.
 
-
 def index(request):
     context = {}
     profiles_count = Profile.objects.count()
@@ -21,25 +20,22 @@ def index(request):
 
     return render(request, 'festflow/index.html', context)
 
-
 def about(request):
     context = {}
     context['content'] = About.objects.last()
     return render(request, 'festflow/about.html', context)
-
 
 def events(request):
     context = {}
     all_events = Event.objects.all()
     context['all_events'] = all_events
     return render(request, 'festflow/event.html', context)
-    
+
 def keynotes(request):
     context = {}
     all_events = Keynote.objects.all()
     context['all_keynotes'] = all_events
     return render(request, 'festflow/keynote.html', context)
-
 
 def sponsors(request):
     context = {}
@@ -47,13 +43,11 @@ def sponsors(request):
     context['all_sponsors'] = all_sponsors
     return render(request, 'festflow/sponsors.html', context)
 
-
 def contact(request):
     context = {}
     all_contacts = organizerMember.objects.all()
     context['all_contacts'] = all_contacts
     return render(request, 'festflow/contact.html', context)
-
 
 def reachus(request):
     context = {}
@@ -70,7 +64,6 @@ def login_page(request):
     profiles_count = Profile.objects.count()
     context['profiles_count'] = profiles_count
     return render(request, 'festflow/login_page.html', context)
-
 
 def event_view(request, event_identifier):
     context = {}
@@ -116,7 +109,6 @@ def register_event(request, event_identifier):
 
     return redirect(event.get_absolute_url())
 
-
 def complete_profile(request):
     context = {}
     backend = request.session['partial_pipeline']['backend']
@@ -137,7 +129,6 @@ def complete_profile(request):
     context['backend'] = backend
     context['profile_form'] = profile_form
     return render(request, 'festflow/complete_profile.html', context)
-
 
 def subscribe(request):
     context = {}
