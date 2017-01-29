@@ -1,0 +1,14 @@
+[Default]
+bears = SpaceConsistencyBear
+files = **.py, **.html, festflow/**.css
+use_spaces = true
+ignore = venv/**, festflow/migrations/**, festflow/__pycache__/**, **.min.css, **.min.js, wsgi/**
+default_actions =
+        SpaceConsistencyBear: ApplyPatchAction
+
+[Python]
+bears = PEP8Bear, PyUnusedCodeBear
+files = **.py
+ignore = venv/**, festflow/migrations/**, festflow/__pycache__/**, wsgi/**
+default_actions =
+        PEP8Bear: ApplyPatchAction
