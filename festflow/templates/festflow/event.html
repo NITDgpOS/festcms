@@ -1,5 +1,6 @@
 {% extends "festflow/base.html" %}
 {% load static %}
+
 {% block title %} EVENTS {% endblock %}
 
 {% block extra_head %}
@@ -23,7 +24,7 @@
             <div class='col-lg-4'>
                 <a href="{{ event.get_absolute_url }}">
                     {% if event.logo %}
-                    <img src="{{ event.logo.url }}" alt= "{{ event.name }}" class='img-responsive' />
+                    <img src="{{ event.logo.url }}" width='100%' alt= "{{ event.name }}" class='img-responsive' />
                     {% endif %}
                     <div class='event-text'>
                         <div class="subdash"></div>

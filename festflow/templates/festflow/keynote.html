@@ -1,5 +1,6 @@
 {% extends "festflow/base.html" %}
 {% load static %}
+
 {% block title %} KEYNOTES {% endblock %}
 
 {% block extra_head %}
@@ -23,7 +24,7 @@
             <div class='col-lg-6'>
                 <a href="{{ keynote.get_absolute_url }}">
                     {% if keynote.image %}
-                    <img src="{{ keynote.image.url }}" alt= "{{ keynote.name }}" class='img-responsive' />
+                    <img src="{{ keynote.image.url }}" width='100%' alt= "{{ keynote.name }}" class='img-responsive' />
                     {% endif %}
                     <div class='event-text'>
                         <div class="subdash"></div>

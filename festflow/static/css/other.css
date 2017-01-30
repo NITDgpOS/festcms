@@ -6,6 +6,10 @@ div.jumbotron {
     background-color: rgba(238,238,238, 0.6);
 }
 
+div.jumbotron > * {
+    font-size: 21px;
+}
+
 .dash {
     display: inline-block;
     width: 100%;
@@ -51,6 +55,7 @@ a#register {
     margin-left: auto;
     margin-right: auto;
     display: block;
+    max-width: 400px;
 }
 
 /*Style problem statement button*/
@@ -60,4 +65,19 @@ a#problem {
     margin-left: auto;
     margin-right: auto;
     display: block;
+    margin-bottom: 10px;
+    max-width: 400px;
+}
+
+/*Style contact details*/
+td.contact {
+    text-align: center;
+}
+
+/*Style question icon*/
+span#ques {
+    font-size: 24px;
+    color: #4285f4;
+    margin-top: 18px;
+    padding-right: 16px;
 }

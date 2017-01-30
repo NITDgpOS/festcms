@@ -28,6 +28,7 @@ a#logout {
     margin-left: auto;
     margin-right: auto;
     display: block;
+    max-width: 500px;
 }
 
 /*Style login buttons*/

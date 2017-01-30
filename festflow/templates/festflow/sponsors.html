@@ -1,16 +1,34 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Sponsors</title>
-</head>
-<body>
+{% extends "festflow/base.html" %}
+{% load static %}
+{% block title %} SPONSORS {% endblock %}
 
+{% block extra_head %}
 
-    {% for sponsor in all_sponsors %}
-    <div>
-        <img src="{{sponsor.logo.url}}">
+<!-- View CSS -->
+<link rel="stylesheet" type="text/css" href='{% static "css/other.css" %}'/>
+
+{% endblock %}
+
+{% block body_contents %}
+<div class="container">
+    <div class="jumbotron">
+        <h1 id='link'> Sponsors </h1>
+        <div class="dash"></div>
+        <br />
+        <br />
+        <br />
+        <div class='row'>
+            {% for sponsor in all_sponsors %}
+            <div class='col-lg-4'>
+                <img src="{{ sponsor.logo.url }}" width='100%' alt='{{ sponsor.name }}' class='img-responsive' />
+                <div class='event-text'>
+                    <div class="subdash"></div>
+                    {{ sponsor.name }}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
     </div>
-    {% endfor %}
+</div>
 
-</body>
-</html>
+{% endblock %}
