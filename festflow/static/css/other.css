@@ -6,7 +6,7 @@ div.jumbotron {
     background-color: rgba(238,238,238, 0.6);
 }
 
-div.jumbotron > * {
+div.jumbotron > li {
     font-size: 21px;
 }
 
