@@ -139,7 +139,7 @@ MEDIA_ROOT = os.path.join(ENV_PATH, 'media/')
 
 MEDIA_URL = '/media/'
 
-#ckeditor settings
+# ckeditor settings
 CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_ALLOW_NONIMAGE_FILES = False
 
