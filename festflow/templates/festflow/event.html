@@ -1,17 +1,40 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>EVENTS</title>
-</head>
-<body>
-  {% for event in all_events %}
-  <a href="{{ event.get_absolute_url }}">
-    {% if event.logo %}
-    <img src="{{ event.logo.url }}" alt= "{{ event.name }}" />
-    {% endif %}
-    <h2>{{ event.name }}</h2>
-    <button>View</button>
-  </a>
- {% endfor %}
-</body>
-</html>
+{% extends "festflow/base.html" %}
+{% load static %}
+
+{% block title %} EVENTS {% endblock %}
+
+{% block extra_head %}
+
+<!-- View CSS -->
+<link rel="stylesheet" type="text/css" href='{% static "css/other.css" %}'/>
+
+{% endblock %}
+
+{% block body_contents %}
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 id='link'>Events</h1>
+        <div class="dash"></div>
+        <br />
+        <br />
+        <br />
+        <div class='row'>
+            {% for event in all_events %}
+            <div class='col-lg-4'>
+                <a href="{{ event.get_absolute_url }}">
+                    {% if event.logo %}
+                    <img src="{{ event.logo.url }}" width='100%' alt= "{{ event.name }}" class='img-responsive' />
+                    {% endif %}
+                    <div class='event-text'>
+                        <div class="subdash"></div>
+                        <p>{{ event.name }}</p>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+/*CSS file for the login.html view*/
+
+div.jumbotron {
+    z-index: 2;
+    box-shadow: 0 8px 16px -6px #888;
+    background-color: rgba(238,238,238, 0.6);
+}
+
+#fb-login {
+    max-width: 250px;
+}
+
+#google-login {
+    max-width: 250px;
+}
+
+.dash {
+    display: inline-block;
+    width: 100%;
+    background-color: #4285f4;
+    height: 5px;
+}
+
+/*Style logout button*/
+a#logout {
+    background: #4285f4;
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 500px;
+}
+
+/*Style login buttons*/
+.login-btn img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Makr the page headers in small-caps*/
+h1#link {
+    font-variant: small-caps;
+}

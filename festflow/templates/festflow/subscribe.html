@@ -1,19 +1,49 @@
-{% if result %}
-  <h3>Succesful Subscription!</h3>
-  <hr />
-  <p>{{ result }}</p>
-{% elif unsubscribe %}
-  <h3>Subscription cancelled!</h3>
-  <hr />
-  <p>Your email id: {{ modify }} has been unsubscribed.</p>
-{% else %}
-  <div>
-    <form method="post">
-      {% csrf_token %}
-      <table border="0">
-        {{ subscription_form.as_table }}
-      </table>
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-{% endif %}
+{% extends "festflow/base.html" %}
+{% load static %}
+
+{% block title %} Subscription {% endblock %}
+
+{% block extra_head %}
+
+<!-- View CSS -->
+<link rel="stylesheet" type="text/css" href='{% static "css/other.css" %}'/>
+
+{% endblock %}
+
+{% block body_contents %}
+
+<div class="container">
+    <div class="jumbotron">
+        {% if result %}
+        <h3 id='link'>  Succesful Subscription! </h3>
+        <div class="subdash"></div>
+        <br />
+        <br />
+        <p>{{ result }}</p>
+        {% elif unsubscribe %}
+        <h3 id='link'>Subscription cancelled!</h3>
+        <div class="subdash"></div>
+        <br />
+        <br />
+        <p>Your email id: {{ modify }} has been unsubscribed.</p>
+        {% else %}
+        <h1 id='link'>  Subscribe </h1>
+        <div class="subdash"></div>
+        <br />
+        <br />
+        <form class="form-inline" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        {% endif %}
+    </div>
+</div>
+<script>
+
+</script>
+
+{% endblock %}

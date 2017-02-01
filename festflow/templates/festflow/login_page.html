@@ -1,30 +1,71 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Login</title>
-</head>
-<body>
+{% extends "festflow/base.html" %}
+{% load static %}
 
+{% block title %} LOGIN {% endblock %}
 
-	{% if user.is_authenticated %}
-	<!--User is logged in-->
-	<p>You are logged in as : <i> {{ user.username }}</i> !</p>
-	<p>First Name: <strong>{{ user.first_name }}</strong></p>
-	<p>Last Name: <strong>{{ user.last_name }}</strong></p>
-	<p>Email: {{ user.email }}</p>
-	<a href="/logout"><button> LogOut</button></a>
-	{% else %}
+{% block extra_head %}
 
-	<!--User is not logged in-->
-	<h2>Register NOW!</h2>
+<!-- View CSS -->
+<link rel="stylesheet" type="text/css" href='{% static "css/login.css" %}'/>
 
-	<a href="/login/facebook/?next=/">
-		<span>Sign in with facebook</span>
-	</a>
-	<a href="/login/google-oauth2/?next=/">
-		<span>Sign in with google</span>
-	</a>
-	{% endif %}
+{% endblock %}
 
-</body>
-</html>
+{% block body_contents %}
+
+<div class="container">
+    <div class="jumbotron">
+        {% if user.is_authenticated %}
+        <!--User is logged in-->
+        <h1 id='link'>Login Details</h1>
+        <div class="dash"></div>
+        <br />
+        <br />
+        <div class='row'>
+        <div class='col-lg-2'></div>
+        <div class='col-lg-8'>
+        <table class="table ">
+            <tbody>
+                <tr>
+                    <td>You are logged in as :</td>
+                    <td><i> {{ user.username }}</i> !</td>
+                </tr>
+                <tr>
+                    <td>First Name :</td>
+                    <td><strong> {{ user.first_name }}</strong></td>
+                </tr>
+                <tr>
+                    <td>Last Name :</td>
+                    <td><strong> {{ user.last_name }}</strong></td>
+                </tr>
+                <tr>
+                    <td>Email :</td>
+                    <td><strong> {{ user.email }}</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a id='logout' href="/logout" class="btn" role="button">LOGOUT</a>
+        </div>
+        <div class='col-lg-2'></div>
+        </div>
+
+        {% else %}
+        <!--User is not logged in-->
+        <h1 id='link'>Register Now</h1>
+        <div class="dash"></div>
+        <br />
+        <br />
+        <div class="login-btn">
+            <a href="/login/facebook/?next=/">
+                <img id='fb-login' src='{% static "images/fb-login-btn.png" %}' class='img-responsive' alt='fb login' />
+            </a>
+            <a href="/login/google-oauth2/?next=/">
+                <img id='google-login' src='{% static "images/google-login-btn.png" %}' class='img-responsive' alt='google login' />
+            </a>
+        </div>
+        {% endif %}
+
+    </div>
+</div>
+
+{% endblock %}

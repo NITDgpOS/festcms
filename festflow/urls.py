@@ -17,7 +17,7 @@ urlpatterns = [
 
     # Event Page
     url(r'^events/$', views.events, name='events'),
-    
+
     # Keynotes Page
     url(r'^keynotes/$', views.keynotes, name='keynotes'),
 
@@ -41,7 +41,6 @@ urlpatterns = [
 
     # Login Page
     url(r'^login/$',views.login_page, name='login_page'),
-
 
     # social login urls
     url('', include('social.apps.django_app.urls', namespace='social')),

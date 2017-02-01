@@ -1,0 +1,83 @@
+/*CSS file for the events.html event_view.html view*/
+
+div.jumbotron {
+    z-index: 2;
+    box-shadow: 0 8px 16px -6px #888;
+    background-color: rgba(238,238,238, 0.6);
+}
+
+div.jumbotron > li {
+    font-size: 21px;
+}
+
+.dash {
+    display: inline-block;
+    width: 100%;
+    background-color: #4285f4;
+    height: 5px;
+}
+
+.subdash {
+    display: inline-block;
+    width: 100%;
+    background-color: #4285f4;
+    height: 2.5px;
+}
+
+div.event-text {
+    color: #000;
+    margin: auto;
+    text-align: center;
+    font-variant: small-caps;
+    margin-bottom: 50px;
+}
+
+/*Make the page headers in small-caps*/
+h1#link {
+    font-variant: small-caps;
+    margin-bottom: 0;
+}
+
+/*Make the page sub-headers in small-caps*/
+h3#link {
+    font-variant: small-caps;
+    margin-bottom: 0;
+}
+
+div.sub-heading {
+    display: flex;
+}
+
+/*Style register button*/
+a#register {
+    background: #4285f4;
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 400px;
+}
+
+/*Style problem statement button*/
+a#problem {
+    background: #4285f4;
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 10px;
+    max-width: 400px;
+}
+
+/*Style contact details*/
+td.contact {
+    text-align: center;
+}
+
+/*Style question icon*/
+span#ques {
+    font-size: 24px;
+    color: #4285f4;
+    margin-top: 18px;
+    padding-right: 16px;
+}

@@ -1,13 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>ABOUT PAGE</title>
-</head>
-<body>
-    {% if content %}
-        {{ content | safe }}
-    {% else %}
-        ABOUT PAGE
-    {% endif %}
-</body>
-</html>
+{% extends "festflow/base.html" %}
+{% load static %}
+
+{% block title %} ABOUT US {% endblock %}
+
+{% block extra_head %}
+
+<!-- View CSS -->
+<link rel="stylesheet" type="text/css" href='{% static "css/about.css" %}'/>
+
+{% endblock %}
+
+{% block body_contents %}
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 id='link'>About Us</h1>
+        <div class="dash"></div>
+        <br />
+        <div class="about-text">
+            {% if content %}
+            {{ content | safe }}
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

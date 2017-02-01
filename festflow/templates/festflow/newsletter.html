@@ -1,6 +1,27 @@
-<html>
-  <div>
-    {{ newsletter }}
-  </div>
-  <p><a href='{{url}}'>Unsubscribe</a></p>
-</html>
+{% extends "festflow/base.html" %}
+{% load static %}
+
+{% block title %} NEWSLETTER {% endblock %}
+
+{% block extra_head %}
+
+<!-- View CSS -->
+<link rel="stylesheet" type="text/css" href='{% static "css/other.css" %}'/>
+
+{% endblock %}
+{% block body_contents %}
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 id='link'>Newsletter</h1>
+        <div class="dash"></div>
+        <br />
+        <br />
+        <div>
+            {{ newsletter }}
+        </div>
+        <a href="{{url}}" class="btn btn-primary" role="button">Unsubscribe</a>
+    </div>
+</div>
+
+{% endblock %}

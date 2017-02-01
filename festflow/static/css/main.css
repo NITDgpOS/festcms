@@ -1,0 +1,61 @@
+/*Main CSS file common for all views*/
+
+body{
+    background: url('../images/bg.png');
+    overflow-x: hidden;
+}
+
+/*Navbar styling*/
+.navbar {
+    background-color: #4285f4;
+    text-decoration: none;
+    -webkit-box-shadow: 5px 5px 5px #aaa;
+    -moz-box-shadow: 5px 5px 5px #aaa;
+    box-shadow: 5px 5px 5px #aaa;
+    z-index:999;
+    width: 100%;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.navbar a {
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: #4285f4;
+}
+
+/*Title and subtitle styling*/
+.title > h1{
+    text-align: center;
+    color: #222;
+    width: auto;
+    font-weight: bold;
+    text-shadow: 3px 3px #bbb;
+    font-size: 72px;
+}
+
+.title > h4{
+    text-align: center;
+    color: #005a8c;
+    font-weight: bold;
+    width: auto;
+    font-size: 24px;
+}
+
+.title {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+/*Logo styling*/
+.logo {
+    margin: auto ;
+}

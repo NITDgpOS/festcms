@@ -1,32 +1,82 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Complete Profile</title>
-</head>
-<body>
-	{% if user.is_authenticated %}
-	<p>Welcome <b>{{ user.first_name }}</b>!</p>
-	<h5>Here is your profile information:</h5>
-	<p>First Name: <b>{{ user.first_name }}</b></p>
-	<p>Last Name: <b>{{ user.last_name }}</b></p>
-	<p>Email: {{ user.email }}</p>
-	{% endif %}
+{% extends "festflow/base.html" %}
+{% load static %}
 
-	<h2>Please complete your profile to continue:</h2><br>
-	{% if profile_form %}
-	<form action="." method="post">
-		{% csrf_token %}
-		<label class="control-label col-sm-4" for="id_institute_name">Institute name:</label>
-		<input class="form-control" id="id_institute_name" maxlength="255" name="institute_name" type="text" required />
-		
-		<label class="control-label col-sm-4" for="id_degree_name">Degree name:</label>
-		<input class="form-control" id="id_degree_name" maxlength="255" name="degree_name" type="text" placeholder="eg: B.Tech"required />
-		<label class="control-label col-sm-4" for="id_major_subject_name">Major subject name:</label>
-		<input class="form-control" id="id_major_subject_name" maxlength="255" name="major_subject_name" type="text" placeholder="eg: ECE or CSE....etc "required />
-		<label class="control-label col-sm-4" for="id_phone_number">Phone number:</label>
-		<input class="form-control" id="id_phone_number" maxlength="15" name="phone_number" type="text" required />
-		<input type="submit" value="Submit" />
-	</form>
-	{% endif %}
-</body>
-</html>
+{% block title %} Complete Profile {% endblock %}
+
+{% block extra_head %}
+
+<!-- View CSS -->
+<link rel="stylesheet" type="text/css" href='{% static "css/other.css" %}'/>
+
+{% endblock %}
+
+{% block body_contents %}
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 id='link'>Complete Profile</h1>
+        <div class="dash"></div>
+        <br />
+        <br />
+
+        {% if user.is_authenticated %}
+        <!--User is logged in-->
+        <h3 id='link'>Profile Info</h3>
+        <div class="subdash"></div>
+        <br />
+        <br />
+        <p>Welcome <b>{{ user.first_name }}</b>!</p>
+
+        <table class="table ">
+            <tbody>
+                <tr>
+                    <td>First Name :</td>
+                    <td><strong> {{ user.first_name }}</strong></td>
+                </tr>
+                <tr>
+                    <td>Last Name :</td>
+                    <td><strong> {{ user.last_name }}</strong></td>
+                </tr>
+                <tr>
+                    <td>Email :</td>
+                    <td><strong> {{ user.email }}</strong></td>
+                </tr>
+            </tbody>
+        </table>
+        {% endif %}
+
+        <h3 id='link'><strong>Please complete your profile to continue</strong></h3>
+        <div class="subdash"></div>
+        <br />
+        <br />
+        {% if profile_form %}
+        <form action="." method="post">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="id_institute_name">Institute Name:</label>
+                <input class="form-control" id="id_institute_name" maxlength="255" name="institute_name" type="text" required />
+            </div>
+
+            <div class="form-group">
+                <label for="id_degree_name">Degree:</label>
+                <input class="form-control" id="id_degree_name" maxlength="255" name="degree_name" type="text" placeholder="eg: B.Tech"required />
+            </div>
+
+            <div class="form-group">
+                <label for="id_major_subject_name">Major:</label>
+                <input class="form-control" id="id_major_subject_name" maxlength="255" name="major_subject_name" type="text" placeholder="eg: Information Technology "required />
+            </div>
+
+            <div class="form-group">
+                <label for="id_phone_number">Phone Number:</label>
+                <input class="form-control" id="id_phone_number" maxlength="15" name="phone_number" type="text" required />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+
+        </form>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

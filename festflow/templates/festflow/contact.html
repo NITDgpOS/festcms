@@ -1,28 +1,56 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Contacts</title>
-</head>
-<body>
-  {% for contact in all_contacts %}
-  <div>
-    <a href="{{contact.contactURL}}" target="_blank">
-      <div>
-        {% if contact.avatar_img %}
-        <img src="{{contact.avatar_img.url}}">
-        {% endif %}
-        <span>{{contact.name}}</span>
-        <a href="tel:{{contact.contactNumber}}">
-          <span>{{contact.contactNumber}}</span>
-        </a>
-        <a href="mailto:{{contact.emailId}}">
-          <span>
-            {{contact.emailId}}
-          </span>
-        </a>
-      </div>
-    </a>
-  </div>
-  {% endfor %}
-</body>
-</html>
+{% extends "festflow/base.html" %}
+{% load static %}
+
+{% block title %} CONTACT {% endblock %}
+
+{% block extra_head %}
+
+<!-- View CSS -->
+<link rel="stylesheet" type="text/css" href='{% static "css/other.css" %}'/>
+
+{% endblock %}
+
+{% block body_contents %}
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 id='link'>  Contact Us </h1>
+        <div class="dash"></div>
+        <br />
+        <br />
+        <br />
+        <div class='row'>
+
+            {% for contact in all_contacts %}
+            <div class='col-lg-3'>
+                <a href="{{contact.contactURL}}" target="_blank">
+                    {% if contact.avatar_img %}
+                    <img src="{{contact.avatar_img.url}}" width='100%' alt='{{ contact.name }}' class='img-responsive img-circle' />
+                    {% endif %}
+                </a>
+                <div class="subdash"></div>
+                <table class="table ">
+                    <tbody>
+                        <tr>
+                            <td class='contact'><strong> {{ contact.name }}</strong></td>
+                        </tr>
+                        <tr>
+                            <a href="tel:{{contact.contactNumber}}">
+                                <td class='contact'><strong> {{contact.contactNumber}}</strong></td>
+                            </a>
+                        </tr>
+                        <tr>
+                            <a href="mailto:{{contact.emailId}}">
+                                <td class='contact'><strong> {{contact.emailId}}</strong></td>
+                            </a>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

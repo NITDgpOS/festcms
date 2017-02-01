@@ -1,16 +1,40 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>KEYNOTE SPEECHES</title>
-</head>
- <body>
-   {% for keynote in all_keynotes %}
-    <a href="{{ keynote.get_absolute_url }}">
-    {% if keynote.image %}
-    <img src="{{ keynote.image.url }}" alt= "{{ keynote.name }}" />
-    {% endif %}
-    <h2>{{ keynote.name }}</h2>
-    </a>
-  {% endfor %}
- </body>
-</html>
+{% extends "festflow/base.html" %}
+{% load static %}
+
+{% block title %} KEYNOTES {% endblock %}
+
+{% block extra_head %}
+
+<!-- View CSS -->
+<link rel="stylesheet" type="text/css" href='{% static "css/other.css" %}'/>
+
+{% endblock %}
+
+{% block body_contents %}
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 id='link'>Keynote Speeches</h1>
+        <div class="dash"></div>
+        <br />
+        <br />
+        <br />
+        <div class='row'>
+            {% for keynote in all_keynotes %}
+            <div class='col-lg-6'>
+                <a href="{{ keynote.get_absolute_url }}">
+                    {% if keynote.image %}
+                    <img src="{{ keynote.image.url }}" width='100%' alt= "{{ keynote.name }}" class='img-responsive' />
+                    {% endif %}
+                    <div class='event-text'>
+                        <div class="subdash"></div>
+                        <p>{{ keynote.name }}</p>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,19 +1,44 @@
-<!DOCTYPE html>
-<html>
-  <head>
-	<title>{{ keynote.name }}</title>
-  </head>
-  <body>
-	<h1>{{ keynote.name }}</h1>
+{% extends "festflow/base.html" %}
+{% load static %}
 
-	{% if keynote.image %}
-	<img src="{{ keynote.image.url }}">
-	{% endif %}
+{% block title %} {{ keynote.name }} {% endblock %}
 
-	<h2>About the Speech</h2>
-	<p>{{ keynote.description }}</p>
-	<p><strong>Venue</strong>: {{ keynote.venue }}</p>
-	<p><strong>Time</strong>: {{ keynote.date_time }}</p>
+{% block extra_head %}
 
-  </body>
-</html>
+<!-- View CSS -->
+<link rel="stylesheet" type="text/css" href='{% static "css/other.css" %}'/>
+
+{% endblock %}
+
+{% block body_contents %}
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 id='link'>{{ keynote.name }}</h1>
+        <div class="dash"></div>
+        <br />
+        <br />
+        {% if keynote.image %}
+        <img src="{{ keynote.image.url }}" alt= "{{ keynote.name }}" class='img-responsive' />
+        <br />
+        {% endif %}
+
+        <h3 id='link'><strong>About the Speech</strong></h3>
+        <div class="subdash"></div>
+        <br />
+        <br />
+        <p>{{ keynote.description|safe }}</p>
+
+        <div class='sub-heading'>
+            <p><strong>Venue : </strong></p>
+            <p> {{ keynote.venue }}</p>
+        </div>
+
+        <div class='sub-heading'>
+            <p><strong>Time : </strong></p>
+            <p> {{ keynote.date_time }}</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
