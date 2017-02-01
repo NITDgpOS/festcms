@@ -19,7 +19,8 @@ def send_email(modeladmin, request, queryset):
         for newsletter in queryset:
             content = template.render({
                 'newsletter': newsletter.content,
-                'url': 'http://%s/subscribe?unsubscribe=%s' % (site, user.identifier),
+                'url': 'http://%s/subscribe?unsubscribe=%s' % (
+                    site, user.identifier),
             })
             messages.append((
                 "Newsletter",
@@ -32,6 +33,7 @@ def send_email(modeladmin, request, queryset):
 
 class NewsLetterAdmin(admin.ModelAdmin):
     actions = [send_email]
+
 
 admin.site.register(Profile)
 admin.site.register(Event)

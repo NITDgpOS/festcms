@@ -31,23 +31,28 @@ urlpatterns = [
     url(r'^subscribe/$', views.subscribe, name='subscribe'),
 
     # Event View Page
-    url(r'^events/(?P<event_identifier>[a-z]*)/$', views.event_view,name='event_view'),
+    url(r'^events/(?P<event_identifier>[a-z]*)/$',
+        views.event_view, name='event_view'),
 
     # Keynote View Page
-    url(r'^keynote/(?P<keynote_identifier>[a-z]*)/$', views.keynote_view,name='keynote_view'),
+    url(r'^keynote/(?P<keynote_identifier>[a-z]*)/$',
+        views.keynote_view, name='keynote_view'),
 
     # Event Register Page
-    url(r'^register_event/(?P<event_identifier>[a-z]*)/$',views.register_event, name='register_event'),
+    url(r'^register_event/(?P<event_identifier>[a-z]*)/$',
+        views.register_event, name='register_event'),
 
     # Login Page
-    url(r'^login/$',views.login_page, name='login_page'),
+    url(r'^login/$', views.login_page, name='login_page'),
 
     # social login urls
     url('', include('social.apps.django_app.urls', namespace='social')),
 
     # Form to complete profile
-    url(r'^complete_profile/$', views.complete_profile,name='complete_profile'),
+    url(r'^complete_profile/$',
+        views.complete_profile, name='complete_profile'),
 
     # logout url
-    url(r'^logout/$', logout,{'next_page': '/'})
+    url(r'^logout/$',
+        logout, {'next_page': '/'})
 ]
