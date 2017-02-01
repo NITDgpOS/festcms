@@ -155,7 +155,7 @@ class About(models.Model):
     content = fields.RichTextUploadingField()
 
     def __str__(self):
-        return self.content
+        return self.identifier
 
     class Meta:
         verbose_name = "about"
