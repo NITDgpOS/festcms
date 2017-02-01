@@ -6,7 +6,7 @@ from .models import *
 
 
 def send_subscription_success(from_addr, to_addr, template):
-    context = { 'email': to_addr }
+    context = {'email': to_addr}
     send_mail_template(
         "New Subscription",
         template,
@@ -24,4 +24,3 @@ def unsubscribe(id):
         return mail
     except Subscription.DoesNotExist:
         raise Http404
-
