@@ -50,6 +50,7 @@ class Event(models.Model):
     def get_absolute_url(self):
         return '/events/%s/' % self.identifier
 
+
 class Keynote(models.Model):
     "Stores information about the keynote speech or talk in the fest"
 
@@ -65,7 +66,7 @@ class Keynote(models.Model):
 
     # keynote image
     image = models.ImageField(upload_to='event_images/',
-                             blank=True, null=True)
+                              blank=True, null=True)
 
     # keynote venue
     venue = models.CharField(max_length=255)
@@ -78,6 +79,7 @@ class Keynote(models.Model):
 
     def get_absolute_url(self):
         return '/keynote/%s/' % self.identifier
+
 
 class Profile(models.Model):
     "Stores additional information about the user"
@@ -101,12 +103,14 @@ class Profile(models.Model):
     def get_absolute_url(self):
         return '/events/%s/' % self.user.username
 
+
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
     # create a dummy profile for superuser
     if created and instance.is_superuser:
         Profile.objects.create(user=instance)
         instance.profile.save()
+
 
 class organizerMember(models.Model):
     """Stores information about the members of the organization
@@ -151,11 +155,12 @@ class About(models.Model):
     content = fields.RichTextUploadingField()
 
     def __str__(self):
-        return self.content
+        return self.identifier
 
     class Meta:
         verbose_name = "about"
         verbose_name_plural = "about"
+
 
 class NewsLetter(models.Model):
     """Stores newsletters sent to subscribed users
@@ -197,6 +202,7 @@ class FAQ(models.Model):
     class Meta:
         verbose_name = 'FAQ'
         verbose_name_plural = 'FAQs'
+
 
 class NavbarEntry(models.Model):
     """Stores the navigation bar entries

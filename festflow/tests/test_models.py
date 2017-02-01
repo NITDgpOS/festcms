@@ -3,6 +3,7 @@ from festflow.models import About
 
 
 class AboutTestCase(TestCase):
+
     def setUp(self):
         About.objects.create(identifier='thisIsValidIdentifier',
                              content='<p>Rich Text Content<p>')
