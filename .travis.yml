@@ -6,4 +6,7 @@ python:
 install: "pip install -r dev-requirements.txt"
 
 # command to run tests
-script: coala --ci
+script:
+ - cp festcms/settings.py.example festcms/settings.py
+ - coala --ci
+ - python manage.py test
