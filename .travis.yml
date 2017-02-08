@@ -10,3 +10,8 @@ script:
  - cp festcms/settings.py.example festcms/settings.py
  - coala --ci -V
  - python manage.py test
+ - coverage run --source='festflow' manage.py test
+ - coverage report
+
+after_success:
+ - codecov
