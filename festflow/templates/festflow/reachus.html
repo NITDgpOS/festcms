@@ -1,0 +1,57 @@
+{% extends "festflow/base.html" %}
+{% load static %}
+
+{% block title %} REACH US {% endblock %}
+
+{% block extra_head %}
+
+<!-- View CSS -->
+<link rel="stylesheet" type="text/css" href='{% static "css/other.css" %}'/>
+
+{% endblock %}
+
+{% block body_contents %}
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 id='link'>Reach Us</h1>
+        <div class="dash"></div>
+        <br />
+        <br />
+        <div class="address">
+            Adress Line 1
+            <br />
+            Adress Line 2
+            <br />
+            Adress Line 3
+            <br />
+            Adress Line 4
+            <br />
+        </div>
+        <div id="map"></div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extrajs %}
+
+<script>
+    function initMap() {
+        // Add latitude and longitude of the college
+        var college = {lat: 23.547619, lng: 87.289375};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: college
+        });
+        var marker = new google.maps.Marker({
+            position: college,
+            map: map
+        });
+    }
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key={{ google_api_key }}&callback=initMap">
+</script>
+
+{% endblock %}
