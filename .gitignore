@@ -4,3 +4,4 @@ venv
 festcms/media
 settings.py
 wsgi/static/
+.coverage
