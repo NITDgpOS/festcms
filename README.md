@@ -1,6 +1,6 @@
 # Fest Management System
 
-[![Join the chat at https://gitter.im/NIT-dgp/General](https://badges.gitter.im/gitterHQ/gitterHQ.github.io.svg)](https://gitter.im/NIT-dgp/General) [![Build Status](https://travis-ci.org/NIT-dgp/festcms.svg?branch=master)](https://travis-ci.org/NIT-dgp/festcms)
+[![Join the chat at https://gitter.im/NIT-dgp/General](https://badges.gitter.im/gitterHQ/gitterHQ.github.io.svg)](https://gitter.im/NIT-dgp/General) [![Build Status](https://travis-ci.org/NIT-dgp/festcms.svg?branch=master)](https://travis-ci.org/NIT-dgp/festcms) [![codecov](https://codecov.io/gh/NIT-dgp/festcms/branch/master/graph/badge.svg)](https://codecov.io/gh/NIT-dgp/festcms)
 
 This is a generic Content management system made specifically for the purpose of handling the websites of college fests. It is written in Django and uses basically a Bootstrap based UI.
 
