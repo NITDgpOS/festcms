@@ -1,7 +1,10 @@
 import hashlib
 
 from django.contrib.auth.models import User
-from django.core.validators import RegexValidator
+from django.contrib.sites.models import Site
+from django.core.exceptions import ValidationError
+from django.core.urlresolvers import reverse, NoReverseMatch
+from django.core.validators import RegexValidator, URLValidator
 from django.db import models
 from ckeditor_uploader import fields
 from django.db.models.signals import post_save
@@ -10,6 +13,17 @@ from django.dispatch import receiver
 
 lowercaseAlphabet = RegexValidator(
     r'^[a-z]*$', 'Only lower case alphabets are allowed.')
+
+
+def validate_navbar_entry(url):
+    domain = Site.objects.get_current().domain
+    try:
+        reverse(url)
+    except NoReverseMatch:
+        try:
+            URLValidator()(url)
+        except ValidationError:
+            URLValidator()('https://%s%s' % (domain, url))
 # Create your models here.
 
 
@@ -207,7 +221,8 @@ class FAQ(models.Model):
 class NavbarEntry(models.Model):
     """Stores the navigation bar entries
     """
-    url = models.URLField(default="#")
+    url = models.CharField(default='#', max_length=100,
+        validators=[validate_navbar_entry])
     name = models.CharField(max_length=50)
 
     def __str__(self):
