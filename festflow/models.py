@@ -149,7 +149,7 @@ class organizerMember(models.Model):
         return self.name
 
 
-class sponsor(models.Model):
+class Sponsor(models.Model):
     """Stores information about fest sponsors
     """
     name = models.CharField(max_length=100)

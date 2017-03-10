@@ -43,7 +43,7 @@ def keynotes(request):
 
 def sponsors(request):
     context = {}
-    all_sponsors = sponsor.objects.all()
+    all_sponsors = Sponsor.objects.all()
     context['all_sponsors'] = all_sponsors
     return render(request, 'festflow/sponsors.html', context)
 
