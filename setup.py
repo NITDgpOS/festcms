@@ -1,6 +1,6 @@
 from setuptools import setup
 
-setup(name='YourAppName',
+setup(name='festcms',
       version='1.0',
       description='A generic CMS for college fests.',
       author='Bishakh Ghosh',
