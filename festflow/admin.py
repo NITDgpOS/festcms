@@ -38,7 +38,7 @@ class NewsLetterAdmin(admin.ModelAdmin):
 admin.site.register(Profile)
 admin.site.register(Event)
 admin.site.register(organizerMember)
-admin.site.register(sponsor)
+admin.site.register(Sponsor)
 admin.site.register(About)
 admin.site.register(Subscription)
 admin.site.register(NewsLetter, NewsLetterAdmin)
