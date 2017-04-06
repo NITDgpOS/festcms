@@ -5,3 +5,4 @@ festcms/media
 settings.py
 wsgi/static/
 .coverage
+.DS_Store
