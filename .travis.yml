@@ -9,7 +9,7 @@ install: "pip install -r dev-requirements.txt"
 # command to run tests
 script:
  - cp festcms/settings.py.example festcms/settings.py
- - coala --ci -V
+ - coala --ci
  - python manage.py test
  - coverage run --source='festflow' manage.py test
  - coverage report

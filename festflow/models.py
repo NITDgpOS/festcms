@@ -222,7 +222,7 @@ class NavbarEntry(models.Model):
     """Stores the navigation bar entries
     """
     url = models.CharField(default='#', max_length=100,
-        validators=[validate_navbar_entry])
+                           validators=[validate_navbar_entry])
     name = models.CharField(max_length=50)
 
     def __str__(self):
