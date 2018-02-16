@@ -3,7 +3,7 @@ import hashlib
 from django.contrib.auth.models import User
 from django.contrib.sites.models import Site
 from django.core.exceptions import ValidationError
-from django.core.urlresolvers import reverse, NoReverseMatch
+from django.urls import reverse, NoReverseMatch
 from django.core.validators import RegexValidator, URLValidator
 from django.db import models
 from ckeditor_uploader import fields
