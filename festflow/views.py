@@ -2,6 +2,8 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
 from django.shortcuts import render, redirect, Http404
+from social_core.pipeline.utils import partial_load
+from social_django.utils import load_strategy
 
 from .forms import *
 from .models import *
@@ -121,9 +123,11 @@ def register_event(request, event_identifier):
 
 
 def complete_profile(request):
+    strategy = load_strategy(request)
+    partial = partial_load(strategy, request.session['partial_pipeline_token'])
     context = {}
-    backend = request.session['partial_pipeline']['backend']
-    user_id = request.session['partial_pipeline']['kwargs']['user']
+    backend = partial.backend;
+    user_id = partial.kwargs['user'].id;
     user_obj = User.objects.get(id=user_id)
 
     if request.method == 'POST':
