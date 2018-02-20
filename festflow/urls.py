@@ -46,7 +46,7 @@ urlpatterns = [
     url(r'^login/$', views.login_page, name='login_page'),
 
     # social login urls
-    url('', include('social.apps.django_app.urls', namespace='social')),
+    url('', include('social_django.urls')),
 
     # Form to complete profile
     url(r'^complete_profile/$',
