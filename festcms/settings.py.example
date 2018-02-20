@@ -43,8 +43,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'social_django',
     'festflow',
-    'ckeditor',
-    'ckeditor_uploader',
     'forms_builder.forms',
     'email_extras',
 )

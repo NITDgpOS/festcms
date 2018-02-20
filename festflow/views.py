@@ -126,8 +126,8 @@ def complete_profile(request):
     strategy = load_strategy(request)
     partial = partial_load(strategy, request.session['partial_pipeline_token'])
     context = {}
-    backend = partial.backend;
-    user_id = partial.kwargs['user'].id;
+    backend = partial.backend
+    user_id = partial.kwargs['user'].id
     user_obj = User.objects.get(id=user_id)
 
     if request.method == 'POST':

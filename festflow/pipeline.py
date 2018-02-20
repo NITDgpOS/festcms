@@ -5,7 +5,7 @@ from .models import Profile
 
 
 @partial
-def save_profile(strategy,details, user=None, is_new = False, *args, **kwargs):
+def save_profile(strategy, details, user=None, is_new=False, *args, **kwargs):
     try:
         profile = Profile.objects.get(user=user)
         return
