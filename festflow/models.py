@@ -6,7 +6,6 @@ from django.core.exceptions import ValidationError
 from django.urls import reverse, NoReverseMatch
 from django.core.validators import RegexValidator, URLValidator
 from django.db import models
-from ckeditor_uploader import fields
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
@@ -166,7 +165,7 @@ class About(models.Model):
     """Stores about content as raw html
     """
     identifier = models.CharField(max_length=50, unique=True)
-    content = fields.RichTextUploadingField()
+    content = models.TextField()
 
     def __str__(self):
         return self.identifier
@@ -180,7 +179,7 @@ class NewsLetter(models.Model):
     """Stores newsletters sent to subscribed users
     """
     identifier = models.CharField(max_length=50, unique=True)
-    content = fields.RichTextUploadingField()
+    content = models.TextField()
 
     def __str__(self):
         return self.identifier
@@ -207,8 +206,8 @@ class FAQ(models.Model):
     """Stores the frequently asked questions
     """
     identifier = models.CharField(max_length=50, unique=True)
-    question = fields.RichTextUploadingField()
-    answer = fields.RichTextUploadingField()
+    question = models.TextField()
+    answer = models.TextField()
 
     def __str__(self):
         return self.identifier

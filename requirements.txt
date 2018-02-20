@@ -2,7 +2,6 @@ coala-bears==0.10
 coverage==4.3.4
 defusedxml==0.5.0
 Django==2.0.2
-django-ckeditor==5.1.1
 django-email-extras==0.3.3
 django-forms-builder==0.13.0
 django-js-asset==1.0.0
