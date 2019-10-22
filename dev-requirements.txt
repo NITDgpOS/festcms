@@ -7,7 +7,7 @@ https://github.com/stephenmcd/django-forms-builder/archive/master.zip
 django-js-asset==1.0.0
 future==0.15.0
 oauthlib==1.1.2
-Pillow==3.3.1
+Pillow==6.2.0
 PyJWT==1.4.2
 python-gnupg==0.4.1
 python-social-auth==0.2.21
